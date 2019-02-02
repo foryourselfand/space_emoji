@@ -24,9 +24,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34aef147-78a7-4b4e-a8a1-a3f290331d22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/blossom_1f33c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/blossom_1f33c.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/sunflower_1f33b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/sunflower_1f33b.png.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,8 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,18 +57,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1501" />
+          <entry key="cs" value="1513" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1501" />
+          <entry key="C#" value="1513" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,7 +76,6 @@
               <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding>
                 <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
-                <marker date="1549117898369" expanded="true" signature="124:420" ph="{...}" />
                 <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
                 <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
               </folding>
@@ -84,15 +86,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="420">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
-                <marker date="1549123460110" expanded="true" signature="6:54" ph="..." />
-                <marker date="1549123460110" expanded="true" signature="96:1170" ph="{...}" />
-                <marker date="1549123460110" expanded="true" signature="221:318" ph="{...}" />
-                <marker date="1549123460110" expanded="true" signature="409:1168" ph="{...}" />
-                <marker date="1549123460110" expanded="true" signature="616:1162" ph="{...}" />
-                <marker date="1549123460110" expanded="true" signature="670:1129" ph="{...}" />
+                <marker date="1549133336027" expanded="false" signature="6:54" ph="..." />
+                <marker date="1549133336027" expanded="true" signature="96:1210" ph="{...}" />
+                <marker date="1549133336027" expanded="true" signature="136:199" ph="/* public GameObject Building; ... */" />
+                <marker date="1549133336027" expanded="true" signature="225:344" ph="{...}" />
+                <marker date="1549133336027" expanded="true" signature="232:320" ph="/* RandomSpawn(Building, 1, 1.3F, 0); ... */" />
+                <marker date="1549133336027" expanded="false" signature="350:1208" ph="/* private void RandomSpawn(GameObject objectToSpawn, int count, float selfX, float byX) ... */" />
               </folding>
             </state>
           </provider>
@@ -135,6 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -155,7 +158,6 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,11 +204,12 @@
       <option name="presentableId" value="Default" />
       <updated>1549112650490</updated>
       <workItem from="1549112653752" duration="6406000" />
+      <workItem from="1549128732359" duration="572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6406000" />
+    <option name="totallyTimeSpent" value="6978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,17 +224,9 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15988836" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16148326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="TeamCity" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -239,11 +234,19 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="TeamCity" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +274,6 @@
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding>
             <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
-            <marker date="1549117898369" expanded="true" signature="124:420" ph="{...}" />
             <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
             <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
           </folding>
@@ -280,15 +282,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
-            <marker date="1549123460110" expanded="true" signature="6:54" ph="..." />
-            <marker date="1549123460110" expanded="true" signature="96:1170" ph="{...}" />
-            <marker date="1549123460110" expanded="true" signature="221:318" ph="{...}" />
-            <marker date="1549123460110" expanded="true" signature="409:1168" ph="{...}" />
-            <marker date="1549123460110" expanded="true" signature="616:1162" ph="{...}" />
-            <marker date="1549123460110" expanded="true" signature="670:1129" ph="{...}" />
+            <marker date="1549133336027" expanded="false" signature="6:54" ph="..." />
+            <marker date="1549133336027" expanded="true" signature="96:1210" ph="{...}" />
+            <marker date="1549133336027" expanded="true" signature="136:199" ph="/* public GameObject Building; ... */" />
+            <marker date="1549133336027" expanded="true" signature="225:344" ph="{...}" />
+            <marker date="1549133336027" expanded="true" signature="232:320" ph="/* RandomSpawn(Building, 1, 1.3F, 0); ... */" />
+            <marker date="1549133336027" expanded="false" signature="350:1208" ph="/* private void RandomSpawn(GameObject objectToSpawn, int count, float selfX, float byX) ... */" />
           </folding>
         </state>
       </provider>

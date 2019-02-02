@@ -5,15 +5,18 @@ public class GameManager : MonoBehaviour
 {
     public GameObject ParentGround;
 
-    public GameObject Building;
-    public GameObject Tree;
+//    public GameObject Building;
+//    public GameObject Tree;
 
     private void Start()
     {
-        RandomSpawn(Building, 1, 1.3F, 0);
-        RandomSpawn(Tree, 2, 1.7F, 0.7F);
+//        RandomSpawn(Building, 1, 1.3F, 0);
+//        RandomSpawn(Tree, 2, 1.7F, 0.7F);
+        
+        
     }
 
+    /*
     private void RandomSpawn(GameObject objectToSpawn, int count, float selfX, float byX)
     {
         var spriteTypes = objectToSpawn.GetComponents<MultiplySprites>();
@@ -35,4 +38,5 @@ public class GameManager : MonoBehaviour
             sign = 1;
         }
     }
+    */
 }
