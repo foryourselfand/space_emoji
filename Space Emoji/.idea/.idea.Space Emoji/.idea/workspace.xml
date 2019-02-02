@@ -24,11 +24,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34aef147-78a7-4b4e-a8a1-a3f290331d22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/blossom_1f33c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/blossom_1f33c.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/sunflower_1f33b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flowers/sunflower_1f33b.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +41,7 @@
     <session id="1581469682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="2" />
@@ -57,44 +59,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1513" />
+          <entry key="cs" value="1520" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1513" />
+          <entry key="C#" value="1520" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state relative-caret-position="298">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
+                <marker date="1549117898369" expanded="true" signature="124:420" ph="{...}" />
                 <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
                 <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-              <folding>
-                <marker date="1549133336027" expanded="false" signature="6:54" ph="..." />
-                <marker date="1549133336027" expanded="true" signature="96:1210" ph="{...}" />
-                <marker date="1549133336027" expanded="true" signature="136:199" ph="/* public GameObject Building; ... */" />
-                <marker date="1549133336027" expanded="true" signature="225:344" ph="{...}" />
-                <marker date="1549133336027" expanded="true" signature="232:320" ph="/* RandomSpawn(Building, 1, 1.3F, 0); ... */" />
-                <marker date="1549133336027" expanded="false" signature="350:1208" ph="/* private void RandomSpawn(GameObject objectToSpawn, int count, float selfX, float byX) ... */" />
               </folding>
             </state>
           </provider>
@@ -107,7 +93,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -204,12 +189,12 @@
       <option name="presentableId" value="Default" />
       <updated>1549112650490</updated>
       <workItem from="1549112653752" duration="6406000" />
-      <workItem from="1549128732359" duration="572000" />
+      <workItem from="1549128732359" duration="2803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6978000" />
+    <option name="totallyTimeSpent" value="9209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -268,29 +253,22 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
-            <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
-            <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="298">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <marker date="1549133336027" expanded="false" signature="6:54" ph="..." />
-            <marker date="1549133336027" expanded="true" signature="96:1210" ph="{...}" />
-            <marker date="1549133336027" expanded="true" signature="136:199" ph="/* public GameObject Building; ... */" />
-            <marker date="1549133336027" expanded="true" signature="225:344" ph="{...}" />
-            <marker date="1549133336027" expanded="true" signature="232:320" ph="/* RandomSpawn(Building, 1, 1.3F, 0); ... */" />
-            <marker date="1549133336027" expanded="false" signature="350:1208" ph="/* private void RandomSpawn(GameObject objectToSpawn, int count, float selfX, float byX) ... */" />
+            <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
+            <marker date="1549117898369" expanded="true" signature="124:420" ph="{...}" />
+            <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
+            <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
           </folding>
         </state>
       </provider>
