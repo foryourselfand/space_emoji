@@ -6,20 +6,35 @@ public class PlacingManager : MonoBehaviour
 {
     public GameObject BuildingsHolder;
     public GameObject TreesHolder;
+    public GameObject AnimalsHolder;
 
     private GameObject[] _buildingsSprites;
     private GameObject[] _treesSprites;
+    private GameObject[] _animalsSprites;
 
     private void Awake()
     {
         _buildingsSprites = GameObject.FindGameObjectsWithTag("Building");
         _treesSprites = GameObject.FindGameObjectsWithTag("Tree");
+        _animalsSprites = GameObject.FindGameObjectsWithTag("Animal");
     }
 
     private void Start()
     {
+        PlaceAll();
+    }
+
+    private void PlaceAll()
+    {
         PlaceSpritesFromHolder(BuildingsHolder, _buildingsSprites);
         PlaceSpritesFromHolder(TreesHolder, _treesSprites);
+        PlaceSpritesFromHolder(AnimalsHolder, _animalsSprites);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            PlaceAll();
     }
 
     public void PlaceSpritesFromHolder(GameObject holdingObject, GameObject[] spritesToPlace)
@@ -40,5 +55,7 @@ public class PlacingManager : MonoBehaviour
                 tempSprite.SetActive(false);
             }
         }
+
+        chosenHolder.ResetToDefault();
     }
 }
