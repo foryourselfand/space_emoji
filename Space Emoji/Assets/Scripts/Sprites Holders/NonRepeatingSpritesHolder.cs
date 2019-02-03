@@ -6,12 +6,12 @@ public class NonRepeatingSpritesHolder : SpritesHolder
 {
     private List<Sprite> _nonRepeatingSprites;
 
-    private void Start()
+    private void Awake()
     {
         ResetToDefault();
     }
 
-    public Sprite GetNonRepeatingSprite()
+    public override Sprite GetRandomSprite()
     {
         var indexToRemove = GetRandomIndex(_nonRepeatingSprites);
         var spriteToReturn = _nonRepeatingSprites[indexToRemove];
@@ -19,7 +19,7 @@ public class NonRepeatingSpritesHolder : SpritesHolder
         return spriteToReturn;
     }
 
-    public void ResetToDefault()
+    public override void ResetToDefault()
     {
         _nonRepeatingSprites = new List<Sprite>(Sprites);
     }

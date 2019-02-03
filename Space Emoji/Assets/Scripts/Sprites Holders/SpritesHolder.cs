@@ -6,9 +6,13 @@ public class SpritesHolder : MonoBehaviour
 {
     [SerializeField] protected List<Sprite> Sprites;
 
-    public Sprite GetRandomSprite()
+    public virtual Sprite GetRandomSprite()
     {
         return Sprites[GetRandomIndex(Sprites)];
+    }
+
+    public virtual void ResetToDefault()
+    {
     }
 
     protected int GetRandomIndex(List<Sprite> sprites)
