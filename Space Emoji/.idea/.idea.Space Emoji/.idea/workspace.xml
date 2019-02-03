@@ -24,12 +24,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34aef147-78a7-4b4e-a8a1-a3f290331d22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NonRepeatingSpritesHolder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NonRepeatingSpritesHolder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpritesHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpritesHolder.cs.meta" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,45 +44,62 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="2" />
+          <entry key="cs" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="2" />
+          <entry key="C#" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1520" />
+          <entry key="cs" value="2314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1520" />
+          <entry key="C#" value="2314" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpritesHolder.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
-                <marker date="1549117898369" expanded="true" signature="124:420" ph="{...}" />
-                <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
-                <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
+                <marker date="1549184644242" expanded="true" signature="6:78" ph="..." />
+                <marker date="1549184644242" expanded="true" signature="122:392" ph="{...}" />
+                <marker date="1549184644242" expanded="true" signature="214:275" ph="{...}" />
+                <marker date="1549184644242" expanded="true" signature="331:390" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/NonRepeatingSpritesHolder.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-24">
+              <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+              <folding>
+                <marker date="1549184750622" expanded="true" signature="6:78" ph="..." />
+                <marker date="1549184750622" expanded="true" signature="134:625" ph="{...}" />
+                <marker date="1549184750622" expanded="true" signature="209:247" ph="{...}" />
+                <marker date="1549184750622" expanded="true" signature="290:519" ph="{...}" />
+                <marker date="1549184750622" expanded="true" signature="553:623" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -92,15 +111,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NonRepeatingSpritesHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpritesHolder.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Test Script.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Manager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NonRepeatingSpritesHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpritesHolder.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +144,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -140,9 +164,7 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,11 +212,12 @@
       <updated>1549112650490</updated>
       <workItem from="1549112653752" duration="6406000" />
       <workItem from="1549128732359" duration="2803000" />
+      <workItem from="1549183394847" duration="1258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9209000" />
+    <option name="totallyTimeSpent" value="10467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -209,7 +232,7 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16148326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16307814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -253,22 +276,30 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpritesHolder.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="300">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <marker date="1549184644242" expanded="true" signature="6:78" ph="..." />
+            <marker date="1549184644242" expanded="true" signature="122:392" ph="{...}" />
+            <marker date="1549184644242" expanded="true" signature="214:275" ph="{...}" />
+            <marker date="1549184644242" expanded="true" signature="331:390" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MultiplySprites.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NonRepeatingSpritesHolder.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="-24">
+          <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
           <folding>
-            <marker date="1549117898369" expanded="true" signature="6:78" ph="..." />
-            <marker date="1549117898369" expanded="true" signature="124:420" ph="{...}" />
-            <marker date="1549117898369" expanded="true" signature="229:298" ph="{...}" />
-            <marker date="1549117898369" expanded="true" signature="333:418" ph="{...}" />
+            <marker date="1549184750622" expanded="true" signature="6:78" ph="..." />
+            <marker date="1549184750622" expanded="true" signature="134:625" ph="{...}" />
+            <marker date="1549184750622" expanded="true" signature="209:247" ph="{...}" />
+            <marker date="1549184750622" expanded="true" signature="290:519" ph="{...}" />
+            <marker date="1549184750622" expanded="true" signature="553:623" ph="{...}" />
           </folding>
         </state>
       </provider>
