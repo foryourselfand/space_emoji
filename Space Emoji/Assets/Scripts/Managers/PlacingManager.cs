@@ -1,40 +1,37 @@
+using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
 
 public class PlacingManager : MonoBehaviour
 {
+    public SpawningManager FlowersSpawner;
+
     public GameObject BuildingsHolder;
     public GameObject TreesHolder;
     public GameObject AnimalsHolder;
+    public GameObject FlowerHolder;
 
     private GameObject[] _buildingsSprites;
     private GameObject[] _treesSprites;
     private GameObject[] _animalsSprites;
+    private GameObject[] _flowersSprites;
 
     private void Awake()
     {
         _buildingsSprites = GameObject.FindGameObjectsWithTag("Building");
         _treesSprites = GameObject.FindGameObjectsWithTag("Tree");
         _animalsSprites = GameObject.FindGameObjectsWithTag("Animal");
+        
+        FlowersSpawner.Spawn();
+        _flowersSprites = FlowersSpawner.Instances.ToArray();
     }
 
-    private void Start()
-    {
-        PlaceAll();
-    }
-
-    private void PlaceAll()
+    public void PlaceAll()
     {
         PlaceSpritesFromHolder(BuildingsHolder, _buildingsSprites);
         PlaceSpritesFromHolder(TreesHolder, _treesSprites);
         PlaceSpritesFromHolder(AnimalsHolder, _animalsSprites);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            PlaceAll();
+        PlaceSpritesFromHolder(FlowerHolder, _flowersSprites);
     }
 
     public void PlaceSpritesFromHolder(GameObject holdingObject, GameObject[] spritesToPlace)
@@ -45,15 +42,8 @@ public class PlacingManager : MonoBehaviour
 
         foreach (var tempSprite in spritesToPlace)
         {
-            if (Random.Range(0, 2) == 0)
-            {
-                tempSprite.SetActive(true);
-                tempSprite.GetComponent<SpriteRenderer>().sprite = chosenHolder.GetRandomSprite();
-            }
-            else
-            {
-                tempSprite.SetActive(false);
-            }
+            tempSprite.GetComponent<SpriteRenderer>().sprite = chosenHolder.GetRandomSprite();
+            tempSprite.SetActive(Random.Range(0, 2) == 0);
         }
 
         chosenHolder.ResetToDefault();
