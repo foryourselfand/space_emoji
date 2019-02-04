@@ -11,7 +11,6 @@ public class Spawning : IExecutable
         for (var i = 0; i < SpawnCount; i++)
         {
             var instance = Instantiate(Prefab, Family.Parent.transform);
-            instance.transform.localPosition = new Vector2(Random.Range(-2.5F, 2.5F), Random.Range(-4.5F, -2F));
             instance.transform.parent = Family.Parent.transform;
         }
 

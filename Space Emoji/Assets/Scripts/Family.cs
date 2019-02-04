@@ -6,7 +6,7 @@ public class Family : MonoBehaviour
     [HideInInspector] public GameObject Parent;
     [HideInInspector] public List<GameObject> Childs;
 
-    private void Awake()
+    public void DefineParent()
     {
         Parent = gameObject;
     }

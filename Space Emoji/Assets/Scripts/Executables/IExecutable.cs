@@ -8,6 +8,7 @@ public abstract class IExecutable : MonoBehaviour
 
     private void Awake()
     {
+        Family.DefineParent();
         SaveChilds();
     }
 
