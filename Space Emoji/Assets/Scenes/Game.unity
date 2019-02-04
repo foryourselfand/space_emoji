@@ -408,8 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23de0035254e4f66803f06d837d95e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Family: {fileID: 1977135915}
   Holder: {fileID: 1389120245}
-  Parent: {fileID: 1977135913}
 --- !u!1 &231407581
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,9 +662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4d888a14c945e0b970442b1e857e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Family: {fileID: 1620522530}
   Prefab: {fileID: 1297758189377792, guid: fe92bb5b7d29d4f76aea72f52ea5e421, type: 2}
-  Parent: {fileID: 1620522528}
-  SpawnCount: 100
+  SpawnCount: 200
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,8 +1293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23de0035254e4f66803f06d837d95e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Family: {fileID: 1705661644}
   Holder: {fileID: 2147481449}
-  Parent: {fileID: 1705661642}
 --- !u!1 &1009410147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,13 +1410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae1219a6a9140658e92815727e9f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawnings:
-  - {fileID: 496677877}
-  Placings:
-  - {fileID: 974682634}
-  - {fileID: 1717206850}
-  - {fileID: 138946220}
-  - {fileID: 1614486988}
+  SpawningParent: {fileID: 1221603485}
+  SpritingParent: {fileID: 1946280989}
 --- !u!1 &1059030165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320620349}
+  - component: {fileID: 1320620350}
   m_Layer: 0
   m_Name: Trees Parent
   m_TagString: Untagged
@@ -1688,6 +1684,19 @@ Transform:
   m_Father: {fileID: 841538341}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320620350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320620348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf2b20191444e78874f35f4a9e0fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
+  Childs: []
 --- !u!1 &1389120245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,8 +1920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23de0035254e4f66803f06d837d95e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Family: {fileID: 1620522530}
   Holder: {fileID: 79966196}
-  Parent: {fileID: 1620522528}
 --- !u!1 &1620522528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1620522529}
+  - component: {fileID: 1620522530}
   m_Layer: 0
   m_Name: Flowers Parent
   m_TagString: Untagged
@@ -1941,6 +1951,19 @@ Transform:
   m_Father: {fileID: 841538341}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1620522530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620522528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf2b20191444e78874f35f4a9e0fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
+  Childs: []
 --- !u!1 &1678249700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,6 +2047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1705661643}
+  - component: {fileID: 1705661644}
   m_Layer: 0
   m_Name: Buildings Parent
   m_TagString: Untagged
@@ -2046,6 +2070,19 @@ Transform:
   m_Father: {fileID: 841538341}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705661644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1705661642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf2b20191444e78874f35f4a9e0fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
+  Childs: []
 --- !u!1 &1717206848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,8 +2123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23de0035254e4f66803f06d837d95e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Family: {fileID: 1320620350}
   Holder: {fileID: 1123646907}
-  Parent: {fileID: 1320620348}
 --- !u!1 &1719885234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946280990}
   m_Layer: 0
-  m_Name: Placings
+  m_Name: Spriting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2203,6 +2240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1977135914}
+  - component: {fileID: 1977135915}
   m_Layer: 0
   m_Name: Animals Parent
   m_TagString: Untagged
@@ -2229,6 +2267,19 @@ Transform:
   m_Father: {fileID: 841538341}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977135915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977135913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf2b20191444e78874f35f4a9e0fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
+  Childs: []
 --- !u!1 &1988023216
 GameObject:
   m_ObjectHideFlags: 0

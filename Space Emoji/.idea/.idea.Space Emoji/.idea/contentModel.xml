@@ -6,10 +6,13 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Executables" t="Include">
-            <e p="Executable.cs" t="Include" />
-            <e p="Placing.cs" t="Include" />
+            <e p="Activating.cs" t="Include" />
+            <e p="IExecutable.cs" t="Include" />
+            <e p="Positioning.cs" t="Include" />
             <e p="Spawning.cs" t="Include" />
+            <e p="Spriting.cs" t="Include" />
           </e>
+          <e p="Family.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Helper.cs" t="Include" />
           <e p="Sprites Holders" t="Include">

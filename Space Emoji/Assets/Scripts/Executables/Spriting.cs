@@ -1,17 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Placing : Executable
+public class Spriting : IExecutable
 {
     public GameObject Holder;
-    public GameObject Parent;
-
-    private List<GameObject> _sprites;
-
-    public void SaveChildrensFromParent()
-    {
-        _sprites = Helper.GetChildsFromParent(Parent);
-    }
 
     public override void Execute()
     {
@@ -19,11 +11,8 @@ public class Placing : Executable
         var index = Random.Range(0, holders.Length);
         var chosenHolder = holders[index];
 
-        foreach (var tempSprite in _sprites)
-        {
+        foreach (var tempSprite in Family.Childs)
             tempSprite.GetComponent<SpriteRenderer>().sprite = chosenHolder.GetRandomSprite();
-            tempSprite.SetActive(Random.Range(0, 2) == 0);
-        }
 
         chosenHolder.ResetToDefault();
     }
