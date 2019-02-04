@@ -5,15 +5,13 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Executable.cs" t="Include" />
-          <e p="Helper.cs" t="Include" />
-          <e p="Managers" t="Include">
-            <e p="GameManager.cs" t="Include" />
-            <e p="PlacingManager.cs" t="Include" />
-            <e p="SpawnersManager.cs" t="Include" />
+          <e p="Executables" t="Include">
+            <e p="Executable.cs" t="Include" />
+            <e p="Placing.cs" t="Include" />
+            <e p="Spawning.cs" t="Include" />
           </e>
-          <e p="Placer.cs" t="Include" />
-          <e p="Spawner.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="Helper.cs" t="Include" />
           <e p="Sprites Holders" t="Include">
             <e p="NonRepeatingSpritesHolder.cs" t="Include" />
             <e p="SpritesHolder.cs" t="Include" />

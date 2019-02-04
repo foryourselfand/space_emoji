@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Placer : MonoBehaviour
+public class Placing : Executable
 {
     public GameObject Holder;
     public GameObject Parent;
 
     private List<GameObject> _sprites;
 
-    private void Awake()
+    public void SaveChildrensFromParent()
     {
         _sprites = Helper.GetChildsFromParent(Parent);
     }
 
-    public void PlaceSpritesFromHolder()
+    public override void Execute()
     {
         var holders = Holder.GetComponents<SpritesHolder>();
         var index = Random.Range(0, holders.Length);
