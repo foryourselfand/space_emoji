@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public SpawnersManager SpawnersManager;
     public PlacingManager PlacingManager;
 
     private void Start()
     {
-        PlacingManager.PlaceAll();
+        ActionAll();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            PlacingManager.PlaceAll();
+            ActionAll();
+    }
+
+    private void ActionAll()
+    {
+        SpawnersManager.SpawnAll();
+        PlacingManager.PlaceAll();   
     }
 }

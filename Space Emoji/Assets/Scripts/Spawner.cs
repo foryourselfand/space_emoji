@@ -3,25 +3,30 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _prefab;
-    [SerializeField] private GameObject _parent;
-    [SerializeField] private int _spawnCount;
+    public GameObject Prefab;
+    public GameObject Parent;
+    public int SpawnCount;
 
-    public List<GameObject> Instances { private set; get; }
+    private List<GameObject> _instances;
+
+    public List<GameObject> Instances
+    {
+        get { return _instances; }
+    }
 
     private void Awake()
     {
-        Instances = new List<GameObject>();
+        _instances = new List<GameObject>();
     }
 
     public void Spawn()
     {
-        for (var i = 0; i < _spawnCount; i++)
+        for (var i = 0; i < SpawnCount; i++)
         {
-            var instance = Instantiate(_prefab, _parent.transform);
-            instance.transform.localPosition = new Vector2(Random.Range(-2.5F, 2.5F), Random.Range(-4.5F, -2F)); 
-            instance.transform.parent = _parent.transform;
-            Instances.Add(instance);
+            var instance = Instantiate(Prefab, Parent.transform);
+            instance.transform.localPosition = new Vector2(Random.Range(-2.5F, 2.5F), Random.Range(-4.5F, -2F));
+            instance.transform.parent = Parent.transform;
+            _instances.Add(instance);
         }
     }
 }
