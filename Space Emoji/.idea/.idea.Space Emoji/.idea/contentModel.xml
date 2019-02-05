@@ -7,8 +7,10 @@
         <e p="Scripts" t="Include">
           <e p="Executables" t="Include">
             <e p="Activating.cs" t="Include" />
+            <e p="Flipping.cs" t="Include" />
             <e p="IExecutable.cs" t="Include" />
             <e p="Positioning.cs" t="Include" />
+            <e p="Rotating.cs" t="Include" />
             <e p="Spawning.cs" t="Include" />
             <e p="Spriting.cs" t="Include" />
           </e>
