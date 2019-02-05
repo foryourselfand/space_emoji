@@ -7,9 +7,7 @@ public class Activating : IExecutable
 
     public override void Execute()
     {
-        foreach (var children in Family.Childs)
-        {
+        foreach (var children in Family.Children)
             children.SetActive(Random.Range(0, UpperRange) == 0);
-        }
     }
 }

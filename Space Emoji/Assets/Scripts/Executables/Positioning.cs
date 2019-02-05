@@ -7,12 +7,10 @@ public class Positioning : IExecutable
 
     public override void Execute()
     {
-        foreach (var children in Family.Childs)
-        {
+        foreach (var children in Family.Children)
             children.transform.localPosition = new Vector2(
                 Random.Range(UpLeft.x, DownRight.x),
                 Random.Range(UpLeft.y, DownRight.y)
             );
-        }
     }
 }

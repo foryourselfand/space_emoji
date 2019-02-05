@@ -14,6 +14,6 @@ public abstract class IExecutable : MonoBehaviour
 
     protected void SaveChilds()
     {
-        Family.Childs = Helper.GetChildsFromParent(Family.Parent);
+        Family.Children = Helper.GetChildrenFromParent(Family.Parent);
     }
 }

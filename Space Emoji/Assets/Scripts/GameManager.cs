@@ -4,38 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject SpawningParent;
-    public GameObject PositioningParent;
-    public GameObject SpritingParent;
-    public GameObject ActivatingParent;
+    public GameObject ExecutingOnce;
+    public GameObject ExecutingAllTime;
 
-    private List<IExecutable> _spawnings;
-    private List<IExecutable> _positionings;
-    private List<IExecutable> _spritings;
-    private List<IExecutable> _activating;
+    private List<IExecutable> _executableOnce;
+    private List<IExecutable> _executableAllTime;
 
     private void Awake()
     {
-        _spawnings = Helper.GetChildsFromParent<IExecutable>(SpawningParent);
-        _positionings = Helper.GetChildsFromParent<IExecutable>(PositioningParent);
-        _spritings = Helper.GetChildsFromParent<IExecutable>(SpritingParent);
-        _activating = Helper.GetChildsFromParent<IExecutable>(ActivatingParent);
+        _executableOnce = Helper.GetFilled(ExecutingOnce);
+        _executableAllTime = Helper.GetFilled(ExecutingAllTime);
     }
 
     private void Start()
     {
-        ExecuteAll(_spawnings);
-        ExecuteAll(_positionings);
-        ExecuteAll(_spritings);
-        ExecuteAll(_activating);
+        ExecuteAll(_executableOnce);
+        ExecuteAll(_executableAllTime);
     }
 
     private void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Space)) return;
-        ExecuteAll(_spritings);
-        ExecuteAll(_positionings);
-        ExecuteAll(_activating);
+        if (Input.GetKeyDown(KeyCode.Space)) ExecuteAll(_executableAllTime);
     }
 
     private static void ExecuteAll(List<IExecutable> executables)
