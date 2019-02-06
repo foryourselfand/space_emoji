@@ -7,6 +7,11 @@ public class GameCycle : MonoBehaviour
 
     public WaiterGroup MenuButtons;
 
+    public OpacityChanger Sky;
+
+    public PositionChanger SpaceParent;
+    public PositionChanger GroundParent;
+
     private void Start()
     {
         CanClick = false;
@@ -20,9 +25,10 @@ public class GameCycle : MonoBehaviour
 
     public void OffGround()
     {
-        // 
+        Sky.SetCurrentAndTarget(1, 0);
+        SpaceParent.SetTarget(new Vector2(0, -10));
+        GroundParent.SetTarget(new Vector2(0, -10));
     }
-
 
     private IEnumerator TriggerMenuButtons()
     {
