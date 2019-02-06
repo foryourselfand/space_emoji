@@ -14,7 +14,7 @@ public class Flipping : IExecutable
         foreach (var child in Family.Children)
         {
             var temp = _startScale;
-            temp.x = Random.Range(0, 2) == 0 ? _startScale.x : -_startScale.x;
+            temp.x *= Random.Range(0, 2) == 0 ? 1 : -1;
             child.transform.localScale = temp;
         }
     }

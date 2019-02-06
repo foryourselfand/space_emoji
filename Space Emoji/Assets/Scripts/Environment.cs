@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvironmentChanger : MonoBehaviour
+public class Environment : MonoBehaviour
 {
     public GameObject ExecutingOnce;
     public GameObject ExecutingAllTime;
@@ -22,9 +22,9 @@ public class EnvironmentChanger : MonoBehaviour
         ExecuteAll(_executableAllTime);
     }
 
-    private void Update()
+    public void RefreshAction()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) ExecuteAll(_executableAllTime);
+        ExecuteAll(_executableAllTime);
     }
 
     private static void ExecuteAll(List<IExecutable> executables)

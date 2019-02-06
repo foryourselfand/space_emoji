@@ -1,18 +1,19 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SoundClicker : Clickable
+public class SoundClicker : MonoBehaviour
 {
     public Sprite OnSprite;
     public Sprite OffSprite;
 
-    private SpriteRenderer _spriteRenderer;
+    private Image _image;
 
     private string _soundState;
 
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _image = GetComponent<Image>();
     }
 
     private void Start()
@@ -21,7 +22,7 @@ public class SoundClicker : Clickable
         ChangeSprite();
     }
 
-    public override void ActionOnClick()
+    public void ActionOnClick()
     {
         _soundState = _soundState.Equals("On") ? "Off" : "On";
         ChangeSprite();
@@ -29,7 +30,7 @@ public class SoundClicker : Clickable
 
     private void ChangeSprite()
     {
-        _spriteRenderer.sprite = _soundState.Equals("On") ? OffSprite : OnSprite;
+        _image.sprite = _soundState.Equals("On") ? OffSprite : OnSprite;
         PlayerPrefs.SetString("Sound", _soundState);
     }
 }

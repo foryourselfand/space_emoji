@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class Activating : IExecutable
 {
-    public int UpperRange;
+    public int Probability;
+    public int UpperBound;
 
     public override void Execute()
     {
         foreach (var children in Family.Children)
-            children.SetActive(Random.Range(0, UpperRange) == 0);
+            children.SetActive(Random.Range(0, UpperBound) - Probability < 0);
     }
 }
