@@ -5,17 +5,17 @@ public class GameCycle : MonoBehaviour
 {
     public static bool CanClick;
 
-    public ButtonsParent ButtonsParent;
+    public WaiterGroup WaiterGroup;
 
     private void Start()
     {
         CanClick = false;
-        StartCoroutine(ShowButtons());
+        StartCoroutine(TriggerButtons());
     }
 
-    private IEnumerator ShowButtons()
+    private IEnumerator TriggerButtons()
     {
-        yield return ButtonsParent.ShowButtons();
-        Debug.Log("END");
+        yield return WaiterGroup.Trigger();
+        CanClick = true;
     }
 }

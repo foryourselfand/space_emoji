@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SoundClicker : MonoBehaviour
+public class SoundClicker : Clicker
 {
     public Sprite OnSprite;
     public Sprite OffSprite;
@@ -22,7 +22,7 @@ public class SoundClicker : MonoBehaviour
         ChangeSprite();
     }
 
-    public void ActionOnClick()
+    protected override void Click()
     {
         _soundState = _soundState.Equals("On") ? "Off" : "On";
         ChangeSprite();

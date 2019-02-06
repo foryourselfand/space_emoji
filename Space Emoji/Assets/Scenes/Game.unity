@@ -146,10 +146,10 @@ RectTransform:
   m_Father: {fileID: 1739143029}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 150, y: -498}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20046322
 MonoBehaviour:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987cdbc8244649eb8825299a99fb69f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Speed: 10
 --- !u!114 &20046323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 20046326}
-        m_MethodName: ActionOnClick
+        m_MethodName: ClickIfCan
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7416905af8ba4ffdb5e07a174fbc950a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonsParent: {fileID: 1739143030}
+  WaiterGroup: {fileID: 1739143030}
 --- !u!4 &354089070
 Transform:
   m_ObjectHideFlags: 0
@@ -1964,10 +1964,10 @@ RectTransform:
   m_Father: {fileID: 1739143029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -500}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609616952
 MonoBehaviour:
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987cdbc8244649eb8825299a99fb69f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Speed: 10
 --- !u!114 &609616953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4697,7 +4697,7 @@ GameObject:
   - component: {fileID: 1739143029}
   - component: {fileID: 1739143030}
   m_Layer: 5
-  m_Name: Buttons Parent
+  m_Name: Buttons Waiter Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4735,7 +4735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6c730e6e534eb6ac82862d88a74b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToWait: 0.1
+  TimeToWait: 0.05
 --- !u!1 &1769367343
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,10 +4810,10 @@ RectTransform:
   m_Father: {fileID: 1739143029}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -150, y: -500}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829767618
 MonoBehaviour:
@@ -4826,7 +4826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987cdbc8244649eb8825299a99fb69f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Speed: 10
 --- !u!114 &1829767619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4867,7 +4867,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1829767622}
-        m_MethodName: ActionOnClick
+        m_MethodName: ClickIfCan
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

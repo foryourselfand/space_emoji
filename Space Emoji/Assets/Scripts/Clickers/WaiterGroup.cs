@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonsParent : MonoBehaviour
+public class WaiterGroup : MonoBehaviour
 {
     public float TimeToWait;
 
     private List<ScaleChanger> _buttons;
+
+    private ScaleType _scaleType;
 
     private void Awake()
     {
@@ -17,17 +19,20 @@ public class ButtonsParent : MonoBehaviour
     {
         foreach (var button in _buttons)
             button.SetCurrent(Vector3.zero);
+        _scaleType = ScaleType.Up;
     }
 
-    public IEnumerator ShowButtons()
+    public IEnumerator Trigger()
     {
         foreach (var button in _buttons)
         {
-            button.SetTargetAndAction(ScaleChanger.ScaleType.Up);
+            button.SetTargetAndAction(_scaleType);
             yield return new WaitForSeconds(TimeToWait);
         }
 
         foreach (var button in _buttons)
             yield return new WaitUntil(button.IsDone);
+        _buttons.Reverse();
+        _scaleType = _scaleType == ScaleType.Up ? ScaleType.Down : ScaleType.Up;
     }
 }

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class RefreshClicker : MonoBehaviour
+public class RefreshClicker : Clicker
 {
     public Environment Environment;
 
-    public void ActionOnClick()
+    protected override void Click()
     {
         Environment.RefreshAction();
     }

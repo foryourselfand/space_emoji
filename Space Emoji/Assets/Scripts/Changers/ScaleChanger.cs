@@ -37,10 +37,4 @@ public class ScaleChanger : Changer
         _target = type == ScaleType.Up ? _upBound : Vector3.zero;
         StartChanging();
     }
-
-    public enum ScaleType
-    {
-        Up,
-        Down
-    }
 }

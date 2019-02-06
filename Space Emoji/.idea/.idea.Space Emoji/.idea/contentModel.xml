@@ -8,11 +8,13 @@
           <e p="Changers" t="Include">
             <e p="Changer.cs" t="Include" />
             <e p="ScaleChanger.cs" t="Include" />
+            <e p="ScaleType.cs" t="Include" />
           </e>
           <e p="Clickers" t="Include">
-            <e p="ButtonsParent.cs" t="Include" />
+            <e p="Clicker.cs" t="Include" />
             <e p="RefreshClicker.cs" t="Include" />
             <e p="SoundClicker.cs" t="Include" />
+            <e p="WaiterGroup.cs" t="Include" />
           </e>
           <e p="Environment.cs" t="Include" />
           <e p="Executables" t="Include">
