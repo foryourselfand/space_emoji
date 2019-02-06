@@ -41,7 +41,7 @@
     <session id="1581469682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -109,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameCycle.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+            <state relative-caret-position="450">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <marker date="1549467400333" expanded="true" signature="6:44" ph="..." />
                 <marker date="1549467400333" expanded="true" signature="84:773" ph="{...}" />
@@ -438,12 +438,12 @@
       <workItem from="1549278604530" duration="11340000" />
       <workItem from="1549369984369" duration="5062000" />
       <workItem from="1549452312687" duration="670000" />
-      <workItem from="1549453437817" duration="10673000" />
+      <workItem from="1549453437817" duration="10909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42200000" />
+    <option name="totallyTimeSpent" value="42436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -878,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameCycle.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        <state relative-caret-position="450">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <marker date="1549467400333" expanded="true" signature="6:44" ph="..." />
             <marker date="1549467400333" expanded="true" signature="84:773" ph="{...}" />

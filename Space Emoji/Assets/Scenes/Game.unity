@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcfb2ae68fa94a669219efb5598a89cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 2
 --- !u!1 &297833595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,8 +1238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuButtons: {fileID: 1739143030}
   Sky: {fileID: 297833598}
-  SpaceParent: {fileID: 0}
-  GroundParent: {fileID: 0}
+  SpaceParent: {fileID: 291970958}
+  GroundParent: {fileID: 841538342}
 --- !u!4 &354089070
 Transform:
   m_ObjectHideFlags: 0
@@ -1628,7 +1628,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0.5019608, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -2497,7 +2497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcfb2ae68fa94a669219efb5598a89cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 2
 --- !u!1 &854470197
 GameObject:
   m_ObjectHideFlags: 0
