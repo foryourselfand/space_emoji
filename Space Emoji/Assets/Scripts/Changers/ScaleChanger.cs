@@ -8,7 +8,7 @@ public class ScaleChanger : Changer
 
     private void Awake()
     {
-        _transformRef = GetComponent<RectTransform>();
+        _transformRef = GetComponent<Transform>();
         _upBound = _transformRef.localScale;
     }
 

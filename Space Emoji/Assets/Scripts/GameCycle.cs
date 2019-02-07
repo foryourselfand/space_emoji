@@ -31,6 +31,9 @@ public class GameCycle : MonoBehaviour
     private IEnumerator RocketOnPlace()
     {
         yield return MoversManager.MoveRocket();
+        yield return ButtonsManager.InstructionsAction();
+        yield return new WaitForSeconds(1);
+        yield return ButtonsManager.InstructionsAction();
     }
 
     private IEnumerator MenuButtonsTrigger()
