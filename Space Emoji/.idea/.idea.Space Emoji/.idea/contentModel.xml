@@ -38,6 +38,7 @@
             <e p="ButtonsManager.cs" t="Include" />
             <e p="FadersManager.cs" t="Include" />
             <e p="MoversManager.cs" t="Include" />
+            <e p="SpaceManager.cs" t="Include" />
           </e>
           <e p="Sprites Holders" t="Include">
             <e p="NonRepeatingSpritesHolder.cs" t="Include" />

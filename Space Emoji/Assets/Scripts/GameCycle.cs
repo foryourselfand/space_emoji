@@ -23,8 +23,14 @@ public class GameCycle : MonoBehaviour
 
     public void OffGround()
     {
+        StartCoroutine(RocketOnPlace());
         MoversManager.OffGround();
         FadersManager.SkyOpacityAction();
+    }
+
+    private IEnumerator RocketOnPlace()
+    {
+        yield return MoversManager.MoveRocket();
     }
 
     private IEnumerator MenuButtonsTrigger()
