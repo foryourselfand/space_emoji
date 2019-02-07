@@ -5,34 +5,37 @@ public class GameCycle : MonoBehaviour
 {
     public static bool CanClick;
 
-    public WaiterGroup MenuButtons;
-
-    public OpacityChanger Sky;
-
-    public PositionChanger SpaceParent;
-    public PositionChanger GroundParent;
+    public ButtonsManager ButtonsManager;
+    public MoversManager MoversManager;
+    public FadersManager FadersManager;
 
     private void Start()
     {
         CanClick = false;
-        ShowMenuButtons();
+        StartCoroutine(StartButtons());
     }
 
-    public void ShowMenuButtons()
+    public void HideMenuButtons()
     {
-        StartCoroutine(TriggerMenuButtons());
+        StartCoroutine(MenuButtonsTrigger());
+        CanClick = false;
     }
 
     public void OffGround()
     {
-        Sky.SetCurrentAndTarget(1, 0);
-        SpaceParent.SetTarget(new Vector2(0, -10));
-        GroundParent.SetTarget(new Vector2(0, -10));
+        MoversManager.OffGround();
+        FadersManager.SkyOpacityAction();
     }
 
-    private IEnumerator TriggerMenuButtons()
+    private IEnumerator MenuButtonsTrigger()
     {
-        yield return MenuButtons.Trigger();
-        CanClick = !CanClick;
+        yield return ButtonsManager.MenuButtonsAction();
+    }
+
+    private IEnumerator StartButtons()
+    {
+        yield return ButtonsManager.MenuButtonsAction();
+        yield return ButtonsManager.MenuDone();
+        CanClick = true;
     }
 }

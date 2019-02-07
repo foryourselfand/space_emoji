@@ -30,9 +30,13 @@ public class WaiterGroup : MonoBehaviour
             yield return new WaitForSeconds(TimeToWait);
         }
 
-        foreach (var button in _buttons)
-            yield return new WaitUntil(button.IsDone);
         _buttons.Reverse();
         _scaleType = _scaleType == ScaleType.Up ? ScaleType.Down : ScaleType.Up;
+    }
+
+    public IEnumerator IsDone()
+    {
+        foreach (var button in _buttons)
+            yield return new WaitUntil(button.IsDone);
     }
 }

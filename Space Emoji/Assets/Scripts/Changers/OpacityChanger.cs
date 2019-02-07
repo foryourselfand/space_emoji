@@ -20,6 +20,7 @@ public class OpacityChanger : Changer
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _current = _spriteRenderer.color.a;
     }
 
     private void SetOpacityRef(float current)

@@ -14,6 +14,7 @@
           </e>
           <e p="Clickers" t="Include">
             <e p="Clicker.cs" t="Include" />
+            <e p="PlayClicker.cs" t="Include" />
             <e p="RefreshClicker.cs" t="Include" />
             <e p="SoundClicker.cs" t="Include" />
             <e p="WaiterGroup.cs" t="Include" />
@@ -33,6 +34,11 @@
           </e>
           <e p="GameCycle.cs" t="Include" />
           <e p="Helper.cs" t="Include" />
+          <e p="Managers" t="Include">
+            <e p="ButtonsManager.cs" t="Include" />
+            <e p="FadersManager.cs" t="Include" />
+            <e p="MoversManager.cs" t="Include" />
+          </e>
           <e p="Sprites Holders" t="Include">
             <e p="NonRepeatingSpritesHolder.cs" t="Include" />
             <e p="SpritesHolder.cs" t="Include" />
