@@ -24,6 +24,7 @@
             <e p="Family.cs" t="Include" />
             <e p="Flipping.cs" t="Include" />
             <e p="IExecutable.cs" t="Include" />
+            <e p="Opaciting.cs" t="Include" />
             <e p="Positioning.cs" t="Include" />
             <e p="Rotating.cs" t="Include" />
             <e p="Scaling.cs" t="Include" />
