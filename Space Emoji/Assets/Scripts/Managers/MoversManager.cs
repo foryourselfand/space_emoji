@@ -17,7 +17,7 @@ public class MoversManager : MonoBehaviour
     {
         Rocket.SetTarget(new Vector2(0, 1.66F));
         yield return new WaitUntil(Rocket.IsDone);
-        Rocket.SetTarget(new Vector2(0, -1.66F));
+        Rocket.SetTarget(new Vector2(0, -2.32F));
         yield return new WaitUntil(Rocket.IsDone);
     }
 }
