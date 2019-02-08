@@ -12,12 +12,12 @@ public class GameCycle : MonoBehaviour
     private void Start()
     {
         CanClick = false;
-        StartCoroutine(StartButtons());
+        StartCoroutine(GroundUp());
     }
 
     public void HideMenuButtons()
     {
-        StartCoroutine(MenuButtonsTrigger());
+        StartCoroutine(MenuButtonsAction());
         CanClick = false;
     }
 
@@ -28,21 +28,27 @@ public class GameCycle : MonoBehaviour
         FadersManager.SkyOpacityAction();
     }
 
+    private IEnumerator GroundUp()
+    {
+        yield return MoversManager.GroundUp();
+        yield return ShowMenuButtons();
+    }
+
+    private IEnumerator ShowMenuButtons()
+    {
+        yield return ButtonsManager.MenuButtonsAction();
+        yield return ButtonsManager.MenuDone();
+        CanClick = true;
+    }
+
     private IEnumerator RocketOnPlace()
     {
         yield return MoversManager.MoveRocket();
         yield return ButtonsManager.InstructionsAction();
     }
 
-    private IEnumerator MenuButtonsTrigger()
+    private IEnumerator MenuButtonsAction()
     {
         yield return ButtonsManager.MenuButtonsAction();
-    }
-
-    private IEnumerator StartButtons()
-    {
-        yield return ButtonsManager.MenuButtonsAction();
-        yield return ButtonsManager.MenuDone();
-        CanClick = true;
     }
 }

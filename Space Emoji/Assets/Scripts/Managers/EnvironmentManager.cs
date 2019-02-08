@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Environment : MonoBehaviour
+public class EnvironmentManager : MonoBehaviour
 {
     public GameObject ExecutingOnce;
     public GameObject ExecutingAllTime;

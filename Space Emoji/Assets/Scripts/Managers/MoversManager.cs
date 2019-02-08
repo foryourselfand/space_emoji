@@ -7,6 +7,14 @@ public class MoversManager : MonoBehaviour
     public PositionChanger GroundParent;
     public SpaceManager SpaceManager;
 
+    public IEnumerator GroundUp()
+    {
+        GroundParent.transform.localPosition = new Vector2(0, -4);
+        GroundParent.SetTarget(new Vector2(0, 4));
+        yield return new WaitUntil(GroundParent.IsDone);
+        Rocket.transform.parent = GroundParent.transform.parent;
+    }
+
     public void OffGround()
     {
         SpaceManager.StartMove();

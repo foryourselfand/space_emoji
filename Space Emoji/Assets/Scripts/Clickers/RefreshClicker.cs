@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class RefreshClicker : Clicker
 {
-    public Environment Environment;
+    public EnvironmentManager EnvironmentManager;
 
     protected override void Click()
     {
-        Environment.RefreshAction();
+        EnvironmentManager.RefreshAction();
     }
 }

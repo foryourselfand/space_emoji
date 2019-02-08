@@ -19,7 +19,6 @@
             <e p="SoundClicker.cs" t="Include" />
             <e p="WaiterGroup.cs" t="Include" />
           </e>
-          <e p="Environment.cs" t="Include" />
           <e p="Executables" t="Include">
             <e p="Activating.cs" t="Include" />
             <e p="Family.cs" t="Include" />
@@ -36,6 +35,7 @@
           <e p="Helper.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="ButtonsManager.cs" t="Include" />
+            <e p="EnvironmentManager.cs" t="Include" />
             <e p="FadersManager.cs" t="Include" />
             <e p="MoversManager.cs" t="Include" />
             <e p="SpaceManager.cs" t="Include" />
