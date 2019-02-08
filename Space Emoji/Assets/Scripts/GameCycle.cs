@@ -5,20 +5,23 @@ public class GameCycle : MonoBehaviour
 {
     public static bool CanClick;
 
-    public ButtonsManager ButtonsManager;
+    public EnvironmentManager EnvironmentManager;
     public MoversManager MoversManager;
+    public ButtonsManager ButtonsManager;
     public FadersManager FadersManager;
 
     private void Start()
     {
         CanClick = false;
+        EnvironmentManager.RefreshOnStart();
         StartCoroutine(GroundUp());
     }
 
     public void HideMenuButtons()
     {
-        StartCoroutine(MenuButtonsAction());
         CanClick = false;
+        EnvironmentManager.RefreshStars();
+        StartCoroutine(MenuButtonsAction());
     }
 
     public void OffGround()
@@ -30,6 +33,7 @@ public class GameCycle : MonoBehaviour
 
     private IEnumerator GroundUp()
     {
+        EnvironmentManager.RefreshEnvironment();
         yield return MoversManager.GroundUp();
         yield return ShowMenuButtons();
     }

@@ -1,30 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class EnvironmentManager : MonoBehaviour
 {
     public GameObject ExecutingOnce;
     public GameObject ExecutingAllTime;
+    public GameObject ExecutingStars;
 
     private List<IExecutable> _executableOnce;
     private List<IExecutable> _executableAllTime;
+    private List<IExecutable> _executableStars;
 
     private void Awake()
     {
         _executableOnce = Helper.GetFilled(ExecutingOnce);
         _executableAllTime = Helper.GetFilled(ExecutingAllTime);
+        _executableStars = Helper.GetFilled(ExecutingStars);
     }
 
-    private void Start()
+    public void RefreshOnStart()
     {
         ExecuteAll(_executableOnce);
+    }
+
+    public void RefreshEnvironment()
+    {
         ExecuteAll(_executableAllTime);
     }
 
-    public void RefreshAction()
+    public void RefreshStars()
     {
-        ExecuteAll(_executableAllTime);
+        ExecuteAll(_executableStars);
     }
 
     private static void ExecuteAll(List<IExecutable> executables)

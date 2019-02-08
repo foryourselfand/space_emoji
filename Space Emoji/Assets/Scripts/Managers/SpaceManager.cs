@@ -11,7 +11,7 @@ public class SpaceManager : MonoBehaviour
         StartCoroutine(Move(ParentSecond, -20));
     }
 
-    public IEnumerator Move(PositionChanger parent, float byY)
+    private IEnumerator Move(PositionChanger parent, float byY)
     {
         parent.SetTarget(new Vector2(0, byY));
         yield return new WaitUntil(parent.IsDone);

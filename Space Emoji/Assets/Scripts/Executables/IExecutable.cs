@@ -9,10 +9,10 @@ public abstract class IExecutable : MonoBehaviour
     private void Awake()
     {
         Family.DefineParent();
-        SaveChilds();
+        SaveChildren();
     }
 
-    protected void SaveChilds()
+    protected void SaveChildren()
     {
         Family.Children = Helper.GetChildrenFromParent(Family.Parent);
     }

@@ -6,6 +6,6 @@ public class RefreshClicker : Clicker
 
     protected override void Click()
     {
-        EnvironmentManager.RefreshAction();
+        EnvironmentManager.RefreshEnvironment();
     }
 }

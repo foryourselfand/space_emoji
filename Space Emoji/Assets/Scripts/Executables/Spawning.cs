@@ -14,6 +14,6 @@ public class Spawning : IExecutable
             instance.transform.parent = Family.Parent.transform;
         }
 
-        SaveChilds();
+        SaveChildren();
     }
 }
