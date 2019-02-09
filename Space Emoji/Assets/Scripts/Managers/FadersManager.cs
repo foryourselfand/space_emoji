@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class FadersManager : MonoBehaviour
 {
-    public OpacityChanger Sky;
+    public OpacityChanger sky;
 
     public void SkyOpacityAction()
     {
-        Sky.SetTarget(0);
+        sky.SetTarget(0);
     }
 }

@@ -3,29 +3,29 @@ using UnityEngine;
 
 public class MoversManager : MonoBehaviour
 {
-    public PositionChanger Rocket;
-    public PositionChanger GroundParent;
-    public SpaceManager SpaceManager;
+    public PositionChanger rocket;
+    public PositionChanger groundParent;
+    public SpaceManager spaceManager;
 
     public IEnumerator GroundUp()
     {
-        GroundParent.transform.localPosition = new Vector2(0, -4);
-        GroundParent.SetTarget(new Vector2(0, 4));
-        yield return new WaitUntil(GroundParent.IsDone);
-        Rocket.transform.parent = GroundParent.transform.parent;
+        groundParent.transform.localPosition = new Vector2(0, -4);
+        groundParent.SetTarget(new Vector2(0, 4));
+        yield return new WaitUntil(groundParent.IsDone);
+        rocket.transform.parent = groundParent.transform.parent;
     }
 
     public void OffGround()
     {
-        SpaceManager.StartMove();
-        GroundParent.SetTarget(new Vector2(0, -4));
+        spaceManager.StartMove();
+        groundParent.SetTarget(new Vector2(0, -4));
     }
 
     public IEnumerator MoveRocket()
     {
-        Rocket.SetTarget(new Vector2(0, 1.66F));
-        yield return new WaitUntil(Rocket.IsDone);
-        Rocket.SetTarget(new Vector2(0, -2.32F));
-        yield return new WaitUntil(Rocket.IsDone);
+        rocket.SetTarget(new Vector2(0, 1.66F));
+        yield return new WaitUntil(rocket.IsDone);
+        rocket.SetTarget(new Vector2(0, -2.32F));
+        yield return new WaitUntil(rocket.IsDone);
     }
 }

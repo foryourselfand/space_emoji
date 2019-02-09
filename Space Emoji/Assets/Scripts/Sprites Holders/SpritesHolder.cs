@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SpritesHolder : MonoBehaviour
 {
-    [SerializeField] protected List<Sprite> Sprites;
+   [SerializeField] protected List<Sprite> sprites;
 
     public virtual Sprite GetRandomSprite()
     {
-        return Sprites[GetRandomIndex(Sprites)];
+        return sprites[GetRandomIndex(sprites)];
     }
 
     public virtual void ResetToDefault()

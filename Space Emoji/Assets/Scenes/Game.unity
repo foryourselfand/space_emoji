@@ -566,8 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9465147c1d44989eec3c793dc51ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuButtons: {fileID: 1739143030}
-  InstructionsParent: {fileID: 769156947}
+  menuButtons: {fileID: 1739143030}
+  instructionsParent: {fileID: 769156947}
 --- !u!1 &156728912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,8 +1753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   family: {fileID: 1972790227}
-  Prefab: {fileID: 1629876114421432, guid: 59c5702474c21431996bbdc1990c5c3f, type: 2}
-  SpawnCount: 500
+  prefab: {fileID: 1629876114421432, guid: 59c5702474c21431996bbdc1990c5c3f, type: 2}
+  spawnCount: 350
 --- !u!1 &491027348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,8 +1906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   family: {fileID: 1620522530}
-  Prefab: {fileID: 1297758189377792, guid: fe92bb5b7d29d4f76aea72f52ea5e421, type: 2}
-  SpawnCount: 150
+  prefab: {fileID: 1297758189377792, guid: fe92bb5b7d29d4f76aea72f52ea5e421, type: 2}
+  spawnCount: 150
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3719,9 +3719,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae1219a6a9140658e92815727e9f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExecutingOnce: {fileID: 1305568505}
-  ExecutingAllTime: {fileID: 491027348}
-  ExecutingStars: {fileID: 1719109078}
+  executingOnce: {fileID: 1305568505}
+  executingAllTime: {fileID: 491027348}
+  executingStars: {fileID: 1719109078}
 --- !u!1 &1085915225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,9 +3838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e805debc8d704e658ac42cbf33783521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rocket: {fileID: 1988023219}
-  GroundParent: {fileID: 841538342}
-  SpaceManager: {fileID: 2099681125}
+  rocket: {fileID: 1988023219}
+  groundParent: {fileID: 841538342}
+  spaceManager: {fileID: 2099681125}
 --- !u!1 &1094033503
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,8 +5149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   family: {fileID: 948433151}
-  Prefab: {fileID: 1629876114421432, guid: 59c5702474c21431996bbdc1990c5c3f, type: 2}
-  SpawnCount: 500
+  prefab: {fileID: 1629876114421432, guid: 59c5702474c21431996bbdc1990c5c3f, type: 2}
+  spawnCount: 350
 --- !u!1 &1461879763
 GameObject:
   m_ObjectHideFlags: 0
@@ -6199,7 +6199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904a6938fb744f9f856ea7fe88b07766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sky: {fileID: 297833598}
+  sky: {fileID: 297833598}
 --- !u!1 &1829767616
 GameObject:
   m_ObjectHideFlags: 0
@@ -6977,8 +6977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92cc42e4f894ed19b12eb267d7ff43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParentFirst: {fileID: 948433152}
-  ParentSecond: {fileID: 1972790228}
+  parentFirst: {fileID: 948433152}
+  parentSecond: {fileID: 1972790228}
 --- !u!1 &2144994935
 GameObject:
   m_ObjectHideFlags: 0

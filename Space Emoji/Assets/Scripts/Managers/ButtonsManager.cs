@@ -5,29 +5,29 @@ using UnityEngine;
 
 public class ButtonsManager : MonoBehaviour
 {
-    public WaiterGroup MenuButtons;
-    public GameObject InstructionsParent;
+    public WaiterGroup menuButtons;
+    public GameObject instructionsParent;
 
     private List<WaiterGroup> _instructions;
 
     private void Awake()
     {
-        _instructions = Helper.GetChildrenFromParent<WaiterGroup>(InstructionsParent);
+        _instructions = Helper.GetChildrenFromParent<WaiterGroup>(instructionsParent);
     }
 
     private void Start()
     {
-        InstructionsParent.gameObject.SetActive(false);
+        instructionsParent.gameObject.SetActive(false);
     }
 
     public IEnumerator MenuButtonsAction()
     {
-        yield return MenuButtons.Trigger();
+        yield return menuButtons.Trigger();
     }
 
     public IEnumerator InstructionsAction()
     {
-        InstructionsParent.gameObject.SetActive(true);
+        instructionsParent.gameObject.SetActive(true);
         StartCoroutine(ConcreteInstructionAction(_instructions[0]));
         StartCoroutine(ConcreteInstructionAction(_instructions[1]));
         yield break;
@@ -40,6 +40,6 @@ public class ButtonsManager : MonoBehaviour
 
     public IEnumerable MenuDone()
     {
-        yield return MenuButtons.IsDone();
+        yield return menuButtons.IsDone();
     }
 }

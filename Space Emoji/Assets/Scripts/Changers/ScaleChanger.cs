@@ -14,7 +14,7 @@ public class ScaleChanger : Changer
 
     protected override void Change(float t)
     {
-        _transformRef.localScale = Vector3.MoveTowards(_transformRef.localScale, _target, Speed * t);
+        _transformRef.localScale = Vector3.MoveTowards(_transformRef.localScale, _target, speed * t);
     }
 
     protected override bool Condition()

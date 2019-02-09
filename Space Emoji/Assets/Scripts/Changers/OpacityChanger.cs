@@ -37,7 +37,7 @@ public class OpacityChanger : Changer
 
     protected override void Change(float t)
     {
-        Opacity = Mathf.MoveTowards(Opacity, _target, t * Speed);
+        Opacity = Mathf.MoveTowards(Opacity, _target, t * speed);
     }
 
     protected override void OnEnd()

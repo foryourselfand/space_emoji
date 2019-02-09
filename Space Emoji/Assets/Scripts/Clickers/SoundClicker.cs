@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SoundClicker : Clicker
 {
-    public Sprite OnSprite;
-    public Sprite OffSprite;
+    public Sprite onSprite;
+    public Sprite offSprite;
 
     private Image _image;
 
@@ -30,7 +31,7 @@ public class SoundClicker : Clicker
 
     private void ChangeSprite()
     {
-        _image.sprite = _soundState.Equals("On") ? OffSprite : OnSprite;
+        _image.sprite = _soundState.Equals("On") ? offSprite : onSprite;
         PlayerPrefs.SetString("Sound", _soundState);
     }
 }

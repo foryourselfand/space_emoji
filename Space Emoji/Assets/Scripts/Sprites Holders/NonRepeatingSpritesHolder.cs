@@ -21,6 +21,6 @@ public class NonRepeatingSpritesHolder : SpritesHolder
 
     public override void ResetToDefault()
     {
-        _nonRepeatingSprites = new List<Sprite>(Sprites);
+        _nonRepeatingSprites = new List<Sprite>(sprites);
     }
 }

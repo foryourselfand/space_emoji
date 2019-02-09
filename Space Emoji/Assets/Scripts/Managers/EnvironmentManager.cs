@@ -5,9 +5,9 @@ using UnityEngine.Experimental.UIElements;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    public GameObject ExecutingOnce;
-    public GameObject ExecutingAllTime;
-    public GameObject ExecutingStars;
+    public GameObject executingOnce;
+    public GameObject executingAllTime;
+    public GameObject executingStars;
 
     private List<IExecutable> _executableOnce;
     private List<IExecutable> _executableAllTime;
@@ -15,9 +15,9 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Awake()
     {
-        _executableOnce = Helper.GetFilled(ExecutingOnce);
-        _executableAllTime = Helper.GetFilled(ExecutingAllTime);
-        _executableStars = Helper.GetFilled(ExecutingStars);
+        _executableOnce = Helper.GetFilled(executingOnce);
+        _executableAllTime = Helper.GetFilled(executingAllTime);
+        _executableStars = Helper.GetFilled(executingStars);
     }
 
     public void RefreshOnStart()

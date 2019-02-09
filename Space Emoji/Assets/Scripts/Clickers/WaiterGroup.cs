@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WaiterGroup : MonoBehaviour
 {
-    public float TimeToWait;
+    public float timeToWait;
 
     private List<ScaleChanger> _buttons;
 
@@ -27,7 +28,7 @@ public class WaiterGroup : MonoBehaviour
         foreach (var button in _buttons)
         {
             button.SetTargetAndAction(_scaleType);
-            yield return new WaitForSeconds(TimeToWait);
+            yield return new WaitForSeconds(timeToWait);
         }
 
         _buttons.Reverse();

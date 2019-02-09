@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class SpaceManager : MonoBehaviour
 {
-    public PositionChanger ParentFirst, ParentSecond;
+    public PositionChanger parentFirst, parentSecond;
 
     public void StartMove()
     {
-        StartCoroutine(Move(ParentFirst, -10));
-        StartCoroutine(Move(ParentSecond, -20));
+        StartCoroutine(Move(parentFirst, -10));
+        StartCoroutine(Move(parentSecond, -20));
     }
 
     private IEnumerator Move(PositionChanger parent, float byY)

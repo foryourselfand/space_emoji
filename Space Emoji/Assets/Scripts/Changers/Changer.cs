@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class Changer : MonoBehaviour
 {
-    public float Speed;
+    public float speed;
 
     private bool _changing;
 

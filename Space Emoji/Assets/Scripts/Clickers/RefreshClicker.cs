@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RefreshClicker : Clicker
 {
-    public EnvironmentManager EnvironmentManager;
+    public EnvironmentManager environmentManager;
 
     protected override void Click()
     {
-        EnvironmentManager.RefreshEnvironment();
+        environmentManager.RefreshEnvironment();
     }
 }

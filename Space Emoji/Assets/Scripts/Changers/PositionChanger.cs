@@ -17,7 +17,7 @@ public class PositionChanger : Changer
 
     protected override void Change(float t)
     {
-        _transform.localPosition = Vector3.MoveTowards(_transform.localPosition, _target, Speed * t);
+        _transform.localPosition = Vector3.MoveTowards(_transform.localPosition, _target, speed * t);
     }
 
     protected override void OnEnd()

@@ -1,10 +1,12 @@
+using UnityEngine.Serialization;
+
 public class PlayClicker : Clicker
 {
-    public GameCycle GameCycle;
+    public GameCycle gameCycle;
 
     protected override void Click()
     {
-        GameCycle.HideMenuButtons();
-        GameCycle.OffGround();
+        gameCycle.HideMenuButtons();
+        gameCycle.OffGround();
     }
 }
