@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Family : MonoBehaviour
 {
-    [HideInInspector] public GameObject Parent;
-    [HideInInspector] public List<GameObject> Children;
+    [HideInInspector] public GameObject parent;
+    [HideInInspector] public List<GameObject> children;
 
     public void DefineParent()
     {
-        Parent = gameObject;
+        parent = gameObject;
     }
 }

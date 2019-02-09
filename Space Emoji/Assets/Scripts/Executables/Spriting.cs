@@ -15,7 +15,7 @@ public class Spriting : IExecutable
         var index = Random.Range(0, _holders.Length);
         var chosenHolder = _holders[index];
 
-        foreach (var tempSprite in Family.Children)
+        foreach (var tempSprite in family.children)
             tempSprite.GetComponent<SpriteRenderer>().sprite = chosenHolder.GetRandomSprite();
 
         chosenHolder.ResetToDefault();

@@ -3,13 +3,13 @@ using Random = UnityEngine.Random;
 
 public class Flipping : IExecutable
 {
-    public float StartScale;
+    public float startScale;
 
     public override void Execute()
     {
-        foreach (var child in Family.Children)
+        foreach (var child in family.children)
         {
-            var temp = new Vector2(StartScale, StartScale);
+            var temp = new Vector2(startScale, startScale);
             temp.x *= Random.Range(0, 2) == 0 ? 1 : -1;
             child.transform.localScale = temp;
         }

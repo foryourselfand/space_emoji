@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class Positioning : IExecutable
 {
-    public Vector2 UpLeft, DownRight;
+    public Vector2 upLeft, downRight;
 
     public override void Execute()
     {
-        foreach (var children in Family.Children)
+        foreach (var children in family.children)
             children.transform.localPosition = new Vector2(
-                Random.Range(UpLeft.x, DownRight.x),
-                Random.Range(UpLeft.y, DownRight.y)
+                Random.Range(upLeft.x, downRight.x),
+                Random.Range(upLeft.y, downRight.y)
             );
     }
 }

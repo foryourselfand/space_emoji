@@ -10,8 +10,8 @@ public class Spawning : IExecutable
     {
         for (var i = 0; i < SpawnCount; i++)
         {
-            var instance = Instantiate(Prefab, Family.Parent.transform);
-            instance.transform.parent = Family.Parent.transform;
+            var instance = Instantiate(Prefab, family.parent.transform);
+            instance.transform.parent = family.parent.transform;
         }
 
         SaveChildren();

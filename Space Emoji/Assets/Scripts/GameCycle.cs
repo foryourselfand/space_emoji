@@ -5,54 +5,54 @@ public class GameCycle : MonoBehaviour
 {
     public static bool CanClick;
 
-    public EnvironmentManager EnvironmentManager;
-    public MoversManager MoversManager;
-    public ButtonsManager ButtonsManager;
-    public FadersManager FadersManager;
+    public EnvironmentManager environmentManager;
+    public MoversManager moversManager;
+    public ButtonsManager buttonsManager;
+    public FadersManager fadersManager;
 
     private void Start()
     {
         CanClick = false;
-        EnvironmentManager.RefreshOnStart();
+        environmentManager.RefreshOnStart();
         StartCoroutine(GroundUp());
     }
 
     public void HideMenuButtons()
     {
         CanClick = false;
-        EnvironmentManager.RefreshStars();
+        environmentManager.RefreshStars();
         StartCoroutine(MenuButtonsAction());
     }
 
     public void OffGround()
     {
         StartCoroutine(RocketOnPlace());
-        MoversManager.OffGround();
-        FadersManager.SkyOpacityAction();
+        moversManager.OffGround();
+        fadersManager.SkyOpacityAction();
     }
 
     private IEnumerator GroundUp()
     {
-        EnvironmentManager.RefreshEnvironment();
-        yield return MoversManager.GroundUp();
+        environmentManager.RefreshEnvironment();
+        yield return moversManager.GroundUp();
         yield return ShowMenuButtons();
     }
 
     private IEnumerator ShowMenuButtons()
     {
-        yield return ButtonsManager.MenuButtonsAction();
-        yield return ButtonsManager.MenuDone();
+        yield return buttonsManager.MenuButtonsAction();
+        yield return buttonsManager.MenuDone();
         CanClick = true;
     }
 
     private IEnumerator RocketOnPlace()
     {
-        yield return MoversManager.MoveRocket();
-        yield return ButtonsManager.InstructionsAction();
+        yield return moversManager.MoveRocket();
+        yield return buttonsManager.InstructionsAction();
     }
 
     private IEnumerator MenuButtonsAction()
     {
-        yield return ButtonsManager.MenuButtonsAction();
+        yield return buttonsManager.MenuButtonsAction();
     }
 }

@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class Scaling : IExecutable
 {
-    public float StartScale;
-    public float OffSet;
+    public float startScale;
+    public float offSet;
 
     public override void Execute()
     {
-        foreach (var child in Family.Children)
+        foreach (var child in family.children)
         {
             child.transform.localScale = new Vector2(
-                StartScale + Random.Range(-OffSet, OffSet),
-                StartScale + Random.Range(-OffSet, OffSet)
+                startScale + Random.Range(-offSet, offSet),
+                startScale + Random.Range(-offSet, offSet)
             );
         }
     }

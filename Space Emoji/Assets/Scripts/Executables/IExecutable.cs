@@ -2,18 +2,18 @@ using UnityEngine;
 
 public abstract class IExecutable : MonoBehaviour
 {
-    public Family Family;
+    public Family family;
 
     public abstract void Execute();
 
     private void Awake()
     {
-        Family.DefineParent();
+        family.DefineParent();
         SaveChildren();
     }
 
     protected void SaveChildren()
     {
-        Family.Children = Helper.GetChildrenFromParent(Family.Parent);
+        family.children = Helper.GetChildrenFromParent(family.parent);
     }
 }
