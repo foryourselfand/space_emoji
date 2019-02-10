@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class Rotating : IExecutable
+public class Rotating : IExecutableOffSet
 {
-    public override void Execute()
+    protected override void ConcreteChildExecute(GameObject child)
     {
-        foreach (var child in family.children){
-            child.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 361));}
+        child.transform.eulerAngles =
+            new Vector3(0, 0, Random.Range(
+                startValue - offSet,
+                startValue + offSet)
+            );
     }
 }

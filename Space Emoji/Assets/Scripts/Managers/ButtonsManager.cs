@@ -1,45 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class ButtonsManager : MonoBehaviour
 {
     public WaiterGroup menuButtons;
-    public GameObject instructionsParent;
 
-    private List<WaiterGroup> _instructions;
+    public GameObject instructionButtonsParent;
+
+    public GameObject inputParent;
+
+    private List<WaiterGroup> _instructionButtons;
 
     private void Awake()
     {
-        _instructions = Helper.GetChildrenFromParent<WaiterGroup>(instructionsParent);
+        _instructionButtons = Helper.GetChildrenFromParent<WaiterGroup>(instructionButtonsParent);
     }
 
     private void Start()
     {
-        instructionsParent.gameObject.SetActive(false);
+        instructionButtonsParent.SetActive(true);
     }
 
-    public IEnumerator MenuButtonsAction()
+    public IEnumerator MenuButtonsTriggering()
     {
-        yield return menuButtons.Trigger();
+        yield return WaiterTriggering(menuButtons);
     }
 
-    public IEnumerator InstructionsAction()
+    public IEnumerator InstructionsShowing()
     {
-        instructionsParent.gameObject.SetActive(true);
-        StartCoroutine(ConcreteInstructionAction(_instructions[0]));
-        StartCoroutine(ConcreteInstructionAction(_instructions[1]));
+        StartCoroutine(WaiterTriggering(_instructionButtons[0]));
+        StartCoroutine(WaiterTriggering(_instructionButtons[1]));
         yield break;
     }
 
-    public IEnumerator ConcreteInstructionAction(WaiterGroup instruction)
+    public IEnumerator MenuFinished()
     {
-        yield return instruction.Trigger();
+        yield return menuButtons.IsAllFinished();
     }
 
-    public IEnumerable MenuDone()
+    private static IEnumerator WaiterTriggering(WaiterGroup waiter)
     {
-        yield return menuButtons.IsDone();
+        yield return waiter.Triggering();
     }
 }

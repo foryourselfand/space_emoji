@@ -5,7 +5,7 @@ public class FadersManager : MonoBehaviour
 {
     public OpacityChanger sky;
 
-    public void SkyOpacityAction()
+    public void SkyOut()
     {
         sky.SetTarget(0);
     }

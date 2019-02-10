@@ -13,6 +13,7 @@
             <e p="ScaleType.cs" t="Include" />
           </e>
           <e p="Clickers" t="Include">
+            <e p="ArrowClicker.cs" t="Include" />
             <e p="Clicker.cs" t="Include" />
             <e p="PlayClicker.cs" t="Include" />
             <e p="RefreshClicker.cs" t="Include" />
@@ -24,6 +25,8 @@
             <e p="Family.cs" t="Include" />
             <e p="Flipping.cs" t="Include" />
             <e p="IExecutable.cs" t="Include" />
+            <e p="IExecutableOffSet.cs" t="Include" />
+            <e p="IExecutableSimple.cs" t="Include" />
             <e p="Opaciting.cs" t="Include" />
             <e p="Positioning.cs" t="Include" />
             <e p="Rotating.cs" t="Include" />
@@ -44,7 +47,6 @@
             <e p="NonRepeatingSpritesHolder.cs" t="Include" />
             <e p="SpritesHolder.cs" t="Include" />
           </e>
-          <e p="Test.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

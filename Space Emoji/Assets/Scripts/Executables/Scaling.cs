@@ -1,18 +1,12 @@
 using UnityEngine;
 
-public class Scaling : IExecutable
+public class Scaling : IExecutableOffSet
 {
-    public float startScale;
-    public float offSet;
-
-    public override void Execute()
+    protected override void ConcreteChildExecute(GameObject child)
     {
-        foreach (var child in family.children)
-        {
-            child.transform.localScale = new Vector2(
-                startScale + Random.Range(-offSet, offSet),
-                startScale + Random.Range(-offSet, offSet)
-            );
-        }
+        child.transform.localScale = new Vector2(
+            startValue + Random.Range(-offSet, offSet),
+            startValue + Random.Range(-offSet, offSet)
+        );
     }
 }

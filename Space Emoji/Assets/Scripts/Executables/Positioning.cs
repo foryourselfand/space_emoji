@@ -1,16 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Positioning : IExecutable
+public class Positioning : IExecutableSimple
 {
     public Vector2 upLeft, downRight;
 
-    public override void Execute()
+    protected override void ConcreteChildExecute(GameObject child)
     {
-        foreach (var children in family.children)
-            children.transform.localPosition = new Vector2(
-                Random.Range(upLeft.x, downRight.x),
-                Random.Range(upLeft.y, downRight.y)
-            );
+        child.transform.localPosition = new Vector2(
+            Random.Range(upLeft.x, downRight.x),
+            Random.Range(upLeft.y, downRight.y)
+        );
     }
 }

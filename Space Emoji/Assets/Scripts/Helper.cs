@@ -24,7 +24,7 @@ public static class Helper
         return childList;
     }
 
-    public static List<IExecutable> GetFilled(GameObject commonParent)
+    public static List<IExecutable> GetExecutablesFilled(GameObject commonParent)
     {
         var executables = new List<IExecutable>();
         foreach (var concreteExecutableParent in GetChildrenFromParent(commonParent))

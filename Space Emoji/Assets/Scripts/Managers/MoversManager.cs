@@ -7,25 +7,25 @@ public class MoversManager : MonoBehaviour
     public PositionChanger groundParent;
     public SpaceManager spaceManager;
 
-    public IEnumerator GroundUp()
+    public IEnumerator GroundUpping()
     {
         groundParent.transform.localPosition = new Vector2(0, -4);
         groundParent.SetTarget(new Vector2(0, 4));
-        yield return new WaitUntil(groundParent.IsDone);
+        yield return new WaitUntil(groundParent.IsFinished);
         rocket.transform.parent = groundParent.transform.parent;
     }
 
-    public void OffGround()
+    public void GroundOff()
     {
         spaceManager.StartMove();
         groundParent.SetTarget(new Vector2(0, -4));
     }
 
-    public IEnumerator MoveRocket()
+    public IEnumerator RocketFlying()
     {
         rocket.SetTarget(new Vector2(0, 1.66F));
-        yield return new WaitUntil(rocket.IsDone);
+        yield return new WaitUntil(rocket.IsFinished);
         rocket.SetTarget(new Vector2(0, -2.32F));
-        yield return new WaitUntil(rocket.IsDone);
+        yield return new WaitUntil(rocket.IsFinished);
     }
 }

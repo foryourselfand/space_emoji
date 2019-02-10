@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class RefreshClicker : Clicker
 {
@@ -7,6 +6,6 @@ public class RefreshClicker : Clicker
 
     protected override void Click()
     {
-        environmentManager.RefreshEnvironment();
+        environmentManager.EnvironmentRefresh();
     }
 }

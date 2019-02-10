@@ -13,46 +13,43 @@ public class GameCycle : MonoBehaviour
     private void Start()
     {
         CanClick = false;
-        environmentManager.RefreshOnStart();
-        StartCoroutine(GroundUp());
+        environmentManager.OnStartRefresh();
+        StartCoroutine(GroundUpping());
     }
 
-    public void HideMenuButtons()
+    private IEnumerator GroundUpping()
     {
-        CanClick = false;
-        environmentManager.RefreshStars();
-        StartCoroutine(MenuButtonsAction());
+        environmentManager.EnvironmentRefresh();
+        yield return moversManager.GroundUpping();
+        yield return MenuButtonsShowing();
     }
 
-    public void OffGround()
+    private IEnumerator MenuButtonsShowing()
     {
-        StartCoroutine(RocketOnPlace());
-        moversManager.OffGround();
-        fadersManager.SkyOpacityAction();
-    }
-
-    private IEnumerator GroundUp()
-    {
-        environmentManager.RefreshEnvironment();
-        yield return moversManager.GroundUp();
-        yield return ShowMenuButtons();
-    }
-
-    private IEnumerator ShowMenuButtons()
-    {
-        yield return buttonsManager.MenuButtonsAction();
-        yield return buttonsManager.MenuDone();
+        yield return buttonsManager.MenuButtonsTriggering();
+        yield return buttonsManager.MenuFinished();
         CanClick = true;
     }
 
-    private IEnumerator RocketOnPlace()
+    public void GroundOff()
     {
-        yield return moversManager.MoveRocket();
-        yield return buttonsManager.InstructionsAction();
+        moversManager.GroundOff();
+        fadersManager.SkyOut();
+        StartCoroutine(MenuButtonsHiding());
+        StartCoroutine(RocketFlying());
     }
 
-    private IEnumerator MenuButtonsAction()
+    private IEnumerator MenuButtonsHiding()
     {
-        yield return buttonsManager.MenuButtonsAction();
+        CanClick = false;
+        environmentManager.StarsRefresh();
+        yield return buttonsManager.MenuButtonsTriggering();
+    }
+
+    private IEnumerator RocketFlying()
+    {
+        yield return moversManager.RocketFlying();
+        yield return buttonsManager.InstructionsShowing();
+        CanClick = true;
     }
 }

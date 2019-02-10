@@ -7,15 +7,15 @@ public class SpaceManager : MonoBehaviour
 
     public void StartMove()
     {
-        StartCoroutine(Move(parentFirst, -10));
-        StartCoroutine(Move(parentSecond, -20));
+        StartCoroutine(Moving(parentFirst, -10));
+        StartCoroutine(Moving(parentSecond, -20));
     }
 
-    private IEnumerator Move(PositionChanger parent, float byY)
+    private IEnumerator Moving(PositionChanger parent, float byY)
     {
         parent.SetTarget(new Vector2(0, byY));
-        yield return new WaitUntil(parent.IsDone);
+        yield return new WaitUntil(parent.IsFinished);
         parent.transform.localPosition += new Vector3(0, 20);
-        StartCoroutine(Move(parent, -20));
+        StartCoroutine(Moving(parent, -20));
     }
 }

@@ -32,7 +32,7 @@ public class ScaleChanger : Changer
         _transformRef.localScale = current;
     }
 
-    public void SetTargetAndAction(ScaleType type)
+    public void SetTarget(ScaleType type)
     {
         _target = type == ScaleType.Up ? _upBound : Vector3.zero;
         StartChanging();

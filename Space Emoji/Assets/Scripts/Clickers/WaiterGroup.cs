@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class WaiterGroup : MonoBehaviour
 {
@@ -23,11 +22,11 @@ public class WaiterGroup : MonoBehaviour
         _scaleType = ScaleType.Up;
     }
 
-    public IEnumerator Trigger()
+    public IEnumerator Triggering()
     {
         foreach (var button in _buttons)
         {
-            button.SetTargetAndAction(_scaleType);
+            button.SetTarget(_scaleType);
             yield return new WaitForSeconds(timeToWait);
         }
 
@@ -35,9 +34,9 @@ public class WaiterGroup : MonoBehaviour
         _scaleType = _scaleType == ScaleType.Up ? ScaleType.Down : ScaleType.Up;
     }
 
-    public IEnumerator IsDone()
+    public IEnumerator IsAllFinished()
     {
         foreach (var button in _buttons)
-            yield return new WaitUntil(button.IsDone);
+            yield return new WaitUntil(button.IsFinished);
     }
 }

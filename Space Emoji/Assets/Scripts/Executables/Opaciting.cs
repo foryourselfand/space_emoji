@@ -1,18 +1,12 @@
 using UnityEngine;
 
-public class Opaciting : IExecutable
+public class Opaciting : IExecutableOffSet
 {
-    public float startOpacity;
-    public float offSet;
-
-    public override void Execute()
+    protected override void ConcreteChildExecute(GameObject child)
     {
-        foreach (var child in family.children)
-        {
-            var spriteRenderer = child.GetComponent<SpriteRenderer>();
-            var temp = spriteRenderer.color;
-            temp.a = Random.Range(startOpacity - offSet, startOpacity + offSet);
-            spriteRenderer.color = temp;
-        }
+        var spriteRenderer = child.GetComponent<SpriteRenderer>();
+        var temp = spriteRenderer.color;
+        temp.a = Random.Range(startValue - offSet, startValue + offSet);
+        spriteRenderer.color = temp;
     }
 }

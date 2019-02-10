@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Activating : IExecutable
+public class Activating : IExecutableSimple
 {
     public int probability;
     public int upperBound;
 
-    public override void Execute()
+    protected override void ConcreteChildExecute(GameObject child)
     {
-        foreach (var children in family.children)
-            children.SetActive(Random.Range(0, upperBound) - probability < 0);
+        child.SetActive(Random.Range(0, upperBound) - probability < 0);
     }
 }

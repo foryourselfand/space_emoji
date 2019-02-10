@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class SpritesHolder : MonoBehaviour
 {
-   [SerializeField] protected List<Sprite> sprites;
+    [SerializeField] protected List<Sprite> sprites;
 
     public virtual Sprite GetRandomSprite()
     {
@@ -16,7 +15,7 @@ public class SpritesHolder : MonoBehaviour
     {
     }
 
-    protected int GetRandomIndex(List<Sprite> sprites)
+    protected static int GetRandomIndex(List<Sprite> sprites)
     {
         return Random.Range(0, sprites.Count);
     }

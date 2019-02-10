@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class OpacityChanger : Changer
 {
+    private float _current;
+    private float _target;
+
     private float Opacity
     {
         get { return _current; }
         set
         {
             _current = value;
-            SetOpacityRef(value);
+            ChangeAlpha(value);
         }
     }
-
-    private float _current;
-    private float _target;
 
     private SpriteRenderer _spriteRenderer;
 
@@ -23,7 +23,7 @@ public class OpacityChanger : Changer
         _current = _spriteRenderer.color.a;
     }
 
-    private void SetOpacityRef(float current)
+    private void ChangeAlpha(float current)
     {
         var tmp = _spriteRenderer.color;
         tmp.a = current;
@@ -54,11 +54,5 @@ public class OpacityChanger : Changer
     {
         _target = target;
         StartChanging();
-    }
-
-    public void SetCurrentAndTarget(float current, float target)
-    {
-        SetCurrent(current);
-        SetTarget(target);
     }
 }

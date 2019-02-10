@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public abstract class Changer : MonoBehaviour
 {
@@ -31,7 +30,7 @@ public abstract class Changer : MonoBehaviour
         _changing = true;
     }
 
-    public bool IsDone()
+    public bool IsFinished()
     {
         return _changing == false;
     }

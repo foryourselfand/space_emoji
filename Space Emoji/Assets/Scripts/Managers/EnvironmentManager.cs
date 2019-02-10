@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
 
 public class EnvironmentManager : MonoBehaviour
 {
@@ -15,22 +14,22 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Awake()
     {
-        _executableOnce = Helper.GetFilled(executingOnce);
-        _executableAllTime = Helper.GetFilled(executingAllTime);
-        _executableStars = Helper.GetFilled(executingStars);
+        _executableOnce = Helper.GetExecutablesFilled(executingOnce);
+        _executableAllTime = Helper.GetExecutablesFilled(executingAllTime);
+        _executableStars = Helper.GetExecutablesFilled(executingStars);
     }
 
-    public void RefreshOnStart()
+    public void OnStartRefresh()
     {
         ExecuteAll(_executableOnce);
     }
 
-    public void RefreshEnvironment()
+    public void EnvironmentRefresh()
     {
         ExecuteAll(_executableAllTime);
     }
 
-    public void RefreshStars()
+    public void StarsRefresh()
     {
         ExecuteAll(_executableStars);
     }
