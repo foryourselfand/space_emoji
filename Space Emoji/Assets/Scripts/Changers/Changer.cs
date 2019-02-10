@@ -14,8 +14,8 @@ public abstract class Changer : MonoBehaviour
             Change(Time.deltaTime);
         else
         {
-            OnEnd();
             _changing = false;
+            OnEnd();
         }
     }
 

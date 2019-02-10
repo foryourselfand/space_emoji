@@ -5,8 +5,6 @@ public class Rocket : PositionChanger
 {
     public float xBound;
 
-    private bool _directionToLeft;
-
     private DirectionType _selfDirection = DirectionType.None;
 
     public void ChangeSpeedAndDirection(DirectionType directionType)
@@ -22,9 +20,7 @@ public class Rocket : PositionChanger
             else
             {
                 if (_selfDirection == DirectionType.None)
-                {
                     _selfDirection = DirectionType.Left;
-                }
 
                 if (speed < 4)
                     speed++;
@@ -42,23 +38,38 @@ public class Rocket : PositionChanger
             else
             {
                 if (_selfDirection == DirectionType.None)
-                {
                     _selfDirection = DirectionType.Right;
-                }
 
                 if (speed < 4)
                     speed++;
             }
         }
 
-        if (_selfDirection == DirectionType.Left)
-            ChangeDirection(-1);
-        else if (_selfDirection == DirectionType.Right)
-            ChangeDirection(1);
+        SetDirectionBasedOnSelf();
     }
 
-    private void ChangeDirection(int direction)
+    protected override void OnEnd()
     {
+        if (_selfDirection == DirectionType.Left)
+            _selfDirection = DirectionType.Right;
+        else if (_selfDirection == DirectionType.Right)
+            _selfDirection = DirectionType.Left;
+
+        SetDirectionBasedOnSelf();
+    }
+
+
+    private void SetDirectionBasedOnSelf()
+    {
+        if (_selfDirection == DirectionType.Left)
+            SetDirection(-1);
+        else if (_selfDirection == DirectionType.Right)
+            SetDirection(1);
+    }
+
+    private void SetDirection(int direction)
+    {
+        StartChanging();
         SetTarget(new Vector2(xBound * direction, transform.localPosition.y));
     }
 }
