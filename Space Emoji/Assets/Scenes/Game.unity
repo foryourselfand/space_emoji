@@ -570,7 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtons: {fileID: 1739143030}
   instructionButtonsParent: {fileID: 769156947}
-  inputParent: {fileID: 1430666382}
+  inputButtonsParent: {fileID: 1430666382}
 --- !u!1 &156728912
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +813,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f96ac40a84046d885a2c7722124b679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedBy: 1
+  rocket: {fileID: 1988023220}
+  buttonsManager: {fileID: 136689932}
 --- !u!114 &222751772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,7 +854,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 222751769}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222751771}
+        m_MethodName: ClickIfCan
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &226069022
@@ -1504,7 +1518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364886425
 GameObject:
@@ -1847,7 +1861,7 @@ Transform:
   - {fileID: 262889467}
   - {fileID: 1259288697}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492932664
 GameObject:
@@ -3041,7 +3055,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1009410148}
-  - {fileID: 1988023218}
   - {fileID: 1320620349}
   - {fileID: 1705661643}
   - {fileID: 1340140648}
@@ -3049,7 +3062,7 @@ Transform:
   - {fileID: 1333724846}
   - {fileID: 1620522529}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &841538342
 MonoBehaviour:
@@ -3306,6 +3319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f96ac40a84046d885a2c7722124b679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedBy: -1
+  rocket: {fileID: 1988023220}
+  buttonsManager: {fileID: 136689932}
 --- !u!114 &909834577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3344,7 +3360,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 909834574}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 909834576}
+        m_MethodName: ClickIfCan
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &945750941
@@ -3956,7 +3983,6 @@ MonoBehaviour:
   rocket: {fileID: 1988023219}
   groundParent: {fileID: 841538342}
   spaceManager: {fileID: 2099681125}
-  rotationParent: {fileID: 1477025594}
 --- !u!1 &1094033503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,7 +4526,7 @@ Transform:
   m_Children:
   - {fileID: 1221603486}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316517561
 GameObject:
@@ -4612,7 +4638,7 @@ Transform:
   - {fileID: 948192077}
   - {fileID: 2043905001}
   m_Father: {fileID: 841538341}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1320620350
 MonoBehaviour:
@@ -4658,7 +4684,7 @@ Transform:
   - {fileID: 270817998}
   - {fileID: 323945798}
   m_Father: {fileID: 841538341}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1333724847
 MonoBehaviour:
@@ -4706,7 +4732,7 @@ Transform:
   - {fileID: 1221335942}
   - {fileID: 1085915226}
   m_Father: {fileID: 841538341}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1340140649
 MonoBehaviour:
@@ -5356,7 +5382,7 @@ RectTransform:
   - {fileID: 769156948}
   - {fileID: 1430666383}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5433,7 +5459,7 @@ Transform:
   m_Children:
   - {fileID: 291970957}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542179020
 GameObject:
@@ -5680,7 +5706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 841538341}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1620522530
 MonoBehaviour:
@@ -5891,7 +5917,7 @@ Transform:
   - {fileID: 1678249701}
   - {fileID: 670043556}
   m_Father: {fileID: 841538341}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1705661644
 MonoBehaviour:
@@ -6066,7 +6092,7 @@ Transform:
   - {fileID: 1733895628}
   - {fileID: 626622016}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726714664
 GameObject:
@@ -6738,7 +6764,7 @@ Transform:
   - {fileID: 1997444116}
   - {fileID: 421577667}
   m_Father: {fileID: 841538341}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1977135915
 MonoBehaviour:
@@ -6763,6 +6789,7 @@ GameObject:
   - component: {fileID: 1988023218}
   - component: {fileID: 1988023217}
   - component: {fileID: 1988023219}
+  - component: {fileID: 1988023220}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -6826,8 +6853,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -1.66, z: 0}
   m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_Children: []
-  m_Father: {fileID: 841538341}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!114 &1988023219
 MonoBehaviour:
@@ -6841,6 +6868,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &1988023220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988023216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a7d4a895a447318a603dd3f8c59db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  xBound: 2.5
 --- !u!1 &1997444115
 GameObject:
   m_ObjectHideFlags: 0

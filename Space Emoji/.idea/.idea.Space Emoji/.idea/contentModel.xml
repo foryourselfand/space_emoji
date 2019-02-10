@@ -43,6 +43,7 @@
             <e p="MoversManager.cs" t="Include" />
             <e p="SpaceManager.cs" t="Include" />
           </e>
+          <e p="Rocket.cs" t="Include" />
           <e p="Sprites Holders" t="Include">
             <e p="NonRepeatingSpritesHolder.cs" t="Include" />
             <e p="SpritesHolder.cs" t="Include" />

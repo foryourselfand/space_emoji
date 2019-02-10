@@ -8,9 +8,11 @@ public class ButtonsManager : MonoBehaviour
 
     public GameObject instructionButtonsParent;
 
-    public GameObject inputParent;
+    public GameObject inputButtonsParent;
 
     private List<WaiterGroup> _instructionButtons;
+
+    private bool _isNeedToHideInstructions;
 
     private void Awake()
     {
@@ -20,6 +22,8 @@ public class ButtonsManager : MonoBehaviour
     private void Start()
     {
         instructionButtonsParent.SetActive(true);
+        inputButtonsParent.SetActive(false);
+        _isNeedToHideInstructions = true;
     }
 
     public IEnumerator MenuButtonsTriggering()
@@ -27,16 +31,34 @@ public class ButtonsManager : MonoBehaviour
         yield return WaiterTriggering(menuButtons);
     }
 
-    public IEnumerator InstructionsShowing()
-    {
-        StartCoroutine(WaiterTriggering(_instructionButtons[0]));
-        StartCoroutine(WaiterTriggering(_instructionButtons[1]));
-        yield break;
-    }
-
     public IEnumerator MenuFinished()
     {
         yield return menuButtons.IsAllFinished();
+    }
+
+    public IEnumerator InstructionsTriggering()
+    {
+        foreach (var instructionButton in _instructionButtons)
+            StartCoroutine(WaiterTriggering(instructionButton));
+        yield break;
+    }
+
+    public IEnumerator InstructionsFinished()
+    {
+        foreach (var instructionButton in _instructionButtons)
+            yield return instructionButton.IsAllFinished();
+    }
+
+    public void ActiveInputs()
+    {
+        inputButtonsParent.SetActive(true);
+    }
+
+    public void HideInstructionsIfNeed()
+    {
+        if (_isNeedToHideInstructions)
+            StartCoroutine(InstructionsTriggering());
+        _isNeedToHideInstructions = false;
     }
 
     private static IEnumerator WaiterTriggering(WaiterGroup waiter)

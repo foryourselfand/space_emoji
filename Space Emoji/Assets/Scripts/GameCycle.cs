@@ -49,7 +49,9 @@ public class GameCycle : MonoBehaviour
     private IEnumerator RocketFlying()
     {
         yield return moversManager.RocketFlying();
-        yield return buttonsManager.InstructionsShowing();
+        yield return buttonsManager.InstructionsTriggering();
+        yield return buttonsManager.InstructionsFinished();
+        buttonsManager.ActiveInputs();
         CanClick = true;
     }
 }

@@ -13,7 +13,7 @@ public class SpaceManager : MonoBehaviour
 
     private IEnumerator Moving(PositionChanger parent, float byY)
     {
-        parent.SetTarget(new Vector2(0, byY));
+        parent.SetTargetFromCurrent(new Vector2(0, byY));
         yield return new WaitUntil(parent.IsFinished);
         parent.transform.localPosition += new Vector3(0, 20);
         StartCoroutine(Moving(parent, -20));

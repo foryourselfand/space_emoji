@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WaiterGroup : MonoBehaviour
@@ -36,7 +37,9 @@ public class WaiterGroup : MonoBehaviour
 
     public IEnumerator IsAllFinished()
     {
-        foreach (var button in _buttons)
+        foreach (var button in _buttons.ToList())
+        {
             yield return new WaitUntil(button.IsFinished);
+        }
     }
 }

@@ -25,9 +25,15 @@ public class PositionChanger : Changer
         _transform.localPosition = _target;
     }
 
-    public void SetTarget(Vector3 target)
+    public void SetTargetFromCurrent(Vector3 target)
     {
         _target = _transform.localPosition + target;
+        StartChanging();
+    }
+
+    public void SetTarget(Vector3 target)
+    {
+        _target = target;
         StartChanging();
     }
 }
