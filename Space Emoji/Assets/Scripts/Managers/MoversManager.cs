@@ -10,11 +10,11 @@ public class MoversManager : MonoBehaviour
     public IEnumerator GroundUpping()
     {
         rocket.transform.parent = groundParent.transform;
-        
+
         groundParent.transform.localPosition = new Vector2(0, -4);
         groundParent.SetTargetFromCurrent(new Vector2(0, 4));
         yield return new WaitUntil(groundParent.IsFinished);
-        
+
         rocket.transform.parent = groundParent.transform.parent;
     }
 
@@ -26,9 +26,11 @@ public class MoversManager : MonoBehaviour
 
     public IEnumerator RocketFlying()
     {
+        rocket.speed = 3;
         rocket.SetTargetFromCurrent(new Vector2(0, 1.66F));
         yield return new WaitUntil(rocket.IsFinished);
         rocket.SetTargetFromCurrent(new Vector2(0, -2.32F));
         yield return new WaitUntil(rocket.IsFinished);
+        rocket.speed = 0;
     }
 }

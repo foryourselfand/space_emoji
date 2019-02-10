@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f96ac40a84046d885a2c7722124b679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBy: 1
+  directionType: 2
   rocket: {fileID: 1988023220}
   buttonsManager: {fileID: 136689932}
 --- !u!114 &222751772
@@ -3319,7 +3319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f96ac40a84046d885a2c7722124b679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBy: -1
+  directionType: 1
   rocket: {fileID: 1988023220}
   buttonsManager: {fileID: 136689932}
 --- !u!114 &909834577
@@ -3980,7 +3980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e805debc8d704e658ac42cbf33783521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 1988023219}
+  rocket: {fileID: 1988023220}
   groundParent: {fileID: 841538342}
   spaceManager: {fileID: 2099681125}
 --- !u!1 &1094033503
@@ -6788,7 +6788,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1988023218}
   - component: {fileID: 1988023217}
-  - component: {fileID: 1988023219}
   - component: {fileID: 1988023220}
   m_Layer: 0
   m_Name: Rocket
@@ -6856,18 +6855,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!114 &1988023219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1988023216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcfb2ae68fa94a669219efb5598a89cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!114 &1988023220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6880,7 +6867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  xBound: 2.5
+  xBound: 2
 --- !u!1 &1997444115
 GameObject:
   m_ObjectHideFlags: 0

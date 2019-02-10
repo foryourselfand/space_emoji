@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Rocket : PositionChanger
@@ -6,15 +7,58 @@ public class Rocket : PositionChanger
 
     private bool _directionToLeft;
 
-    public void ChangeSpeed(int speedBy)
+    private DirectionType _selfDirection = DirectionType.None;
+
+    public void ChangeSpeedAndDirection(DirectionType directionType)
     {
-        speed += speedBy;
-        _directionToLeft = speedBy < 0;
-        ChangeDirection(_directionToLeft ? -1 : 1);
+        if (directionType == DirectionType.Left)
+        {
+            if (_selfDirection == DirectionType.Right)
+            {
+                speed--;
+                if (speed == 0)
+                    _selfDirection = DirectionType.None;
+            }
+            else
+            {
+                if (_selfDirection == DirectionType.None)
+                {
+                    _selfDirection = DirectionType.Left;
+                }
+
+                if (speed < 4)
+                    speed++;
+            }
+        }
+
+        if (directionType == DirectionType.Right)
+        {
+            if (_selfDirection == DirectionType.Left)
+            {
+                speed--;
+                if (speed == 0)
+                    _selfDirection = DirectionType.None;
+            }
+            else
+            {
+                if (_selfDirection == DirectionType.None)
+                {
+                    _selfDirection = DirectionType.Right;
+                }
+
+                if (speed < 4)
+                    speed++;
+            }
+        }
+
+        if (_selfDirection == DirectionType.Left)
+            ChangeDirection(-1);
+        else if (_selfDirection == DirectionType.Right)
+            ChangeDirection(1);
     }
 
     private void ChangeDirection(int direction)
     {
-        SetTarget(new Vector2(xBound * direction, -2.32F));
+        SetTarget(new Vector2(xBound * direction, transform.localPosition.y));
     }
 }
