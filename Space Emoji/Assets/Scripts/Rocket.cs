@@ -1,9 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Rocket : PositionChanger
 {
     public float xBound;
+
+    public CameraChanger cameraChanger;
 
     private DirectionType _selfDirection = DirectionType.None;
 
@@ -27,14 +30,16 @@ public class Rocket : PositionChanger
     private void DecreaseSpeed()
     {
         speed--;
+        cameraChanger.SetTargetFromStart(speed / 5);
         if (speed == 0)
             _selfDirection = DirectionType.None;
     }
 
     private void IncreaseSpeed(DirectionType defaultDirection)
     {
-        if (speed < 4)
+        if (speed < 5)
             speed++;
+        cameraChanger.SetTargetFromStart(speed / 5);
         if (_selfDirection == DirectionType.None)
             _selfDirection = defaultDirection;
     }
@@ -61,5 +66,20 @@ public class Rocket : PositionChanger
     {
         StartChanging();
         SetTarget(new Vector2(xBound * direction, transform.localPosition.y));
+    }
+
+    public IEnumerator Fly()
+    {
+        speed = 3;
+
+        cameraChanger.SetTargetFromStart(-0.2F);
+        SetTargetFromCurrent(new Vector2(0, 1.66F));
+        yield return new WaitUntil(IsFinished);
+
+        cameraChanger.SetTargetFromStart(-0.2F);
+        SetTargetFromCurrent(new Vector2(0, -2.32F));
+        yield return new WaitUntil(IsFinished);
+
+        speed = 0;
     }
 }
