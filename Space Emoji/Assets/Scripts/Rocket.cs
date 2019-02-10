@@ -7,45 +7,36 @@ public class Rocket : PositionChanger
 
     private DirectionType _selfDirection = DirectionType.None;
 
-    public void ChangeSpeedAndDirection(DirectionType directionType)
+    public void ChangeSpeedAndDirection(DirectionType initial)
     {
-        if (directionType == DirectionType.Left)
-        {
-            if (_selfDirection == DirectionType.Right)
-            {
-                speed--;
-                if (speed == 0)
-                    _selfDirection = DirectionType.None;
-            }
-            else
-            {
-                if (_selfDirection == DirectionType.None)
-                    _selfDirection = DirectionType.Left;
-
-                if (speed < 4)
-                    speed++;
-            }
-        }
-
-        if (directionType == DirectionType.Right)
-        {
-            if (_selfDirection == DirectionType.Left)
-            {
-                speed--;
-                if (speed == 0)
-                    _selfDirection = DirectionType.None;
-            }
-            else
-            {
-                if (_selfDirection == DirectionType.None)
-                    _selfDirection = DirectionType.Right;
-
-                if (speed < 4)
-                    speed++;
-            }
-        }
+        DirectionCondition(initial, DirectionType.Left, DirectionType.Right);
+        DirectionCondition(initial, DirectionType.Right, DirectionType.Left);
 
         SetDirectionBasedOnSelf();
+    }
+
+    private void DirectionCondition(DirectionType initial, DirectionType positive, DirectionType negative)
+    {
+        if (initial != positive) return;
+        if (_selfDirection == negative)
+            DecreaseSpeed();
+        else
+            IncreaseSpeed(positive);
+    }
+
+    private void DecreaseSpeed()
+    {
+        speed--;
+        if (speed == 0)
+            _selfDirection = DirectionType.None;
+    }
+
+    private void IncreaseSpeed(DirectionType defaultDirection)
+    {
+        if (speed < 4)
+            speed++;
+        if (_selfDirection == DirectionType.None)
+            _selfDirection = defaultDirection;
     }
 
     protected override void OnEnd()
@@ -57,7 +48,6 @@ public class Rocket : PositionChanger
 
         SetDirectionBasedOnSelf();
     }
-
 
     private void SetDirectionBasedOnSelf()
     {
