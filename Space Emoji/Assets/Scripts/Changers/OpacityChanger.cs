@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloatOpacityChanger : FloatChanger
+public class OpacityChanger : FloatChanger
 {
     private SpriteRenderer _spriteRenderer;
 
@@ -16,8 +16,8 @@ public class FloatOpacityChanger : FloatChanger
 
     protected override void SetCurrentRef(float current)
     {
-        var tmp = _spriteRenderer.color;
-        tmp.a = current;
-        _spriteRenderer.color = tmp;
+        var temp = _spriteRenderer.color;
+        temp.a = current;
+        _spriteRenderer.color = temp;
     }
 }

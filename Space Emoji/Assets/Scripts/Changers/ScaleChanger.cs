@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloatScaleChanger : FloatChanger
+public class ScaleChanger : FloatChanger
 {
     private Transform _transform;
 

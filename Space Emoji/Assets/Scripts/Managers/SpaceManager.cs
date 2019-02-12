@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpaceManager : MonoBehaviour
 {
-    public PositionChanger parentFirst, parentSecond;
+    public PositionYChanger parentFirst, parentSecond;
 
     public void StartMove()
     {
@@ -11,11 +11,11 @@ public class SpaceManager : MonoBehaviour
         StartCoroutine(Moving(parentSecond, -20));
     }
 
-    private IEnumerator Moving(PositionChanger parent, float byY)
+    private IEnumerator Moving(PositionYChanger parent, float byY)
     {
-        parent.SetTargetFromCurrent(new Vector2(0, byY));
+        parent.SetTargetFromCurrent(byY);
         yield return new WaitUntil(parent.IsFinished);
-        parent.transform.localPosition += new Vector3(0, 20);
+        parent.SetCurrent(10);
         StartCoroutine(Moving(parent, -20));
     }
 }

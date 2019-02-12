@@ -7,13 +7,13 @@ public class WaiterGroup : MonoBehaviour
 {
     public float timeToWait;
 
-    private List<FloatScaleChanger> _buttons;
+    private List<ScaleChanger> _buttons;
 
     private ScaleType _scaleType;
 
     private void Awake()
     {
-        _buttons = Helper.GetChildrenFromParent<FloatScaleChanger>(gameObject);
+        _buttons = Helper.GetChildrenFromParent<ScaleChanger>(gameObject);
     }
 
     private void Start()

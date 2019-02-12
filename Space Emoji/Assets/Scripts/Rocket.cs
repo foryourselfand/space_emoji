@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Rocket : PositionChanger
+public class Rocket : PositionXChanger
 {
-    public FloatCameraChanger cameraChanger;
+    public CameraChanger cameraChanger;
 
     private DirectionType _selfDirection = DirectionType.None;
 
@@ -63,22 +63,6 @@ public class Rocket : PositionChanger
 
     private void SetDirection(int direction)
     {
-        StartChanging();
-        SetTarget(new Vector2(100 * direction, transform.localPosition.y));
-    }
-
-    public IEnumerator Fly()
-    {
-        speed = 3;
-
-        cameraChanger.SetTargetFromStart(-1);
-        SetTargetFromCurrent(new Vector2(0, 1.66F));
-        yield return new WaitUntil(IsFinished);
-
-        cameraChanger.SetTargetFromStart(0);
-        SetTargetFromCurrent(new Vector2(0, -2.32F));
-        yield return new WaitUntil(IsFinished);
-
-        speed = 0;
+        SetTarget(100 * direction);
     }
 }
