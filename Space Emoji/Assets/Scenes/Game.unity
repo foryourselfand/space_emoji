@@ -1992,6 +1992,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
@@ -2015,10 +2016,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 916c377f14f74602b9dcbb95961ab895, type: 3}
+  m_Script: {fileID: 11500000, guid: 40d6c2b52905427bb945ba9b945c12dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2072,6 +2072,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad38fd41e5d4f0a92ed8be60d925863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &559332666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6993,9 +7005,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1988023218}
   - component: {fileID: 1988023217}
-  - component: {fileID: 1988023220}
   - component: {fileID: 1988023219}
   - component: {fileID: 1988023221}
+  - component: {fileID: 1988023220}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -7102,7 +7114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  cameraChanger: {fileID: 519420030}
+  cameraChanger: {fileID: 519420033}
 --- !u!50 &1988023221
 Rigidbody2D:
   serializedVersion: 4

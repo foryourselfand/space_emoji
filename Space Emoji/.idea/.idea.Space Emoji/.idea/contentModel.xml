@@ -6,8 +6,17 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Changers" t="Include">
+            <e p="Behaviors" t="Include">
+              <e p="ChangerBehavior.cs" t="Include" />
+              <e p="LerpBehavior.cs" t="Include" />
+              <e p="MoveTowardsBehavior.cs" t="Include" />
+            </e>
             <e p="CameraChanger.cs" t="Include" />
             <e p="Changer.cs" t="Include" />
+            <e p="FloatCameraChanger.cs" t="Include" />
+            <e p="FloatChanger.cs" t="Include" />
+            <e p="FloatOpacityChanger.cs" t="Include" />
+            <e p="FloatScaleChanger.cs" t="Include" />
             <e p="OpacityChanger.cs" t="Include" />
             <e p="PositionChanger.cs" t="Include" />
             <e p="ScaleChanger.cs" t="Include" />
@@ -56,9 +65,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Space Emoji.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Space Emoji.-146125437.00" t="ExcludeRecursive" />

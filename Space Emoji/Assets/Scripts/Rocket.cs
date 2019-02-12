@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rocket : PositionChanger
 {
-    public CameraChanger cameraChanger;
+    public FloatCameraChanger cameraChanger;
 
     private DirectionType _selfDirection = DirectionType.None;
 
@@ -71,11 +71,11 @@ public class Rocket : PositionChanger
     {
         speed = 3;
 
-        cameraChanger.SetTargetFromStart(-0.2F);
+        cameraChanger.SetTargetFromStart(-1);
         SetTargetFromCurrent(new Vector2(0, 1.66F));
         yield return new WaitUntil(IsFinished);
 
-        cameraChanger.SetTargetFromStart(-0.2F);
+        cameraChanger.SetTargetFromStart(0);
         SetTargetFromCurrent(new Vector2(0, -2.32F));
         yield return new WaitUntil(IsFinished);
 
