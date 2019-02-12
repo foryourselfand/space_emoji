@@ -1,4 +1,4 @@
-public class PositionYChanger : PositionChanger
+public class PositionYChanger : TransformChanger
 {
     protected override float GetCurrentRef()
     {

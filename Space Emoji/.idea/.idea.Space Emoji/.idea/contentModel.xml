@@ -9,17 +9,19 @@
             <e p="Behaviors" t="Include">
               <e p="ChangerBehavior.cs" t="Include" />
               <e p="LerpBehavior.cs" t="Include" />
+              <e p="MoveTowardsAngle.cs" t="Include" />
               <e p="MoveTowardsBehavior.cs" t="Include" />
             </e>
             <e p="CameraChanger.cs" t="Include" />
             <e p="Changer.cs" t="Include" />
             <e p="FloatChanger.cs" t="Include" />
             <e p="OpacityChanger.cs" t="Include" />
-            <e p="PositionChanger.cs" t="Include" />
             <e p="PositionXChanger.cs" t="Include" />
             <e p="PositionYChanger.cs" t="Include" />
+            <e p="RotationChanger.cs" t="Include" />
             <e p="ScaleChanger.cs" t="Include" />
             <e p="ScaleType.cs" t="Include" />
+            <e p="TransformChanger.cs" t="Include" />
           </e>
           <e p="Clickers" t="Include">
             <e p="ArrowClicker.cs" t="Include" />

@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!114 &20046323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!114 &609616953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2769,7 +2769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!1 &651776355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!1 &1041057478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5549,6 +5549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1477025595}
+  - component: {fileID: 1477025596}
   m_Layer: 0
   m_Name: Rotation Parent
   m_TagString: Untagged
@@ -5562,7 +5563,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1477025594}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5570,6 +5571,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1477025596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477025594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630a1b51ecb84c249e664c9726ba4d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!1 &1542179020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5787,7 +5800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!1 &1620522528
 GameObject:
   m_ObjectHideFlags: 0
@@ -6359,7 +6372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!1 &1733895627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6438,7 +6451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6c730e6e534eb6ac82862d88a74b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 0.1
+  timeToWait: 0.05
 --- !u!1 &1768686006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6624,7 +6637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262e2d0368a4271b933f49d992adadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!114 &1829767619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7103,6 +7116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   cameraChanger: {fileID: 519420033}
+  rotationChanger: {fileID: 1477025596}
 --- !u!50 &1988023221
 Rigidbody2D:
   serializedVersion: 4

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class PositionChanger : FloatChanger
+public abstract class TransformChanger : FloatChanger
 {
     protected Transform Transform;
 

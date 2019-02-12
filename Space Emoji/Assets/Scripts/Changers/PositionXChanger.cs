@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PositionXChanger : PositionChanger
+public class PositionXChanger : TransformChanger
 {
     protected override float GetCurrentRef()
     {

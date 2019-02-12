@@ -5,6 +5,20 @@ using UnityEngine;
 public class Rocket : PositionXChanger
 {
     public CameraChanger cameraChanger;
+    public RotationChanger rotationChanger;
+
+    private float _dependentSpeed;
+
+    private float DependentSpeed
+    {
+        get { return _dependentSpeed; }
+        set
+        {
+            _dependentSpeed = value;
+            speed = value;
+            cameraChanger.SetTargetFromStart(value / 2);
+        }
+    }
 
     private DirectionType _selfDirection = DirectionType.None;
 
@@ -13,12 +27,17 @@ public class Rocket : PositionXChanger
         DirectionCondition(initial, DirectionType.Left, DirectionType.Right);
         DirectionCondition(initial, DirectionType.Right, DirectionType.Left);
 
-        SetDirectionBasedOnSelf();
+        var direction = initial == DirectionType.Right ? -1 : 1;
+        var temp = DependentSpeed * direction * 2.5F;
+        rotationChanger.SetTargetFromStart(temp);
+        Debug.Log(temp.ToString());
+
+        MoveByDirection();
     }
 
-    private void DirectionCondition(DirectionType initial, DirectionType positive, DirectionType negative)
+    private void DirectionCondition(DirectionType direction, DirectionType positive, DirectionType negative)
     {
-        if (initial != positive) return;
+        if (direction != positive) return;
         if (_selfDirection == negative)
             DecreaseSpeed();
         else
@@ -27,19 +46,17 @@ public class Rocket : PositionXChanger
 
     private void DecreaseSpeed()
     {
-        speed--;
-        cameraChanger.SetTargetFromStart(speed / 2);
-        if (speed == 0)
+        DependentSpeed--;
+        if (DependentSpeed == 0)
             _selfDirection = DirectionType.None;
     }
 
-    private void IncreaseSpeed(DirectionType defaultDirection)
+    private void IncreaseSpeed(DirectionType direction)
     {
-        if (speed < 5)
-            speed++;
-        cameraChanger.SetTargetFromStart(speed / 2);
+        if (DependentSpeed < 5)
+            DependentSpeed++;
         if (_selfDirection == DirectionType.None)
-            _selfDirection = defaultDirection;
+            _selfDirection = direction;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,19 +67,12 @@ public class Rocket : PositionXChanger
         else if (_selfDirection == DirectionType.Right)
             _selfDirection = DirectionType.Left;
 
-        SetDirectionBasedOnSelf();
+        MoveByDirection();
     }
 
-    private void SetDirectionBasedOnSelf()
+    private void MoveByDirection()
     {
-        if (_selfDirection == DirectionType.Left)
-            SetDirection(-1);
-        else if (_selfDirection == DirectionType.Right)
-            SetDirection(1);
-    }
-
-    private void SetDirection(int direction)
-    {
+        var direction = _selfDirection == DirectionType.Right ? 1 : -1;
         SetTarget(100 * direction);
     }
 }
