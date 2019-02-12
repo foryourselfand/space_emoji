@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Rocket : PositionChanger
 {
-    public float xBound;
-
     public CameraChanger cameraChanger;
 
     private DirectionType _selfDirection = DirectionType.None;
@@ -30,7 +28,7 @@ public class Rocket : PositionChanger
     private void DecreaseSpeed()
     {
         speed--;
-        cameraChanger.SetTargetFromStart(speed / 5);
+        cameraChanger.SetTargetFromStart(speed / 2);
         if (speed == 0)
             _selfDirection = DirectionType.None;
     }
@@ -39,13 +37,14 @@ public class Rocket : PositionChanger
     {
         if (speed < 5)
             speed++;
-        cameraChanger.SetTargetFromStart(speed / 5);
+        cameraChanger.SetTargetFromStart(speed / 2);
         if (_selfDirection == DirectionType.None)
             _selfDirection = defaultDirection;
     }
 
-    protected override void OnEnd()
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.CompareTag("Bound")) return;
         if (_selfDirection == DirectionType.Left)
             _selfDirection = DirectionType.Right;
         else if (_selfDirection == DirectionType.Right)
@@ -65,7 +64,7 @@ public class Rocket : PositionChanger
     private void SetDirection(int direction)
     {
         StartChanging();
-        SetTarget(new Vector2(xBound * direction, transform.localPosition.y));
+        SetTarget(new Vector2(100 * direction, transform.localPosition.y));
     }
 
     public IEnumerator Fly()
