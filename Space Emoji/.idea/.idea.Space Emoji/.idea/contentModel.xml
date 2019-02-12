@@ -11,15 +11,12 @@
               <e p="LerpBehavior.cs" t="Include" />
               <e p="MoveTowardsBehavior.cs" t="Include" />
             </e>
-            <e p="CameraChanger.cs" t="Include" />
             <e p="Changer.cs" t="Include" />
             <e p="FloatCameraChanger.cs" t="Include" />
             <e p="FloatChanger.cs" t="Include" />
             <e p="FloatOpacityChanger.cs" t="Include" />
             <e p="FloatScaleChanger.cs" t="Include" />
-            <e p="OpacityChanger.cs" t="Include" />
             <e p="PositionChanger.cs" t="Include" />
-            <e p="ScaleChanger.cs" t="Include" />
             <e p="ScaleType.cs" t="Include" />
           </e>
           <e p="Clickers" t="Include">

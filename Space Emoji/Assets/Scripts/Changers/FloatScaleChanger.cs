@@ -18,4 +18,12 @@ public class FloatScaleChanger : FloatChanger
     {
         _transform.localScale = new Vector3(current, current);
     }
+
+    public void SetTypeTarget(ScaleType scaleType)
+    {
+        if (scaleType == ScaleType.Up)
+            SetTargetToStart();
+        else
+            SetTarget(0);
+    }
 }

@@ -7,19 +7,19 @@ public class WaiterGroup : MonoBehaviour
 {
     public float timeToWait;
 
-    private List<ScaleChanger> _buttons;
+    private List<FloatScaleChanger> _buttons;
 
     private ScaleType _scaleType;
 
     private void Awake()
     {
-        _buttons = Helper.GetChildrenFromParent<ScaleChanger>(gameObject);
+        _buttons = Helper.GetChildrenFromParent<FloatScaleChanger>(gameObject);
     }
 
     private void Start()
     {
         foreach (var button in _buttons)
-            button.SetCurrent(Vector3.zero);
+            button.SetCurrent(0);
         _scaleType = ScaleType.Up;
     }
 
@@ -27,7 +27,7 @@ public class WaiterGroup : MonoBehaviour
     {
         foreach (var button in _buttons)
         {
-            button.SetTarget(_scaleType);
+            button.SetTypeTarget(_scaleType);
             yield return new WaitForSeconds(timeToWait);
         }
 

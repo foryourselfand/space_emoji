@@ -42,21 +42,29 @@ public abstract class FloatChanger : Changer
         CurrentValue = _targetValue;
     }
 
+    public void SetCurrent(float current)
+    {
+        CurrentValue = current;
+    }
+
     public void SetTarget(float target)
     {
         _targetValue = target;
         StartChanging();
     }
 
+    public void SetTargetToStart()
+    {
+        SetTarget(_startValue);
+    }
+
     public void SetTargetFromCurrent(float target)
     {
-        _targetValue = CurrentValue + target;
-        StartChanging();
+        SetTarget(CurrentValue + target);
     }
 
     public void SetTargetFromStart(float target)
     {
-        _targetValue = _startValue + target;
-        StartChanging();
+        SetTarget(_startValue + target);
     }
 }
