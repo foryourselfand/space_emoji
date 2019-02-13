@@ -5,7 +5,23 @@ using UnityEngine;
 public class Rocket : PositionXChanger
 {
     public CameraChanger cameraChanger;
-    public RotationChanger rotationChanger;
+    public RotationManager rotationManager;
+
+    private DirectionType _selfDirection = DirectionType.None;
+
+    public DirectionType SelfDirection
+    {
+        get { return _selfDirection; }
+        set
+        {
+            _selfDirection = value;
+            if (value == DirectionType.Left)
+                rotationManager.direction = 1;
+            if (value == DirectionType.Right)
+                rotationManager.direction = -1;
+            rotationManager.Action(DependentSpeed);
+        }
+    }
 
     private float _dependentSpeed;
 
@@ -17,62 +33,76 @@ public class Rocket : PositionXChanger
             _dependentSpeed = value;
             speed = value;
             cameraChanger.SetTargetFromStart(value / 2);
+            rotationManager.Action(DependentSpeed);
         }
     }
 
-    private DirectionType _selfDirection = DirectionType.None;
+    private bool _canLeft = true, _canRight = true;
 
     public void ChangeSpeedAndDirection(DirectionType initial)
     {
-        DirectionCondition(initial, DirectionType.Left, DirectionType.Right);
-        DirectionCondition(initial, DirectionType.Right, DirectionType.Left);
-
-        var direction = initial == DirectionType.Right ? -1 : 1;
-        var temp = DependentSpeed * direction * 2.5F;
-        rotationChanger.SetTargetFromStart(temp);
-        Debug.Log(temp.ToString());
+        if (initial == DirectionType.Left)
+        {
+            if (_canLeft)
+            {
+                if (SelfDirection == DirectionType.Right)
+                    DecreaseSpeed();
+                else
+                    IncreaseSpeed(DirectionType.Left);
+            }
+        }
+        else if (initial == DirectionType.Right)
+        {
+            if (_canRight)
+            {
+                if (SelfDirection == DirectionType.Left)
+                    DecreaseSpeed();
+                else
+                    IncreaseSpeed(DirectionType.Right);
+            }
+        }
 
         MoveByDirection();
     }
 
-    private void DirectionCondition(DirectionType direction, DirectionType positive, DirectionType negative)
-    {
-        if (direction != positive) return;
-        if (_selfDirection == negative)
-            DecreaseSpeed();
-        else
-            IncreaseSpeed(positive);
-    }
-
     private void DecreaseSpeed()
     {
+        if (DependentSpeed - 1 == 0)
+            SelfDirection = DirectionType.None;
         DependentSpeed--;
-        if (DependentSpeed == 0)
-            _selfDirection = DirectionType.None;
     }
 
     private void IncreaseSpeed(DirectionType direction)
     {
+        if (SelfDirection == DirectionType.None)
+            SelfDirection = direction;
         if (DependentSpeed < 5)
             DependentSpeed++;
-        if (_selfDirection == DirectionType.None)
-            _selfDirection = direction;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Bound")) return;
-        if (_selfDirection == DirectionType.Left)
-            _selfDirection = DirectionType.Right;
-        else if (_selfDirection == DirectionType.Right)
-            _selfDirection = DirectionType.Left;
+        if (SelfDirection == DirectionType.Left)
+            SelfDirection = DirectionType.Right;
+        else if (SelfDirection == DirectionType.Right)
+            SelfDirection = DirectionType.Left;
 
         MoveByDirection();
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.CompareTag("Bound")) return;
+        if (!_canLeft)
+            _canLeft = true;
+        if (!_canRight)
+            _canRight = true;
+    }
+
     private void MoveByDirection()
     {
-        var direction = _selfDirection == DirectionType.Right ? 1 : -1;
+        var direction = SelfDirection == DirectionType.Right ? 1 : -1;
         SetTarget(100 * direction);
     }
 }

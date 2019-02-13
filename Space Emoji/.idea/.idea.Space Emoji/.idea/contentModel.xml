@@ -8,8 +8,8 @@
           <e p="Changers" t="Include">
             <e p="Behaviors" t="Include">
               <e p="ChangerBehavior.cs" t="Include" />
+              <e p="LerpAngle.cs" t="Include" />
               <e p="LerpBehavior.cs" t="Include" />
-              <e p="MoveTowardsAngle.cs" t="Include" />
               <e p="MoveTowardsBehavior.cs" t="Include" />
             </e>
             <e p="CameraChanger.cs" t="Include" />
@@ -53,6 +53,7 @@
             <e p="EnvironmentManager.cs" t="Include" />
             <e p="FadersManager.cs" t="Include" />
             <e p="MoversManager.cs" t="Include" />
+            <e p="RotationManager.cs" t="Include" />
             <e p="SpaceManager.cs" t="Include" />
           </e>
           <e p="Rocket.cs" t="Include" />
@@ -66,7 +67,9 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Space Emoji.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Space Emoji.-146125437.00" t="ExcludeRecursive" />
