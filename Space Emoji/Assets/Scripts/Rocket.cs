@@ -9,31 +9,24 @@ public class Rocket : PositionXChanger
 
     private DirectionType _selfDirection = DirectionType.None;
 
-    public DirectionType SelfDirection
+    private DirectionType SelfDirection
     {
         get { return _selfDirection; }
         set
         {
             _selfDirection = value;
-            if (value == DirectionType.Left)
-                rotationManager.direction = 1;
-            if (value == DirectionType.Right)
-                rotationManager.direction = -1;
-            rotationManager.Action(DependentSpeed);
+            rotationManager.Action(_selfDirection, DependentSpeed);
         }
     }
 
-    private float _dependentSpeed;
-
     private float DependentSpeed
     {
-        get { return _dependentSpeed; }
+        get { return speed; }
         set
         {
-            _dependentSpeed = value;
             speed = value;
             cameraChanger.SetTargetFromStart(value / 2);
-            rotationManager.Action(DependentSpeed);
+            rotationManager.Action(_selfDirection, DependentSpeed);
         }
     }
 

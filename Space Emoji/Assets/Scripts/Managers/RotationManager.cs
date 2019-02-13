@@ -6,12 +6,13 @@ public class RotationManager : MonoBehaviour
 
     public float offSet;
 
-    [HideInInspector] public int direction;
-
-
-    public void Action(float angle)
+    public void Action(DirectionType directionType, float angle)
     {
-        Debug.Log(direction.ToString());
+        var direction = 0;
+        if (directionType == DirectionType.Left)
+            direction = 1;
+        else if (directionType == DirectionType.Right)
+            direction = -1;
         rotationChanger.SetTargetFromStart(angle * offSet * direction);
     }
 }
