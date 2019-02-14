@@ -7,15 +7,15 @@ public class SpaceManager : MonoBehaviour
 
     public void StartMove()
     {
-        StartCoroutine(Moving(parentFirst, -10));
-        StartCoroutine(Moving(parentSecond, -20));
+        StartCoroutine(Moving(parentFirst, -15));
+        StartCoroutine(Moving(parentSecond, -30));
     }
 
     private IEnumerator Moving(PositionYChanger parent, float byY)
     {
         parent.SetTargetFromCurrent(byY);
         yield return new WaitUntil(parent.IsFinished);
-        parent.SetCurrent(10);
-        StartCoroutine(Moving(parent, -20));
+        parent.SetCurrent(15);
+        StartCoroutine(Moving(parent, -30));
     }
 }

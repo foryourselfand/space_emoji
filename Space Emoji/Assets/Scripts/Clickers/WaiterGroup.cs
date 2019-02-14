@@ -37,9 +37,7 @@ public class WaiterGroup : MonoBehaviour
 
     public IEnumerator IsAllFinished()
     {
-        foreach (var button in _buttons.ToList())
-        {
+        foreach (var button in _buttons.ToArray())
             yield return new WaitUntil(button.IsFinished);
-        }
     }
 }

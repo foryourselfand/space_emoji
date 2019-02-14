@@ -13,7 +13,7 @@ public class CameraManager : MonoBehaviour
 
     public void MoveIn()
     {
-        cameraChanger.SetTarget(4);
+        cameraChanger.SetTarget(3.5F);
     }
 
     public void MoveOut()
