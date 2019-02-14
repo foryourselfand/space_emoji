@@ -4,7 +4,7 @@ public class OpacityChanger : FloatChanger
 {
     private SpriteRenderer _spriteRenderer;
 
-    protected override void DefineChangingValue()
+    public override void DefineChangingValue()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }

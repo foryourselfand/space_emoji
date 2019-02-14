@@ -23,7 +23,7 @@ public abstract class FloatChanger : Changer
             _changerBehavior = gameObject.AddComponent<MoveTowardsBehavior>();
     }
 
-    protected abstract void DefineChangingValue();
+    public abstract void DefineChangingValue();
     protected abstract float GetCurrentRef();
     protected abstract void SetCurrentRef(float current);
 

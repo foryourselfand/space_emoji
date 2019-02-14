@@ -4,7 +4,7 @@ public class CameraChanger : FloatChanger
 {
     private Camera _camera;
 
-    protected override void DefineChangingValue()
+    public override void DefineChangingValue()
     {
         _camera = GetComponent<Camera>();
     }

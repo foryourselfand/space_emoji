@@ -10,6 +10,7 @@ public class GameCycle : MonoBehaviour
     public ButtonsManager buttonsManager;
     public FadersManager fadersManager;
     public CameraManager cameraManager;
+    public EnemyManager enemyManager;
 
     private void Start()
     {
@@ -69,5 +70,6 @@ public class GameCycle : MonoBehaviour
         yield return buttonsManager.InstructionsFinished();
         buttonsManager.ActiveInputs();
         CanClick = true;
+        StartCoroutine(enemyManager.Swapwning());
     }
 }
