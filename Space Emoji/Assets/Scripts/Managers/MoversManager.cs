@@ -9,30 +9,33 @@ public class MoversManager : MonoBehaviour
 
     public IEnumerator GroundUpping()
     {
+        groundParent.gameObject.SetActive(true);
         rocket.transform.parent = groundParent.transform;
 
         groundParent.SetCurrent(-4);
         groundParent.SetTargetFromCurrent(4);
         yield return new WaitUntil(groundParent.IsFinished);
-
-        rocket.transform.parent = groundParent.transform.parent;
     }
 
-    public void GroundOff()
+    public IEnumerator GroundDowning()
     {
+        rocket.transform.parent = groundParent.transform.parent;
+        
         spaceManager.StartMove();
         groundParent.SetTargetFromCurrent(-4);
+        yield return new WaitUntil(groundParent.IsFinished);
+        
+        groundParent.gameObject.SetActive(false);
     }
 
-    public IEnumerator RocketFlyUp()
+    public void RocketUp()
     {
-        rocket.SetTargetFromCurrent(1.66F);
-        yield return new WaitUntil(rocket.IsFinished);
+        rocket.SetTargetFromCurrent(10);
     }
 
-    public IEnumerator RocketFlyDown()
+    public IEnumerator RocketDown()
     {
-        rocket.SetTargetFromCurrent(-2.32F);
+        rocket.SetTarget(-2.32F);
         yield return new WaitUntil(rocket.IsFinished);
     }
 

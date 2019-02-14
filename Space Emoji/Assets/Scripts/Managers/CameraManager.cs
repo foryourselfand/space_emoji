@@ -6,8 +6,18 @@ public class CameraManager : MonoBehaviour
 
     public float step;
 
-    public void Action(float flyValue)
+    public void MoveByStep(float flyValue)
     {
         cameraChanger.SetTargetFromStart(flyValue / step);
+    }
+
+    public void MoveIn()
+    {
+        cameraChanger.SetTarget(4);
+    }
+
+    public void MoveOut()
+    {
+        cameraChanger.SetTargetToStart();
     }
 }

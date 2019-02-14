@@ -28,7 +28,7 @@ public class Rocket : PositionXChanger
         {
             speed = value;
 
-            cameraManager.Action(value);
+            cameraManager.MoveByStep(value);
             rotationManager.Action(_selfDirection, DependentSpeed);
         }
     }

@@ -34,12 +34,10 @@ public class GameCycle : MonoBehaviour
 
     public void GroundOff()
     {
-        moversManager.GroundOff();
+        StartCoroutine(RocketFlyingUp());
         fadersManager.SkyOut();
         StartCoroutine(MenuButtonsHiding());
-        StartCoroutine(RocketFlying());
     }
-
 
     private IEnumerator MenuButtonsHiding()
     {
@@ -48,13 +46,25 @@ public class GameCycle : MonoBehaviour
         yield return buttonsManager.MenuButtonsTriggering();
     }
 
-    private IEnumerator RocketFlying()
+    private IEnumerator RocketFlyingUp()
     {
-        cameraManager.Action(-1);
-        yield return moversManager.RocketFlyUp();
-        cameraManager.Action(0);
-        yield return moversManager.RocketFlyDown();
+        cameraManager.MoveIn();
+        moversManager.RocketUp();
+        yield return moversManager.GroundDowning();
 
+        StartCoroutine(RocketFlyingDown());
+    }
+
+    private IEnumerator RocketFlyingDown()
+    {
+        cameraManager.MoveOut();
+        yield return moversManager.RocketDown();
+
+        StartCoroutine(ShowingInstructionButtons());
+    }
+
+    private IEnumerator ShowingInstructionButtons()
+    {
         yield return buttonsManager.InstructionsTriggering();
         yield return buttonsManager.InstructionsFinished();
         buttonsManager.ActiveInputs();
