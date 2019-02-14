@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Rocket : PositionXChanger
 {
-    public CameraChanger cameraChanger;
+    public CameraManager cameraManager;
     public RotationManager rotationManager;
 
     private DirectionType _selfDirection = DirectionType.None;
+    private DirectionType _lastDirection = DirectionType.None;
 
     private DirectionType SelfDirection
     {
         get { return _selfDirection; }
         set
         {
+            _lastDirection = _selfDirection;
             _selfDirection = value;
             rotationManager.Action(_selfDirection, DependentSpeed);
         }
@@ -25,7 +27,8 @@ public class Rocket : PositionXChanger
         set
         {
             speed = value;
-            cameraChanger.SetTargetFromStart(value / 2);
+
+            cameraManager.Action(value);
             rotationManager.Action(_selfDirection, DependentSpeed);
         }
     }
@@ -80,6 +83,11 @@ public class Rocket : PositionXChanger
             SelfDirection = DirectionType.Right;
         else if (SelfDirection == DirectionType.Right)
             SelfDirection = DirectionType.Left;
+
+        if (_lastDirection == DirectionType.Left)
+            _canLeft = false;
+        if (_lastDirection == DirectionType.Right)
+            _canRight = false;
 
         MoveByDirection();
     }

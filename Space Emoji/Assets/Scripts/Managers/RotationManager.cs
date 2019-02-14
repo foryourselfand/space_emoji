@@ -4,7 +4,7 @@ public class RotationManager : MonoBehaviour
 {
     public RotationChanger rotationChanger;
 
-    public float offSet;
+    public float step;
 
     public void Action(DirectionType directionType, float angle)
     {
@@ -13,6 +13,6 @@ public class RotationManager : MonoBehaviour
             direction = 1;
         else if (directionType == DirectionType.Right)
             direction = -1;
-        rotationChanger.SetTargetFromStart(angle * offSet * direction);
+        rotationChanger.SetTargetFromStart(angle * step * direction);
     }
 }

@@ -9,6 +9,7 @@ public class GameCycle : MonoBehaviour
     public MoversManager moversManager;
     public ButtonsManager buttonsManager;
     public FadersManager fadersManager;
+    public CameraManager cameraManager;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class GameCycle : MonoBehaviour
         StartCoroutine(RocketFlying());
     }
 
+
     private IEnumerator MenuButtonsHiding()
     {
         CanClick = false;
@@ -48,7 +50,11 @@ public class GameCycle : MonoBehaviour
 
     private IEnumerator RocketFlying()
     {
-        yield return moversManager.RocketFlying();
+        cameraManager.Action(-1);
+        yield return moversManager.RocketFlyUp();
+        cameraManager.Action(0);
+        yield return moversManager.RocketFlyDown();
+
         yield return buttonsManager.InstructionsTriggering();
         yield return buttonsManager.InstructionsFinished();
         buttonsManager.ActiveInputs();

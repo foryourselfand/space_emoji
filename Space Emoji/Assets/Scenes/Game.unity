@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!114 &20046323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,6 +1198,48 @@ Transform:
   m_Father: {fileID: 1477025595}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297561241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297561242}
+  - component: {fileID: 297561243}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297561242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297561241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1542179021}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &297561243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297561241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a38759a88c448339b0c4c7bce4747cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraChanger: {fileID: 519420033}
+  step: 2
 --- !u!1 &297833595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,6 +1328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  floatSpeed: 0
 --- !u!1 &323945797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1539,7 @@ MonoBehaviour:
   moversManager: {fileID: 1092288683}
   buttonsManager: {fileID: 136689932}
   fadersManager: {fileID: 1768686008}
+  cameraManager: {fileID: 297561243}
 --- !u!4 &354089070
 Transform:
   m_ObjectHideFlags: 0
@@ -2071,6 +2116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  floatSpeed: 0
 --- !u!1 &559332666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!114 &609616953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2770,6 +2817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!1 &651776355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,6 +3137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  floatSpeed: 0
 --- !u!1 &854470197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,6 +3610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  floatSpeed: 0
 --- !u!1 &996941577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,6 +3885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!1 &1041057478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,7 +5634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630a1b51ecb84c249e664c9726ba4d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
+  floatSpeed: 0
 --- !u!114 &1477025597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5624,6 +5676,7 @@ Transform:
   - {fileID: 1092288682}
   - {fileID: 136689931}
   - {fileID: 1768686007}
+  - {fileID: 297561242}
   - {fileID: 1665657457}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -5814,6 +5867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!1 &1620522528
 GameObject:
   m_ObjectHideFlags: 0
@@ -5975,7 +6029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1542179021}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1665657458
 MonoBehaviour:
@@ -5989,8 +6043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationChanger: {fileID: 1477025596}
-  offSet: 2.5
-  direction: 0
+  step: 2.5
 --- !u!1 &1678249700
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,6 +6482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!1 &1733895627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6694,6 +6748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  floatSpeed: 0
 --- !u!114 &1829767619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7000,6 +7055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  floatSpeed: 0
 --- !u!1 &1977135913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7171,7 +7227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  cameraChanger: {fileID: 519420033}
+  floatSpeed: 0
+  cameraManager: {fileID: 297561243}
   rotationManager: {fileID: 1665657458}
 --- !u!50 &1988023221
 Rigidbody2D:
@@ -7205,6 +7262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  floatSpeed: 0
 --- !u!1 &1997444115
 GameObject:
   m_ObjectHideFlags: 0

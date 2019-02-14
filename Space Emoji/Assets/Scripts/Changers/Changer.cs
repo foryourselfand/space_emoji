@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class Changer : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public abstract class Changer : MonoBehaviour
     {
         if (!_changing) return;
         if (Condition())
-            Change(Time.deltaTime);
+            Change();
         else
         {
             _changing = false;
@@ -21,7 +23,7 @@ public abstract class Changer : MonoBehaviour
 
     protected abstract bool Condition();
 
-    protected abstract void Change(float t);
+    protected abstract void Change();
 
     protected abstract void OnEnd();
 

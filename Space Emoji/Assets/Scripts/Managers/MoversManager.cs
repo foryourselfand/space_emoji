@@ -24,11 +24,22 @@ public class MoversManager : MonoBehaviour
         groundParent.SetTargetFromCurrent(-4);
     }
 
+    public IEnumerator RocketFlyUp()
+    {
+        rocket.SetTargetFromCurrent(1.66F);
+        yield return new WaitUntil(rocket.IsFinished);
+    }
+
+    public IEnumerator RocketFlyDown()
+    {
+        rocket.SetTargetFromCurrent(-2.32F);
+        yield return new WaitUntil(rocket.IsFinished);
+    }
+
     public IEnumerator RocketFlying()
     {
         rocket.SetTargetFromCurrent(1.66F);
         yield return new WaitUntil(rocket.IsFinished);
-
         rocket.SetTargetFromCurrent(-2.32F);
         yield return new WaitUntil(rocket.IsFinished);
     }

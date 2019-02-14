@@ -32,7 +32,7 @@ public abstract class FloatChanger : Changer
         return Mathf.Abs(CurrentValue - _targetValue) > 0.01F;
     }
 
-    protected override void Change(float t)
+    protected override void Change()
     {
         CurrentValue = _changerBehavior.Change(CurrentValue, _targetValue, speed);
     }

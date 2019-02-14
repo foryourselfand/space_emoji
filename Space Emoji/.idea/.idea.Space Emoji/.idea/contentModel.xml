@@ -50,6 +50,7 @@
           <e p="Helper.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="ButtonsManager.cs" t="Include" />
+            <e p="CameraManager.cs" t="Include" />
             <e p="EnvironmentManager.cs" t="Include" />
             <e p="FadersManager.cs" t="Include" />
             <e p="MoversManager.cs" t="Include" />
