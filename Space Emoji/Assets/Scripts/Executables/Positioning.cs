@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Positioning : IExecutableSimple
 {
-    public Vector2 upLeft, downRight;
+    public Vector2PairPrefab corners;
 
     protected override void ConcreteChildExecute(GameObject child)
     {
         child.transform.localPosition = new Vector2(
-            Random.Range(upLeft.x, downRight.x),
-            Random.Range(upLeft.y, downRight.y)
+            Random.Range(corners.upLeft.x, corners.downRight.x),
+            Random.Range(corners.upLeft.y, corners.downRight.y)
         );
     }
 }

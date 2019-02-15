@@ -6,7 +6,7 @@ public class Opaciting : IExecutableOffSet
     {
         var spriteRenderer = child.GetComponent<SpriteRenderer>();
         var temp = spriteRenderer.color;
-        temp.a = Random.Range(startValue - offSet, startValue + offSet);
+        temp.a = Random.Range(offSet.value.x - offSet.value.y, offSet.value.x + offSet.value.y);
         spriteRenderer.color = temp;
     }
 }

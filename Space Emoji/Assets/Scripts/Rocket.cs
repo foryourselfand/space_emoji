@@ -35,6 +35,11 @@ public class Rocket : PositionXChanger
 
 //    private bool _canLeft = true, _canRight = true;
 
+    private void Start()
+    {
+        DependentSpeed = 0;
+    }
+
     public void ChangeSpeedAndDirection(DirectionType initial)
     {
         if (initial == DirectionType.Left)

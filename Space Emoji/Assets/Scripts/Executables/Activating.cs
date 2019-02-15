@@ -3,11 +3,10 @@ using UnityEngine;
 
 public class Activating : IExecutableSimple
 {
-    public int probability;
-    public int upperBound;
+    public Vector2Prefab probability;
 
     protected override void ConcreteChildExecute(GameObject child)
     {
-        child.SetActive(Random.Range(0, upperBound) - probability < 0);
+        child.SetActive(Random.Range(0, probability.value.y) - probability.value.x < 0);
     }
 }

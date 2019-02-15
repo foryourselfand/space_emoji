@@ -4,11 +4,11 @@ using UnityEngine;
 public class Spawning : IExecutable
 {
     public GameObject prefab;
-    public int spawnCount;
+    public FloatPrefab spawnCount;
 
     public override void Execute()
     {
-        for (var i = 0; i < spawnCount; i++)
+        for (var i = 0; i < spawnCount.value; i++)
         {
             var instance = Instantiate(prefab, family.parent.transform);
             instance.transform.parent = family.parent.transform;

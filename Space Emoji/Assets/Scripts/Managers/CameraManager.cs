@@ -4,11 +4,11 @@ public class CameraManager : MonoBehaviour
 {
     public CameraChanger cameraChanger;
 
-    public float step;
+    public FloatPrefab step;
 
     public void MoveByStep(float flyValue)
     {
-        cameraChanger.SetTargetFromStart(flyValue / step);
+        cameraChanger.SetTargetFromStart(flyValue / step.value);
     }
 
     public void MoveIn()

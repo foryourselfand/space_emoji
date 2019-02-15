@@ -26,24 +26,26 @@
           </e>
           <e p="Clickers" t="Include">
             <e p="ArrowClicker.cs" t="Include" />
-            <e p="Clicker.cs" t="Include" />
+            <e p="Other" t="Include">
+              <e p="Clicker.cs" t="Include" />
+              <e p="WaiterGroup.cs" t="Include" />
+            </e>
             <e p="PlayClicker.cs" t="Include" />
             <e p="RefreshClicker.cs" t="Include" />
             <e p="SoundClicker.cs" t="Include" />
-            <e p="WaiterGroup.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyBound.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
           </e>
+          <e p="Enums" t="Include">
+            <e p="DirectionType.cs" t="Include" />
+            <e p="ScaleType.cs" t="Include" />
+          </e>
           <e p="Executables" t="Include">
             <e p="Activating.cs" t="Include" />
-            <e p="Family.cs" t="Include" />
             <e p="Flipping.cs" t="Include" />
-            <e p="IExecutable.cs" t="Include" />
-            <e p="IExecutableOffSet.cs" t="Include" />
-            <e p="IExecutableSimple.cs" t="Include" />
             <e p="Opaciting.cs" t="Include" />
             <e p="Positioning.cs" t="Include" />
             <e p="Rotating.cs" t="Include" />
@@ -54,6 +56,12 @@
               <e p="SpritesHolder.cs" t="Include" />
             </e>
             <e p="Spriting.cs" t="Include" />
+            <e p="Super" t="Include">
+              <e p="Family.cs" t="Include" />
+              <e p="IExecutable.cs" t="Include" />
+              <e p="IExecutableOffSet.cs" t="Include" />
+              <e p="IExecutableSimple.cs" t="Include" />
+            </e>
           </e>
           <e p="GameCycle.cs" t="Include" />
           <e p="Managers" t="Include">
@@ -67,10 +75,12 @@
             <e p="SpaceManager.cs" t="Include" />
           </e>
           <e p="Other" t="Include">
-            <e p="DirectionType.cs" t="Include" />
-            <e p="FloatPrefab.cs" t="Include" />
             <e p="Helper.cs" t="Include" />
-            <e p="ScaleType.cs" t="Include" />
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="FloatPrefab.cs" t="Include" />
+            <e p="Vector2PairPrefab.cs" t="Include" />
+            <e p="Vector2Prefab.cs" t="Include" />
           </e>
           <e p="Rocket.cs" t="Include" />
         </e>

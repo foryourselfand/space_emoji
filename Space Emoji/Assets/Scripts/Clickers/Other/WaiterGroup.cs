@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WaiterGroup : MonoBehaviour
 {
-    public float timeToWait;
+    public FloatPrefab timeToWait;
 
     private List<ScaleChanger> _buttons;
 
@@ -28,7 +28,7 @@ public class WaiterGroup : MonoBehaviour
         for (var i = 0; i < _buttons.Count; i++)
         {
             _buttons[i].SetTypeTarget(_scaleType);
-            yield return new WaitForSeconds(timeToWait);
+            yield return new WaitForSeconds(timeToWait.value);
         }
 
         _buttons.Reverse();

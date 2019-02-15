@@ -6,8 +6,8 @@ public class Rotating : IExecutableOffSet
     {
         child.transform.eulerAngles =
             new Vector3(0, 0, Random.Range(
-                startValue - offSet,
-                startValue + offSet)
+                offSet.value.x - offSet.value.y,
+                offSet.value.x + offSet.value.y)
             );
     }
 }
