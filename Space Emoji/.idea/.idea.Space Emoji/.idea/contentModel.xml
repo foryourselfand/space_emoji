@@ -16,12 +16,13 @@
             <e p="Changer.cs" t="Include" />
             <e p="FloatChanger.cs" t="Include" />
             <e p="OpacityChanger.cs" t="Include" />
-            <e p="PositionXChanger.cs" t="Include" />
-            <e p="PositionYChanger.cs" t="Include" />
-            <e p="RotationChanger.cs" t="Include" />
-            <e p="ScaleChanger.cs" t="Include" />
-            <e p="ScaleType.cs" t="Include" />
-            <e p="TransformChanger.cs" t="Include" />
+            <e p="Transform" t="Include">
+              <e p="PositionXChanger.cs" t="Include" />
+              <e p="PositionYChanger.cs" t="Include" />
+              <e p="RotationChanger.cs" t="Include" />
+              <e p="ScaleChanger.cs" t="Include" />
+              <e p="TransformChanger.cs" t="Include" />
+            </e>
           </e>
           <e p="Clickers" t="Include">
             <e p="ArrowClicker.cs" t="Include" />
@@ -31,10 +32,11 @@
             <e p="SoundClicker.cs" t="Include" />
             <e p="WaiterGroup.cs" t="Include" />
           </e>
-          <e p="DirectionType.cs" t="Include" />
-          <e p="Enemy.cs" t="Include" />
-          <e p="EnemyBound.cs" t="Include" />
-          <e p="EnemySpawner.cs" t="Include" />
+          <e p="Enemies" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyBound.cs" t="Include" />
+            <e p="EnemySpawner.cs" t="Include" />
+          </e>
           <e p="Executables" t="Include">
             <e p="Activating.cs" t="Include" />
             <e p="Family.cs" t="Include" />
@@ -47,11 +49,13 @@
             <e p="Rotating.cs" t="Include" />
             <e p="Scaling.cs" t="Include" />
             <e p="Spawning.cs" t="Include" />
+            <e p="Sprites Holders" t="Include">
+              <e p="NonRepeatingSpritesHolder.cs" t="Include" />
+              <e p="SpritesHolder.cs" t="Include" />
+            </e>
             <e p="Spriting.cs" t="Include" />
           </e>
-          <e p="FloatPrefab.cs" t="Include" />
           <e p="GameCycle.cs" t="Include" />
-          <e p="Helper.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="ButtonsManager.cs" t="Include" />
             <e p="CameraManager.cs" t="Include" />
@@ -62,18 +66,22 @@
             <e p="RotationManager.cs" t="Include" />
             <e p="SpaceManager.cs" t="Include" />
           </e>
-          <e p="Rocket.cs" t="Include" />
-          <e p="Sprites Holders" t="Include">
-            <e p="NonRepeatingSpritesHolder.cs" t="Include" />
-            <e p="SpritesHolder.cs" t="Include" />
+          <e p="Other" t="Include">
+            <e p="DirectionType.cs" t="Include" />
+            <e p="FloatPrefab.cs" t="Include" />
+            <e p="Helper.cs" t="Include" />
+            <e p="ScaleType.cs" t="Include" />
           </e>
+          <e p="Rocket.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Space Emoji.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Space Emoji.-146125437.00" t="ExcludeRecursive" />

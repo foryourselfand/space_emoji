@@ -25,9 +25,9 @@ public class WaiterGroup : MonoBehaviour
 
     public IEnumerator Triggering()
     {
-        foreach (var button in _buttons)
+        for (var i = 0; i < _buttons.Count; i++)
         {
-            button.SetTypeTarget(_scaleType);
+            _buttons[i].SetTypeTarget(_scaleType);
             yield return new WaitForSeconds(timeToWait);
         }
 
@@ -37,7 +37,9 @@ public class WaiterGroup : MonoBehaviour
 
     public IEnumerator IsAllFinished()
     {
-        foreach (var button in _buttons.ToArray())
-            yield return new WaitUntil(button.IsFinished);
+        for (var i = 0; i < _buttons.Count; i++)
+        {
+            yield return new WaitUntil(_buttons[i].IsFinished);
+        }
     }
 }

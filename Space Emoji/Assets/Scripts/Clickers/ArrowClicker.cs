@@ -2,11 +2,11 @@ public class ArrowClicker : Clicker
 {
     public DirectionType directionType;
     public Rocket rocket;
-    public ButtonsManager buttonsManager;
+    public GameCycle gameCycle;
 
     protected override void Click()
     {
         rocket.ChangeSpeedAndDirection(directionType);
-        buttonsManager.HideInstructionsIfNeed();
+        gameCycle.FirstClickOnInstructions();
     }
 }

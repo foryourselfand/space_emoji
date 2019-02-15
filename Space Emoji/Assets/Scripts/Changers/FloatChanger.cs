@@ -34,7 +34,7 @@ public abstract class FloatChanger : Changer
 
     protected override void Change()
     {
-        CurrentValue = _changerBehavior.Change(CurrentValue, _targetValue, speed);
+        CurrentValue = _changerBehavior.Change(CurrentValue, _targetValue, speed.value);
     }
 
     protected override void OnEnd()

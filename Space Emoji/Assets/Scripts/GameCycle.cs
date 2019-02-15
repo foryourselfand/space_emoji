@@ -12,9 +12,12 @@ public class GameCycle : MonoBehaviour
     public CameraManager cameraManager;
     public EnemyManager enemyManager;
 
+    private bool _isFirstCLickOnInstructions;
+
     private void Start()
     {
         CanClick = false;
+        _isFirstCLickOnInstructions = true;
         environmentManager.OnStartRefresh();
         StartCoroutine(GroundUpping());
     }
@@ -66,10 +69,17 @@ public class GameCycle : MonoBehaviour
 
     private IEnumerator ShowingInstructionButtons()
     {
-        yield return buttonsManager.InstructionsTriggering();
+        buttonsManager.InstructionsTrigger();
         yield return buttonsManager.InstructionsFinished();
         buttonsManager.ActiveInputs();
         CanClick = true;
+    }
+
+    public void FirstClickOnInstructions()
+    {
+        if (!_isFirstCLickOnInstructions) return;
+        _isFirstCLickOnInstructions = false;
+        buttonsManager.InstructionsTrigger();
         StartCoroutine(enemyManager.Swapwning());
     }
 }
