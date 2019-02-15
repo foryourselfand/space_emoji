@@ -33,29 +33,29 @@ public class Rocket : PositionXChanger
         }
     }
 
-    private bool _canLeft = true, _canRight = true;
+//    private bool _canLeft = true, _canRight = true;
 
     public void ChangeSpeedAndDirection(DirectionType initial)
     {
         if (initial == DirectionType.Left)
         {
-            if (_canLeft)
-            {
-                if (SelfDirection == DirectionType.Right)
-                    DecreaseSpeed();
-                else
-                    IncreaseSpeed(DirectionType.Left);
-            }
+//            if (_canLeft)
+//            {
+            if (SelfDirection == DirectionType.Right)
+                DecreaseSpeed();
+            else
+                IncreaseSpeed(DirectionType.Left);
+//            }
         }
         else if (initial == DirectionType.Right)
         {
-            if (_canRight)
-            {
-                if (SelfDirection == DirectionType.Left)
-                    DecreaseSpeed();
-                else
-                    IncreaseSpeed(DirectionType.Right);
-            }
+//            if (_canRight)
+//            {
+            if (SelfDirection == DirectionType.Left)
+                DecreaseSpeed();
+            else
+                IncreaseSpeed(DirectionType.Right);
+//            }
         }
 
         MoveByDirection();
@@ -79,27 +79,42 @@ public class Rocket : PositionXChanger
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Bound")) return;
-        if (SelfDirection == DirectionType.Left)
-            SelfDirection = DirectionType.Right;
-        else if (SelfDirection == DirectionType.Right)
-            SelfDirection = DirectionType.Left;
+        switch (SelfDirection)
+        {
+            case DirectionType.Left:
+                SelfDirection = DirectionType.Right;
+                break;
+            case DirectionType.Right:
+                SelfDirection = DirectionType.Left;
+                break;
+            case DirectionType.None:
+            {
+                if (_lastDirection == DirectionType.Left)
+                {
+//                    _canLeft = false;
+                    IncreaseSpeed(DirectionType.Right);
+                }
+                else if (_lastDirection == DirectionType.Right)
+                {
+//                    _canRight = false;
+                    IncreaseSpeed(DirectionType.Left);
+                }
 
-        if (_lastDirection == DirectionType.Left)
-            _canLeft = false;
-        if (_lastDirection == DirectionType.Right)
-            _canRight = false;
+                break;
+            }
+        }
 
         MoveByDirection();
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (!other.CompareTag("Bound")) return;
-        if (!_canLeft)
-            _canLeft = true;
-        if (!_canRight)
-            _canRight = true;
-    }
+//    private void OnTriggerExit2D(Collider2D other)
+//    {
+//        if (!other.CompareTag("Bound")) return;
+//        if (!_canLeft)
+//            _canLeft = true;
+//        if (!_canRight)
+//            _canRight = true;
+//    }
 
     private void MoveByDirection()
     {

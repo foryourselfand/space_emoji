@@ -49,6 +49,7 @@
             <e p="Spawning.cs" t="Include" />
             <e p="Spriting.cs" t="Include" />
           </e>
+          <e p="FloatPrefab.cs" t="Include" />
           <e p="GameCycle.cs" t="Include" />
           <e p="Helper.cs" t="Include" />
           <e p="Managers" t="Include">
@@ -72,9 +73,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Space Emoji.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Space Emoji.-146125437.00" t="ExcludeRecursive" />
