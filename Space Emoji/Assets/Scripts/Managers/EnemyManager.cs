@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
             
             randomSpawner.Spawn(parentUI, parentRotation);
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.5F);
         }
     }
 }

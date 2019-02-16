@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114662861392500218}
   - component: {fileID: 114041630156890522}
   m_Layer: 5
-  m_Name: Left Warning
+  m_Name: Right Warning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f81768d7ab643cb95b5369b2d8e7fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSet: {x: 90, y: 0}
-  enemyMover: {fileID: 1955177367127890, guid: d4b788aaf1b2c4a40888da3ad053a8d7, type: 2}
+  offSet: {x: -90, y: 0}
+  enemyMover: {fileID: 1955177367127890, guid: 12785bc84c1d24484a75baed71ddec64, type: 2}
 --- !u!114 &114662861392500218
 MonoBehaviour:
   m_ObjectHideFlags: 1
