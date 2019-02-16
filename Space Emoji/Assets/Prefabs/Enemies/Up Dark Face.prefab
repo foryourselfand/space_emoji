@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4269597574130032}
   - component: {fileID: 212930266094848912}
   m_Layer: 0
-  m_Name: Dark
+  m_Name: Up Dark Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

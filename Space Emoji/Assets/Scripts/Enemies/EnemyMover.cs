@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyMover : MonoBehaviour
 {
     public GameObject face;
     public float angle;
@@ -10,10 +10,9 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start in Enemy");
         _transform = GetComponent<Transform>();
 
-        Instantiate(face, _transform.localPosition, Quaternion.Euler(0, 0, angle), _transform);
+        Instantiate(face, _transform.position, Quaternion.Euler(0, 0, angle), _transform);
         _transform.localRotation = Quaternion.Euler(0, 0, angle);
 
         Invoke("DestroyAfter", 10);

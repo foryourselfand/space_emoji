@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4353077748060578}
   - component: {fileID: 114792113663692068}
   m_Layer: 0
-  m_Name: Dark Mover
+  m_Name: Up Dark Mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
