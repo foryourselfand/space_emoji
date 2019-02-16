@@ -17,6 +17,7 @@ public abstract class FloatChanger : Changer
     private void Awake()
     {
         DefineChangingValue();
+        Speed = prefabSpeed.value;
         _startValue = CurrentValue;
         _changerBehavior = GetComponent<ChangerBehavior>();
         if (_changerBehavior == null)
@@ -34,7 +35,7 @@ public abstract class FloatChanger : Changer
 
     protected override void Change()
     {
-        CurrentValue = _changerBehavior.Change(CurrentValue, _targetValue, speed.value);
+        CurrentValue = _changerBehavior.Change(CurrentValue, _targetValue, Speed);
     }
 
     protected override void OnEnd()

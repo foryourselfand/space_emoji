@@ -4,15 +4,16 @@ using UnityEngine.UI;
 
 public class EnemyManager : MonoBehaviour
 {
-    public EnemySpawner enemySpawner;
-    public GameObject parentRotation;
     public GameObject parentUI;
+    public GameObject parentRotation;
+
+    public EnemySpawner enemySpawner;
 
     public IEnumerator Swapwning()
     {
         while (true)
         {
-            enemySpawner.Spawn(parentRotation, parentUI);
+            enemySpawner.Spawn(parentUI, parentRotation);
 
             yield return new WaitForSeconds(2);
         }

@@ -5,15 +5,12 @@ using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject movingEnemy;
+    public WarningSymbol warningSymbol;
+
     public List<Image> boundsImage;
-    public Image prefabSymbol;
 
     private List<RectTransform> _boundsRect;
     private Vector3[] _vector;
-
-    private Vector3 _randomPosition;
-    private Image _instansedSymbol;
 
     private void Awake()
     {
@@ -23,19 +20,15 @@ public class EnemySpawner : MonoBehaviour
         _vector = new Vector3[4];
     }
 
-    public void Spawn(GameObject parentRotation, GameObject parentUI)
+    public void Spawn(GameObject parentUI, GameObject parentRotation)
     {
         var randomBoundIndex = Random.Range(0, _boundsRect.Count);
         var randomBound = _boundsRect[randomBoundIndex];
-        _randomPosition = GetRandomPosition(randomBound);
+        var randomPosition = GetRandomPosition(randomBound);
 
-        _instansedSymbol = Instantiate(prefabSymbol, parentUI.transform);
+        var warningInstance = Instantiate(warningSymbol, randomPosition, Quaternion.identity, parentUI.transform);
 
-        var tempUIPosition = _instansedSymbol.transform.position;
-        tempUIPosition.x = _randomPosition.x;
-        _instansedSymbol.transform.position = tempUIPosition;
-
-        Instantiate(movingEnemy, _randomPosition, Quaternion.identity, parentRotation.transform);
+        warningInstance.StartCoroutine(warningInstance.Blick(randomPosition, parentRotation));
     }
 
     private Vector3 GetRandomPosition(RectTransform boundRect)
@@ -44,6 +37,7 @@ public class EnemySpawner : MonoBehaviour
 
         var tempX = Random.Range(_vector[0].x, _vector[2].x);
         var tempY = Random.Range(_vector[0].y, _vector[2].y);
+
 //        Debug.Log(string.Format("{0} {1}", _vector[0].x.ToString(), _vector[2].x.ToString()));
 //        Debug.Log(string.Format("{0} {1}", _vector[0].y.ToString(), _vector[2].y.ToString()));
 

@@ -23,10 +23,10 @@ public class Rocket : PositionXChanger
 
     private float DependentSpeed
     {
-        get { return speed.value; }
+        get { return Speed; }
         set
         {
-            speed.value = value;
+            Speed = value;
 
             cameraManager.MoveByStep(value);
             rotationManager.Action(_selfDirection, DependentSpeed);
@@ -34,11 +34,6 @@ public class Rocket : PositionXChanger
     }
 
 //    private bool _canLeft = true, _canRight = true;
-
-    private void Start()
-    {
-        DependentSpeed = 0;
-    }
 
     public void ChangeSpeedAndDirection(DirectionType initial)
     {

@@ -5,7 +5,8 @@ using UnityEngine.Serialization;
 
 public abstract class Changer : MonoBehaviour
 {
-    public FloatPrefab speed;
+    public FloatPrefab prefabSpeed;
+    protected float Speed;
 
     private bool _changing;
 

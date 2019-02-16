@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Start in Enemy");
         _transform = GetComponent<Transform>();
 
         Instantiate(face, _transform.localPosition, Quaternion.Euler(0, 0, angle), _transform);
