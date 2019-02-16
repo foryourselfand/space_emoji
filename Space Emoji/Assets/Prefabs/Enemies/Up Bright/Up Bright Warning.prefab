@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114662861392500218}
   - component: {fileID: 114041630156890522}
   m_Layer: 5
-  m_Name: Up Warning
+  m_Name: Up Bright Warning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offSet: {x: 0, y: -150}
-  enemyMover: {fileID: 1955177367127890, guid: cb15e754f8f45427cbddfd5190776fd4, type: 2}
+  enemyMover: {fileID: 1955177367127890, guid: 8b7e33542e98245c0bef467b27f94957, type: 2}
 --- !u!114 &114662861392500218
 MonoBehaviour:
   m_ObjectHideFlags: 1

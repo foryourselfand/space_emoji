@@ -25,11 +25,11 @@ public class EnemyMover : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed.value);
-        if (_isScoreAdded == false && transform.position.y <= rocketY.value)
-        {
-            _isScoreAdded = true;
-            Debug.Log("Score + 1");
-        }
+//        if (_isScoreAdded == false && transform.position.y <= rocketY.value)
+//        {
+//            _isScoreAdded = true;
+//            Debug.Log("Score + 1");
+//        }
     }
 
     private void DestroyAfter()
