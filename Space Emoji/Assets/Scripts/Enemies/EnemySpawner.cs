@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public WarningSymbol warningSymbol;
+    public EnemyWarning enemyWarning;
 
     public List<Image> boundsImage;
 
@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         var randomBound = _boundsRect[randomBoundIndex];
         var randomPosition = GetRandomPosition(randomBound);
 
-        var warningInstance = Instantiate(warningSymbol, randomPosition, Quaternion.identity, parentUI.transform);
+        var warningInstance = Instantiate(enemyWarning, randomPosition, Quaternion.identity, parentUI.transform);
 
         warningInstance.StartCoroutine(warningInstance.Blick(randomPosition, parentRotation));
     }

@@ -54,3 +54,4 @@ MonoBehaviour:
   face: {fileID: 1050017022150418, guid: 271541ef31a324b39a00ff49db81cb63, type: 2}
   angle: 180
   speed: {fileID: 11400000, guid: 1a09cd5130ffe4eca8e31c7a7b6e882c, type: 2}
+  rocketY: {fileID: 11400000, guid: 1e8c265034cac46d4ba2ac740bc6522e, type: 2}

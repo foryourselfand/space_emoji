@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class WarningSymbol : MonoBehaviour
+public class EnemyWarning : MonoBehaviour
 {
     public Vector2 offSet;
 

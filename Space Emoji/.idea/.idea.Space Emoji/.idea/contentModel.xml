@@ -35,9 +35,10 @@
             <e p="SoundClicker.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
+            <e p="EnemyFace.cs" t="Include" />
             <e p="EnemyMover.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
-            <e p="WarningSymbol.cs" t="Include" />
+            <e p="EnemyWarning.cs" t="Include" />
           </e>
           <e p="Enums" t="Include">
             <e p="DirectionType.cs" t="Include" />
