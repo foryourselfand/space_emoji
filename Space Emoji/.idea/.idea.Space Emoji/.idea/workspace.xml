@@ -24,22 +24,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34aef147-78a7-4b4e-a8a1-a3f290331d22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/CameraDependent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/CameraDependent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/ClickDependent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/ClickDependent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/DependentsParent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/DependentsParent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/RotationDependent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/RotationDependent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/SpriteOpacityDepended.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClickDependents/SpriteOpacityDepended.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CameraManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RotationManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RotationManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Camera Speed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Camera Speed.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Rotation Speed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Rotation Speed.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Rocket.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Rocket.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,29 +57,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rocket.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="210">
+              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
               <folding>
-                <marker date="1550393072209" expanded="false" signature="6:92" ph="..." />
-                <marker date="1550393072209" expanded="true" signature="132:2728" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="348:544" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="405:538" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="578:711" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="626:705" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="748:837" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="901:1383" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="950:1125" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="1174:1349" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="1417:1540" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="1597:1759" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="1812:2571" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="1897:2537" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="2242:2334" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="2398:2489" ph="{...}" />
-                <marker date="1550393072209" expanded="true" signature="2607:2726" ph="{...}" />
+                <marker date="1550393492438" expanded="false" signature="6:92" ph="..." />
+                <marker date="1550393492438" expanded="true" signature="132:2656" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="348:544" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="405:538" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="578:711" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="626:705" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="748:837" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="901:1383" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="950:1125" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="1174:1349" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="1417:1540" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="1597:1759" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="1812:2499" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="1897:2465" ph="{...}" />
+                <marker date="1550393492438" expanded="true" signature="2535:2654" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ClickDependents/SpriteOpacityDepended.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <folding>
+                <marker date="1550397205530" expanded="true" signature="51:274" ph="{...}" />
+                <marker date="1550397205530" expanded="true" signature="188:272" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -194,6 +199,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Executables/Super/IExecutableOffSet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClickDependents/SpriteOpacityDepended.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Changers/Transform/TransformChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -273,7 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Changers/RotationChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Changers/Behaviors/MoveTowardsAngle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Changers/Behaviors/LerpAngle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
@@ -324,6 +329,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RotationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClickDependents/DependentsParent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClickDependents/SpriteOpacityDepended.cs" />
       </list>
     </option>
   </component>
@@ -497,12 +503,12 @@
       <workItem from="1550242514075" duration="2091000" />
       <workItem from="1550298856536" duration="8991000" />
       <workItem from="1550317237827" duration="810000" />
-      <workItem from="1550387499454" duration="3859000" />
+      <workItem from="1550387499454" duration="4908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140552000" />
+    <option name="totallyTimeSpent" value="141601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,18 +568,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Changers/Transform/PositionYChanger.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <marker date="1549981172737" expanded="true" signature="48:331" ph="{...}" />
-            <marker date="1549981172737" expanded="true" signature="95:149" ph="{...}" />
-            <marker date="1549981172737" expanded="true" signature="207:329" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Changers/Transform/TransformChanger.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1129,26 +1123,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rocket.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding>
-            <marker date="1550393072209" expanded="false" signature="6:92" ph="..." />
-            <marker date="1550393072209" expanded="true" signature="132:2728" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="348:544" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="405:538" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="578:711" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="626:705" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="748:837" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="901:1383" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="950:1125" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="1174:1349" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="1417:1540" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="1597:1759" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="1812:2571" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="1897:2537" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="2242:2334" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="2398:2489" ph="{...}" />
-            <marker date="1550393072209" expanded="true" signature="2607:2726" ph="{...}" />
+            <marker date="1550393492438" expanded="false" signature="6:92" ph="..." />
+            <marker date="1550393492438" expanded="true" signature="132:2656" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="348:544" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="405:538" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="578:711" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="626:705" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="748:837" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="901:1383" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="950:1125" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="1174:1349" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="1417:1540" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="1597:1759" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="1812:2499" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="1897:2465" ph="{...}" />
+            <marker date="1550393492438" expanded="true" signature="2535:2654" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ClickDependents/SpriteOpacityDepended.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <marker date="1550397205530" expanded="true" signature="51:274" ph="{...}" />
+            <marker date="1550397205530" expanded="true" signature="188:272" ph="{...}" />
           </folding>
         </state>
       </provider>

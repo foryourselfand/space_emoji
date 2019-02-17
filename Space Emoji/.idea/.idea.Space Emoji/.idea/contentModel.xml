@@ -29,6 +29,7 @@
             <e p="ClickDependent.cs" t="Include" />
             <e p="DependentsParent.cs" t="Include" />
             <e p="RotationDependent.cs" t="Include" />
+            <e p="SpriteOpacityDepended.cs" t="Include" />
           </e>
           <e p="Clickers" t="Include">
             <e p="ArrowClicker.cs" t="Include" />

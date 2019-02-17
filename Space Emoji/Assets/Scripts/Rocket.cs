@@ -85,13 +85,9 @@ public class Rocket : PositionXChanger
             case DirectionType.None:
             {
                 if (_lastDirection == DirectionType.Left)
-                {
                     IncreaseSpeed(DirectionType.Right);
-                }
                 else if (_lastDirection == DirectionType.Right)
-                {
                     IncreaseSpeed(DirectionType.Left);
-                }
 
                 break;
             }
