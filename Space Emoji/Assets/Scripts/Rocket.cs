@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Rocket : PositionXChanger
 {
-    public CameraManager cameraManager;
-    public RotationManager rotationManager;
+    public DependentsParent dependentsParent;
 
     private DirectionType _selfDirection = DirectionType.None;
     private DirectionType _lastDirection = DirectionType.None;
@@ -17,7 +17,7 @@ public class Rocket : PositionXChanger
         {
             _lastDirection = _selfDirection;
             _selfDirection = value;
-            rotationManager.Action(_selfDirection, DependentSpeed);
+            DependentsAction();
         }
     }
 
@@ -27,10 +27,13 @@ public class Rocket : PositionXChanger
         set
         {
             Speed = value;
-
-            cameraManager.MoveByStep(value);
-            rotationManager.Action(_selfDirection, DependentSpeed);
+            DependentsAction();
         }
+    }
+
+    private void DependentsAction()
+    {
+        dependentsParent.AllDependentsAction(SelfDirection, DependentSpeed);
     }
 
     public void ChangeSpeedAndDirection(DirectionType initial)
