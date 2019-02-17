@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f81768d7ab643cb95b5369b2d8e7fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSet: {x: 0, y: -150}
-  enemyMover: {fileID: 1955177367127890, guid: cb15e754f8f45427cbddfd5190776fd4, type: 2}
+  prefabSpeed: {fileID: 11400000, guid: 8db0e6015a10747f784f45ca64706d5b, type: 2}
+  offSet: {x: 0, y: -150, z: 0}
 --- !u!114 &114662861392500218
 MonoBehaviour:
   m_ObjectHideFlags: 1
