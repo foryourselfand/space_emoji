@@ -68,4 +68,9 @@ public abstract class FloatChanger : Changer
     {
         SetTarget(_startValue + target);
     }
+
+    public void AddToCurrent(float increment)
+    {
+        CurrentValue += increment;
+    }
 }

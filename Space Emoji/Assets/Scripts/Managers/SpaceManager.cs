@@ -3,49 +3,33 @@ using UnityEngine;
 
 public class SpaceManager : MonoBehaviour
 {
-    public PositionYChanger rotationParent;
-    public PositionYChanger firstParent, secondParent;
+    public PositionYChanger spaceParent;
 
-    private PositionYChanger _currentSky;
+    public PositionYChanger[] starsParents;
+    private int _starsParentsIndex;
+
+    public void ResetToStart()
+    {
+        spaceParent.SetCurrent(0);
+        starsParents[0].SetCurrent(0);
+        starsParents[1].SetCurrent(15);
+    }
 
     public void StartMove()
     {
-        _currentSky = firstParent;
-        StartCoroutine(Move());
-
-//        StartCoroutine(Moving(firstParent, -15));
-//        StartCoroutine(Moving(secondParent, -30));
+        _starsParentsIndex = 0;
+        StartCoroutine(StarsMoving());
     }
 
-    private IEnumerator Move()
+    private IEnumerator StarsMoving()
     {
-        rotationParent.SetTargetFromCurrent(-15);
-        yield return new WaitUntil(rotationParent.IsFinished);
-        if (_currentSky == firstParent)
-        {
-            _currentSky = secondParent;
+        spaceParent.SetTargetFromCurrent(-15);
 
-            var tempPosition = firstParent.transform.localPosition;
-            tempPosition.y += 30;
-            firstParent.transform.localPosition = tempPosition;
-        }
-        else if (_currentSky == secondParent)
-        {
-            _currentSky = firstParent;
+        yield return new WaitUntil(spaceParent.IsFinished);
 
-            var tempPosition = secondParent.transform.localPosition;
-            tempPosition.y += 30;
-            secondParent.transform.localPosition = tempPosition;
-        }
+        starsParents[_starsParentsIndex].AddToCurrent(30);
+        _starsParentsIndex = Mathf.Abs(1 - _starsParentsIndex);
 
-        StartCoroutine(Move());
-    }
-
-    private IEnumerator Moving(PositionYChanger parent, float byY)
-    {
-        parent.SetTargetFromCurrent(byY);
-        yield return new WaitUntil(parent.IsFinished);
-        parent.SetCurrent(15);
-        StartCoroutine(Moving(parent, -30));
+        StartCoroutine(StarsMoving());
     }
 }

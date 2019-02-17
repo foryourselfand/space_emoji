@@ -3299,7 +3299,7 @@ GameObject:
   - component: {fileID: 841538341}
   - component: {fileID: 841538342}
   m_Layer: 0
-  m_Name: Parent Groud
+  m_Name: Groud Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5998,7 +5998,7 @@ GameObject:
   - component: {fileID: 1477025596}
   - component: {fileID: 1477025597}
   m_Layer: 0
-  m_Name: Rotation Parent
+  m_Name: Rotation(Stars) Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8155,8 +8155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationParent: {fileID: 291970958}
-  firstParent: {fileID: 948433152}
-  secondParent: {fileID: 1972790228}
+  starsParents:
+  - {fileID: 948433152}
+  - {fileID: 1972790228}
 --- !u!1 &2116234310
 GameObject:
   m_ObjectHideFlags: 0
