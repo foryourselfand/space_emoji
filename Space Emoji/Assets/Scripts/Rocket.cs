@@ -33,29 +33,21 @@ public class Rocket : PositionXChanger
         }
     }
 
-//    private bool _canLeft = true, _canRight = true;
-
     public void ChangeSpeedAndDirection(DirectionType initial)
     {
         if (initial == DirectionType.Left)
         {
-//            if (_canLeft)
-//            {
             if (SelfDirection == DirectionType.Right)
                 DecreaseSpeed();
             else
                 IncreaseSpeed(DirectionType.Left);
-//            }
         }
         else if (initial == DirectionType.Right)
         {
-//            if (_canRight)
-//            {
             if (SelfDirection == DirectionType.Left)
                 DecreaseSpeed();
             else
                 IncreaseSpeed(DirectionType.Right);
-//            }
         }
 
         MoveByDirection();
@@ -91,12 +83,10 @@ public class Rocket : PositionXChanger
             {
                 if (_lastDirection == DirectionType.Left)
                 {
-//                    _canLeft = false;
                     IncreaseSpeed(DirectionType.Right);
                 }
                 else if (_lastDirection == DirectionType.Right)
                 {
-//                    _canRight = false;
                     IncreaseSpeed(DirectionType.Left);
                 }
 
@@ -106,15 +96,6 @@ public class Rocket : PositionXChanger
 
         MoveByDirection();
     }
-
-//    private void OnTriggerExit2D(Collider2D other)
-//    {
-//        if (!other.CompareTag("Bound")) return;
-//        if (!_canLeft)
-//            _canLeft = true;
-//        if (!_canRight)
-//            _canRight = true;
-//    }
 
     private void MoveByDirection()
     {

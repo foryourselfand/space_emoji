@@ -1205,6 +1205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyWarning: {fileID: 114041630156890522, guid: dc3f3d5f8e6dd49ca9239e25470e2549,
     type: 2}
+  enemyMover: {fileID: 1955177367127890, guid: 8b7e33542e98245c0bef467b27f94957, type: 2}
   boundsImage:
   - {fileID: 1722275597}
   - {fileID: 571442808}
@@ -3285,6 +3286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyWarning: {fileID: 114041630156890522, guid: 5148c02bcc4de46ca982d5ee8fb5f3ed,
     type: 2}
+  enemyMover: {fileID: 1955177367127890, guid: d4b788aaf1b2c4a40888da3ad053a8d7, type: 2}
   boundsImage:
   - {fileID: 1915518562}
 --- !u!1 &841538340
@@ -4462,6 +4464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyWarning: {fileID: 114041630156890522, guid: 84bced49a9f4844428eafb24cc3b3233,
     type: 2}
+  enemyMover: {fileID: 1955177367127890, guid: cb15e754f8f45427cbddfd5190776fd4, type: 2}
   boundsImage:
   - {fileID: 1722275597}
   - {fileID: 571442808}
@@ -6641,6 +6644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyWarning: {fileID: 114041630156890522, guid: de82e1f1a4ccb42daafd78b55d34b814,
     type: 2}
+  enemyMover: {fileID: 1955177367127890, guid: 12785bc84c1d24484a75baed71ddec64, type: 2}
   boundsImage:
   - {fileID: 2116234312}
 --- !u!1 &1717206848
@@ -7789,7 +7793,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988023216}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: -2.32, z: 0}
+  m_LocalPosition: {x: 0, y: -1.66, z: 0}
   m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_Children:
   - {fileID: 872900952}

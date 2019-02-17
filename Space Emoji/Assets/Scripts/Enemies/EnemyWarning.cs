@@ -5,20 +5,19 @@ public class EnemyWarning : MonoBehaviour
 {
     public Vector2 offSet;
 
-    public GameObject enemyMover;
-
     private void Start()
     {
-        var tempPosition = transform.localPosition;
-        tempPosition.x += offSet.x;
-        tempPosition.y += offSet.y;
-        transform.localPosition = tempPosition;
+        var localPosition = transform.localPosition;
+
+        StartCoroutine(Blick());
+        localPosition = new Vector3(localPosition.x + offSet.x, localPosition.y + offSet.y);
+
+        transform.localPosition = localPosition;
     }
 
-    public IEnumerator Blick(Vector3 randomPosition, GameObject parentRotation)
+    private IEnumerator Blick()
     {
         yield return new WaitForSeconds(1);
-        Instantiate(enemyMover, randomPosition, Quaternion.identity, parentRotation.transform);
         Destroy(gameObject);
     }
 }

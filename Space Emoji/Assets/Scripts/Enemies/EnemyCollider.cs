@@ -6,7 +6,7 @@ public class EnemyCollider : MonoBehaviour
     {
         if (other.CompareTag("Rocket"))
         {
-            Debug.Log("Rocket Dead");
+//            Debug.Log("Rocket Dead");
         }
     }
 
@@ -14,7 +14,7 @@ public class EnemyCollider : MonoBehaviour
     {
         if (other.CompareTag("Score"))
         {
-            Debug.Log("Score +1");
+//            Debug.Log("Score +1");
         }
     }
 }
