@@ -15,7 +15,10 @@
             <e p="CameraChanger.cs" t="Include" />
             <e p="Changer.cs" t="Include" />
             <e p="FloatChanger.cs" t="Include" />
-            <e p="OpacityChanger.cs" t="Include" />
+            <e p="Opacity" t="Include">
+              <e p="CanvasOpacityChanger.cs" t="Include" />
+              <e p="SpriteOpacityChanger.cs" t="Include" />
+            </e>
             <e p="Transform" t="Include">
               <e p="PositionXChanger.cs" t="Include" />
               <e p="PositionYChanger.cs" t="Include" />
@@ -25,11 +28,15 @@
             </e>
           </e>
           <e p="ClickDependents" t="Include">
-            <e p="CameraDependent.cs" t="Include" />
-            <e p="ClickDependent.cs" t="Include" />
-            <e p="DependentsParent.cs" t="Include" />
+            <e p="CameraPositionDependent.cs" t="Include" />
+            <e p="CameraSizeDependent.cs" t="Include" />
             <e p="RotationDependent.cs" t="Include" />
-            <e p="SpriteOpacityDepended.cs" t="Include" />
+            <e p="SpriteOpacityDependent.cs" t="Include" />
+            <e p="Super" t="Include">
+              <e p="ClickDependent.cs" t="Include" />
+              <e p="DependentsParent.cs" t="Include" />
+            </e>
+            <e p="UIOpacityDependent.cs" t="Include" />
           </e>
           <e p="Clickers" t="Include">
             <e p="ArrowClicker.cs" t="Include" />

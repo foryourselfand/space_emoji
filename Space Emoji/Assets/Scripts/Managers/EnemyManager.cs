@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
             var randomSpawnerIndex = Random.Range(0, enemySpawners.Count);
             var randomSpawner = enemySpawners[randomSpawnerIndex];
 
-            randomSpawner.Spawn(parentUI, parentRotation);
+            randomSpawner.SpawnWarning(parentUI, parentRotation);
 
             yield return new WaitForSeconds(1.5F);
         }

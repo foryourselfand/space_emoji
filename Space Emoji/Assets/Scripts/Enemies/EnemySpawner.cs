@@ -21,17 +21,17 @@ public class EnemySpawner : MonoBehaviour
         _vector = new Vector3[4];
     }
 
-    public void Spawn(GameObject parentUI, GameObject parentRotation)
+    public void SpawnWarning(GameObject parentUI, GameObject parentRotation)
     {
         var randomBoundIndex = Random.Range(0, _boundsRect.Count);
         var randomBound = _boundsRect[randomBoundIndex];
         var randomPosition = GetRandomPosition(randomBound);
 
         Instantiate(enemyWarning, randomPosition, Quaternion.identity, parentUI.transform);
-        StartCoroutine(TestCoroutine(randomPosition, parentRotation));
+        StartCoroutine(SpawnMover(randomPosition, parentRotation));
     }
 
-    private IEnumerator TestCoroutine(Vector3 randomPosition, GameObject parentRotation)
+    private IEnumerator SpawnMover(Vector3 randomPosition, GameObject parentRotation)
     {
         yield return new WaitForSeconds(1);
         Instantiate(enemyMover, randomPosition, Quaternion.identity, parentRotation.transform);

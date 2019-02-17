@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabSpeed: {fileID: 11400000, guid: 8db0e6015a10747f784f45ca64706d5b, type: 2}
-  offSet: {x: 0, y: -150, z: 0}
+  offSet: {x: 0, y: -150}
 --- !u!114 &114662861392500218
 MonoBehaviour:
   m_ObjectHideFlags: 1

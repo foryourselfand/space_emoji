@@ -11,6 +11,7 @@ public class MoversManager : MonoBehaviour
     {
         groundParent.gameObject.SetActive(true);
         rocket.transform.parent = groundParent.transform;
+        spaceManager.ResetToStart();
 
         groundParent.SetCurrent(-4);
         groundParent.SetTargetFromCurrent(4);
@@ -20,11 +21,11 @@ public class MoversManager : MonoBehaviour
     public IEnumerator GroundDowning()
     {
         rocket.transform.parent = groundParent.transform.parent;
-        
+
         spaceManager.StartMove();
         groundParent.SetTargetFromCurrent(-4);
         yield return new WaitUntil(groundParent.IsFinished);
-        
+
         groundParent.gameObject.SetActive(false);
     }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FadersManager : MonoBehaviour
 {
-    public OpacityChanger sky;
+    public SpriteOpacityChanger sky;
 
     public void SkyOut()
     {
