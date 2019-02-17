@@ -24,11 +24,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34aef147-78a7-4b4e-a8a1-a3f290331d22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Camera/Camera Position Speed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Camera/Camera Position Speed.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Camera/Camera Size Speed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Camera/Camera Size Speed.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Rotation Speed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Rotation Speed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Steeps/Rotation Step.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Steeps/Rotation Step.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Steeps/Opacity/Canvas Opacity Step.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Steeps/Opacity/Canvas Opacity Step.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding>
                 <marker date="1550417568652" expanded="false" signature="6:100" ph="..." />
                 <marker date="1550417568652" expanded="true" signature="143:613" ph="{...}" />
@@ -144,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SpaceManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <marker date="1550418660102" expanded="false" signature="6:44" ph="..." />
                 <marker date="1550418660102" expanded="true" signature="87:893" ph="{...}" />
@@ -159,8 +159,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rocket.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+            <state relative-caret-position="2670">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
               <folding>
                 <marker date="1550421222765" expanded="false" signature="6:92" ph="..." />
                 <marker date="1550421222765" expanded="true" signature="132:3199" ph="{...}" />
@@ -203,7 +203,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ClickDependents/RotationDependent.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding>
                 <marker date="1550392518691" expanded="true" signature="47:471" ph="{...}" />
                 <marker date="1550392518691" expanded="true" signature="186:469" ph="{...}" />
@@ -534,12 +534,12 @@
       <workItem from="1550242514075" duration="2091000" />
       <workItem from="1550298856536" duration="8991000" />
       <workItem from="1550317237827" duration="810000" />
-      <workItem from="1550387499454" duration="13178000" />
+      <workItem from="1550387499454" duration="13288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149871000" />
+    <option name="totallyTimeSpent" value="149981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1094,7 +1094,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ClickDependents/RotationDependent.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
             <marker date="1550392518691" expanded="true" signature="47:471" ph="{...}" />
             <marker date="1550392518691" expanded="true" signature="186:469" ph="{...}" />
@@ -1105,7 +1105,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <marker date="1550417568652" expanded="false" signature="6:100" ph="..." />
             <marker date="1550417568652" expanded="true" signature="143:613" ph="{...}" />
@@ -1145,7 +1145,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SpaceManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
             <marker date="1550418660102" expanded="false" signature="6:44" ph="..." />
             <marker date="1550418660102" expanded="true" signature="87:893" ph="{...}" />
@@ -1158,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rocket.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        <state relative-caret-position="2670">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
           <folding>
             <marker date="1550421222765" expanded="false" signature="6:92" ph="..." />
             <marker date="1550421222765" expanded="true" signature="132:3199" ph="{...}" />
