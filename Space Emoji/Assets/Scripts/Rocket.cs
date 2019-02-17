@@ -21,6 +21,8 @@ public class Rocket : PositionXChanger
         }
     }
 
+//    private int _clickCount;
+
     private float DependentSpeed
     {
         get { return Speed; }
@@ -34,6 +36,7 @@ public class Rocket : PositionXChanger
     private void DependentsAction()
     {
         dependentsParent.AllDependentsAction(SelfDirection, DependentSpeed);
+//        dependentsParent.AllDependentsAction(SelfDirection, _clickCount);
     }
 
     public void ChangeSpeedAndDirection(DirectionType initial)
@@ -59,16 +62,34 @@ public class Rocket : PositionXChanger
     private void DecreaseSpeed()
     {
         if (DependentSpeed - 1 == 0)
+//        if (_clickCount == 0)
             SelfDirection = DirectionType.None;
+
         DependentSpeed--;
+
+//        _clickCount--;
+//        if (Math.Abs(DependentSpeed - 1) < 0.01F)
+//            DependentSpeed = 0;
+//        else
+//            DependentSpeed /= 1.6F;
     }
 
     private void IncreaseSpeed(DirectionType direction)
     {
         if (SelfDirection == DirectionType.None)
             SelfDirection = direction;
+
         if (DependentSpeed < 5)
             DependentSpeed++;
+
+//        if (_clickCount < 4)
+//        {
+//            _clickCount++;
+//            if (Math.Abs(DependentSpeed) < 0.01F)
+//                DependentSpeed = 1;
+//            else
+//                DependentSpeed *= 1.6F;
+//        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
