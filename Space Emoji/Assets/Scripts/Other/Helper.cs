@@ -24,11 +24,27 @@ public static class Helper
         return childList;
     }
 
-    public static List<IExecutable> GetExecutablesFilled(GameObject commonParent)
+    public static List<IExecutable> GetExecutablesFilledInList(GameObject commonParent)
     {
         var executables = new List<IExecutable>();
+
         foreach (var concreteExecutableParent in GetChildrenFromParent(commonParent))
             executables.AddRange(GetChildrenFromParent<IExecutable>(concreteExecutableParent));
+
+        return executables;
+    }
+
+    public static List<IExecutable>[] GetExecutablesFilledInArray(GameObject commonParent, int size)
+    {
+        var executables = new List<IExecutable>[size];
+
+        var tempParent = GetChildrenFromParent(commonParent);
+        for (var i = 0; i < tempParent.Count; i++)
+        {
+            executables[i] = new List<IExecutable>();
+            executables[i].AddRange(GetChildrenFromParent<IExecutable>(tempParent[i]));
+        }
+
         return executables;
     }
 }

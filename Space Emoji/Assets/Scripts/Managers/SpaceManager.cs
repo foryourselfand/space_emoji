@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SpaceManager : MonoBehaviour
 {
+    public EnvironmentManager environmentManager;
+
     public PositionYChanger spaceParent;
 
     public PositionYChanger[] starsParents;
@@ -31,6 +33,7 @@ public class SpaceManager : MonoBehaviour
         yield return new WaitUntil(spaceParent.IsFinished);
 
         starsParents[_starsParentsIndex].AddToCurrent(skyDistance.value * 2);
+        environmentManager.ConcreteStarsRefresh(_starsParentsIndex);
         _starsParentsIndex = Mathf.Abs(1 - _starsParentsIndex);
 
         StartCoroutine(StarsMoving());

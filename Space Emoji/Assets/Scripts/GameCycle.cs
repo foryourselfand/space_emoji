@@ -46,7 +46,7 @@ public class GameCycle : MonoBehaviour
     private IEnumerator MenuButtonsHiding()
     {
         CanClick = false;
-        environmentManager.StarsRefresh();
+        environmentManager.AllStarsRefresh();
         yield return buttonsManager.MenuButtonsTriggering();
     }
 
