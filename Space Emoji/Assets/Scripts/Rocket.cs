@@ -94,27 +94,32 @@ public class Rocket : PositionXChanger
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Bound")) return;
-        switch (SelfDirection)
+        if (other.CompareTag("Bound"))
         {
-            case DirectionType.Left:
-                SelfDirection = DirectionType.Right;
-                break;
-            case DirectionType.Right:
-                SelfDirection = DirectionType.Left;
-                break;
-            case DirectionType.None:
+            switch (SelfDirection)
             {
-                if (_lastDirection == DirectionType.Left)
-                    IncreaseSpeed(DirectionType.Right);
-                else if (_lastDirection == DirectionType.Right)
-                    IncreaseSpeed(DirectionType.Left);
+                case DirectionType.Left:
+                    SelfDirection = DirectionType.Right;
+                    break;
+                case DirectionType.Right:
+                    SelfDirection = DirectionType.Left;
+                    break;
+                case DirectionType.None:
+                {
+                    if (_lastDirection == DirectionType.Left)
+                        IncreaseSpeed(DirectionType.Right);
+                    else if (_lastDirection == DirectionType.Right)
+                        IncreaseSpeed(DirectionType.Left);
 
-                break;
+                    break;
+                }
             }
-        }
 
-        MoveByDirection();
+            MoveByDirection();
+        } else if (other.CompareTag("Enemy"))
+        {
+//            Debug.Log("Dead");
+        }
     }
 
     private void MoveByDirection()

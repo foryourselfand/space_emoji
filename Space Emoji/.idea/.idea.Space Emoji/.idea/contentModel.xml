@@ -49,10 +49,10 @@
             <e p="SoundClicker.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
-            <e p="EnemyCollider.cs" t="Include" />
             <e p="EnemyMover.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
             <e p="EnemyWarning.cs" t="Include" />
+            <e p="ScoreCollider.cs" t="Include" />
           </e>
           <e p="Enums" t="Include">
             <e p="DirectionType.cs" t="Include" />
@@ -86,6 +86,7 @@
             <e p="EnvironmentManager.cs" t="Include" />
             <e p="FadersManager.cs" t="Include" />
             <e p="MoversManager.cs" t="Include" />
+            <e p="ScoreManager.cs" t="Include" />
             <e p="SpaceManager.cs" t="Include" />
           </e>
           <e p="Other" t="Include">
