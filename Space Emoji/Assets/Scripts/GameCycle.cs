@@ -62,6 +62,7 @@ public class GameCycle : MonoBehaviour
     private IEnumerator RocketFlyingDown()
     {
         cameraManager.MoveOut();
+        fadersManager.ShowUI();
         yield return moversManager.RocketDown();
 
         StartCoroutine(ShowingInstructionButtons());

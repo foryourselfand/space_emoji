@@ -19,7 +19,8 @@ public class EnemyManager : MonoBehaviour
 
             randomSpawner.SpawnWarning(parentUI, parentRotation);
 
-            yield return new WaitForSeconds(1.5F);
+            var randomTime = Random.Range(-0.25F, 0.25F);
+            yield return new WaitForSeconds(0.75F + randomTime);
         }
     }
 }

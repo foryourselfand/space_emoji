@@ -4880,8 +4880,6 @@ MonoBehaviour:
   enemySpawners:
   - {fileID: 1095736512}
   - {fileID: 290383190}
-  - {fileID: 822480973}
-  - {fileID: 1707263671}
 --- !u!4 &1150960264
 Transform:
   m_ObjectHideFlags: 0
@@ -6626,7 +6624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0034179688, y: 206.75}
+  m_AnchoredPosition: {x: -0.0029296875, y: 206.75}
   m_SizeDelta: {x: 1165.2, y: 1268.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583633136
@@ -7451,6 +7449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sky: {fileID: 297833598}
+  canvasOpacityChanger: {fileID: 89218576}
 --- !u!1 &1779043000
 GameObject:
   m_ObjectHideFlags: 0
