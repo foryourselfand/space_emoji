@@ -98,6 +98,7 @@
             <e p="Vector2Prefab.cs" t="Include" />
           </e>
           <e p="Rocket.cs" t="Include" />
+          <e p="UpdatingOpacity.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

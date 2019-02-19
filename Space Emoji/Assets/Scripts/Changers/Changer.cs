@@ -32,6 +32,12 @@ public abstract class Changer : MonoBehaviour
     {
         _changing = true;
     }
+    
+    protected void StopChanging()
+    {
+        _changing = false;
+    }
+
 
     public bool IsFinished()
     {

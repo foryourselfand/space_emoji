@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class FloatChanger : Changer
 {
-    private float CurrentValue
+    protected float CurrentValue
     {
         get { return GetCurrentRef(); }
         set { SetCurrentRef(value); }
