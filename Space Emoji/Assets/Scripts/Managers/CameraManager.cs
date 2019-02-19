@@ -2,15 +2,29 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public CameraChanger cameraChanger;
+    public GameObject cameraGameObject;
+
+    private CameraChanger _cameraChanger;
+    private CameraShakeTest _cameraShake;
+
+    private void Awake()
+    {
+        _cameraChanger = cameraGameObject.GetComponent<CameraChanger>();
+        _cameraShake = cameraGameObject.GetComponent<CameraShakeTest>();
+    }
 
     public void MoveIn()
     {
-        cameraChanger.SetTarget(3.5F);
+        _cameraChanger.SetTarget(3.5F);
     }
 
     public void MoveOut()
     {
-        cameraChanger.SetTargetToStart();
+        _cameraChanger.SetTargetToStart();
+    }
+
+    public void ShakeLittle(DirectionType selfDirection)
+    {
+        _cameraShake.ShakeLittle(selfDirection);
     }
 }

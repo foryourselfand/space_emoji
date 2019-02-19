@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Rocket : PositionXChanger
 {
+    public CameraManager cameraManager;
     public DependentsParent dependentsParent;
 
     private DirectionType _selfDirection = DirectionType.None;
@@ -107,13 +108,16 @@ public class Rocket : PositionXChanger
             switch (SelfDirection)
             {
                 case DirectionType.Left:
+                    cameraManager.ShakeLittle(SelfDirection);
                     SelfDirection = DirectionType.Right;
                     break;
                 case DirectionType.Right:
+                    cameraManager.ShakeLittle(SelfDirection);
                     SelfDirection = DirectionType.Left;
                     break;
                 case DirectionType.None:
                 {
+                    cameraManager.ShakeLittle(_lastDirection);
                     if (_lastDirection == DirectionType.Left)
                     {
                         IncreaseSpeed(DirectionType.Right);
@@ -134,7 +138,7 @@ public class Rocket : PositionXChanger
 
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Dead");
+//            Debug.Log("Dead");
         }
     }
 

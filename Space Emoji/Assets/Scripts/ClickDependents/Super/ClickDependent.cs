@@ -4,5 +4,5 @@ public abstract class ClickDependent : MonoBehaviour
 {
     public FloatPrefab step;
 
-    public abstract void DependentAction(DirectionType directionType, float dependentValue);
+    public abstract void DependentAction(DirectionType selfDirection, float rocketSpeed);
 }

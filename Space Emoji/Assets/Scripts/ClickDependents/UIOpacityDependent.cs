@@ -4,8 +4,8 @@ public class UIOpacityDependent : ClickDependent
 {
     public CanvasOpacityChanger canvasChanger;
 
-    public override void DependentAction(DirectionType directionType, float dependentValue)
+    public override void DependentAction(DirectionType selfDirection, float rocketSpeed)
     {
-        canvasChanger.SetTargetFromStart(-1 * dependentValue * step.value);
+        canvasChanger.SetTargetFromStart(-1 * rocketSpeed * step.value);
     }
 }

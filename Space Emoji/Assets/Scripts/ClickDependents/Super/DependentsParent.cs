@@ -10,9 +10,9 @@ public class DependentsParent : MonoBehaviour
         _clickDependents = Helper.GetChildrenFromParent<ClickDependent>(gameObject);
     }
 
-    public void AllDependentsAction(DirectionType directionType, float dependentSpeed)
+    public void AllDependentsAction(DirectionType selfDirection, float rocketSpeed)
     {
         foreach (var depended in _clickDependents)
-            depended.DependentAction(directionType, dependentSpeed);
+            depended.DependentAction(selfDirection, rocketSpeed);
     }
 }

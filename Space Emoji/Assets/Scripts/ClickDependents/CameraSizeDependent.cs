@@ -2,8 +2,8 @@ public class CameraSizeDependent : ClickDependent
 {
     public CameraChanger cameraSize;
 
-    public override void DependentAction(DirectionType directionType, float dependentValue)
+    public override void DependentAction(DirectionType selfDirection, float rocketSpeed)
     {
-        cameraSize.SetTargetFromStart(dependentValue / step.value);
+        cameraSize.SetTargetFromStart(rocketSpeed / step.value);
     }
 }
