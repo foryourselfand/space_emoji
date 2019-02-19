@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212930266094848912}
   - component: {fileID: 58400753141541578}
   - component: {fileID: 50632135049873242}
-  - component: {fileID: 114980402691141852}
   m_Layer: 10
   m_Name: Left Face
   m_TagString: Enemy
@@ -78,17 +77,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.77
---- !u!114 &114980402691141852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1050017022150418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67f6334f03aa4a248013495d5427074f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212930266094848912
 SpriteRenderer:
   m_ObjectHideFlags: 1

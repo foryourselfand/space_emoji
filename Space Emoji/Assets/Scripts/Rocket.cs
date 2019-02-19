@@ -33,6 +33,8 @@ public class Rocket : PositionXChanger
         }
     }
 
+    private bool _canLeft = true, _canRight = true;
+
     private void DependentsAction()
     {
         dependentsParent.AllDependentsAction(SelfDirection, DependentSpeed);
@@ -43,17 +45,23 @@ public class Rocket : PositionXChanger
     {
         if (initial == DirectionType.Left)
         {
-            if (SelfDirection == DirectionType.Right)
-                DecreaseSpeed();
-            else
-                IncreaseSpeed(DirectionType.Left);
+            if (_canLeft)
+            {
+                if (SelfDirection == DirectionType.Right)
+                    DecreaseSpeed();
+                else
+                    IncreaseSpeed(DirectionType.Left);
+            }
         }
         else if (initial == DirectionType.Right)
         {
-            if (SelfDirection == DirectionType.Left)
-                DecreaseSpeed();
-            else
-                IncreaseSpeed(DirectionType.Right);
+            if (_canRight)
+            {
+                if (SelfDirection == DirectionType.Left)
+                    DecreaseSpeed();
+                else
+                    IncreaseSpeed(DirectionType.Right);
+            }
         }
 
         MoveByDirection();
@@ -107,18 +115,37 @@ public class Rocket : PositionXChanger
                 case DirectionType.None:
                 {
                     if (_lastDirection == DirectionType.Left)
+                    {
                         IncreaseSpeed(DirectionType.Right);
+                        _canLeft = false;
+                    }
                     else if (_lastDirection == DirectionType.Right)
+                    {
                         IncreaseSpeed(DirectionType.Left);
+                        _canRight = false;
+                    }
 
                     break;
                 }
             }
 
             MoveByDirection();
-        } else if (other.CompareTag("Enemy"))
+        }
+
+        if (other.CompareTag("Enemy"))
         {
-//            Debug.Log("Dead");
+            Debug.Log("Dead");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Bound"))
+        {
+            if (_canLeft == false)
+                _canLeft = true;
+            if (_canRight == false)
+                _canRight = true;
         }
     }
 
