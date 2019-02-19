@@ -4,14 +4,16 @@ using Random = UnityEngine.Random;
 
 public class UpdatingOpacity : SpriteOpacityChanger
 {
-    public Vector2Prefab offSet;
+    public Vector2Prefab targetOffSet;
+    public FloatPrefab speedOffSet;
 
     private void OnBecameVisible()
     {
         if (Random.Range(0, 2) == 0)
-            SetTarget(offSet.value.x + offSet.value.y);
+            SetTarget(targetOffSet.value.x + targetOffSet.value.y);
         else
-            SetTarget(offSet.value.x - offSet.value.y);
+            SetTarget(targetOffSet.value.x - targetOffSet.value.y);
+        Speed = Random.Range(Speed - speedOffSet.value, Speed + speedOffSet.value);
     }
 
     private void OnBecameInvisible()
@@ -22,9 +24,9 @@ public class UpdatingOpacity : SpriteOpacityChanger
     protected override void OnEnd()
     {
         base.OnEnd();
-        if (CurrentValue == offSet.value.x + offSet.value.y)
-            SetTarget(offSet.value.x - offSet.value.y);
-        else if (CurrentValue == offSet.value.x - offSet.value.y)
-            SetTarget(offSet.value.x + offSet.value.y);
+        if (CurrentValue == targetOffSet.value.x + targetOffSet.value.y)
+            SetTarget(targetOffSet.value.x - targetOffSet.value.y);
+        else if (CurrentValue == targetOffSet.value.x - targetOffSet.value.y)
+            SetTarget(targetOffSet.value.x + targetOffSet.value.y);
     }
 }

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4141574210319096}
   - component: {fileID: 212939848234719408}
+  - component: {fileID: 114129043023191250}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -40,6 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114129043023191250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629876114421432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2c0c61f5a64e59b8f7fb4888090013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabSpeed: {fileID: 11400000, guid: 5318db238cfb641cd9858261a21990a6, type: 2}
+  targetOffSet: {fileID: 11400000, guid: 6bf5b2d409544438a87f7b599a842e74, type: 2}
+  speedOffSet: {fileID: 11400000, guid: 7e51c5241a56b4e5ebdd48fea1274722, type: 2}
 --- !u!212 &212939848234719408
 SpriteRenderer:
   m_ObjectHideFlags: 1

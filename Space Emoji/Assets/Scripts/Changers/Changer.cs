@@ -38,7 +38,6 @@ public abstract class Changer : MonoBehaviour
         _changing = false;
     }
 
-
     public bool IsFinished()
     {
         return _changing == false;

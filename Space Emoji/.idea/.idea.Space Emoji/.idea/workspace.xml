@@ -24,14 +24,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34aef147-78a7-4b4e-a8a1-a3f290331d22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Emoji/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/UI Mover Speed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/UI Mover Speed.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Star.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Star.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Updating Opacity Speed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Values/Changers/Speeds/Updating Opacity Speed.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Changers/Changer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Changers/Changer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Changers/FloatChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Changers/FloatChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,14 +57,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="300">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
-                <marker date="1550580045871" expanded="true" signature="6:32" ph="..." />
-                <marker date="1550580045871" expanded="true" signature="120:751" ph="{...}" />
-                <marker date="1550580045871" expanded="true" signature="191:365" ph="{...}" />
-                <marker date="1550580045871" expanded="true" signature="403:439" ph="{...}" />
-                <marker date="1550580045871" expanded="true" signature="476:749" ph="{...}" />
+                <marker date="1550583140378" expanded="true" signature="6:32" ph="..." />
+                <marker date="1550583140378" expanded="true" signature="120:949" ph="{...}" />
+                <marker date="1550583140378" expanded="true" signature="233:515" ph="{...}" />
+                <marker date="1550583140378" expanded="true" signature="553:589" ph="{...}" />
+                <marker date="1550583140378" expanded="true" signature="626:947" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -74,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Changers/FloatChanger.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="330">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <marker date="1550579772831" expanded="true" signature="64:1687" ph="{...}" />
                 <marker date="1550579772831" expanded="true" signature="99:189" ph="{...}" />
@@ -89,24 +88,6 @@
                 <marker date="1550579772831" expanded="true" signature="1434:1488" ph="{...}" />
                 <marker date="1550579772831" expanded="true" signature="1538:1591" ph="{...}" />
                 <marker date="1550579772831" expanded="true" signature="1638:1685" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Changers/Changer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding>
-                <marker date="1550579552391" expanded="false" signature="6:91" ph="..." />
-                <marker date="1550579552391" expanded="true" signature="138:786" ph="{...}" />
-                <marker date="1550579552391" expanded="true" signature="259:435" ph="{...}" />
-                <marker date="1550579552391" expanded="true" signature="357:429" ph="{...}" />
-                <marker date="1550579552391" expanded="true" signature="590:628" ph="{...}" />
-                <marker date="1550579552391" expanded="true" signature="667:706" ph="{...}" />
-                <marker date="1550579552391" expanded="true" signature="737:784" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -265,8 +246,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Changers/CameraShakeTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Changers/Changer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Changers/FloatChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Changers/Changer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs" />
       </list>
     </option>
@@ -438,12 +419,12 @@
       <workItem from="1550317237827" duration="810000" />
       <workItem from="1550387499454" duration="13288000" />
       <workItem from="1550475029640" duration="5270000" />
-      <workItem from="1550566797971" duration="6220000" />
+      <workItem from="1550566797971" duration="8696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161471000" />
+    <option name="totallyTimeSpent" value="163947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1013,24 +994,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Changers/Changer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <marker date="1550579552391" expanded="false" signature="6:91" ph="..." />
-            <marker date="1550579552391" expanded="true" signature="138:786" ph="{...}" />
-            <marker date="1550579552391" expanded="true" signature="259:435" ph="{...}" />
-            <marker date="1550579552391" expanded="true" signature="357:429" ph="{...}" />
-            <marker date="1550579552391" expanded="true" signature="590:628" ph="{...}" />
-            <marker date="1550579552391" expanded="true" signature="667:706" ph="{...}" />
-            <marker date="1550579552391" expanded="true" signature="737:784" ph="{...}" />
+            <marker date="1550580610949" expanded="false" signature="6:91" ph="..." />
+            <marker date="1550580610949" expanded="true" signature="138:785" ph="{...}" />
+            <marker date="1550580610949" expanded="true" signature="259:435" ph="{...}" />
+            <marker date="1550580610949" expanded="true" signature="357:429" ph="{...}" />
+            <marker date="1550580610949" expanded="true" signature="590:628" ph="{...}" />
+            <marker date="1550580610949" expanded="true" signature="667:706" ph="{...}" />
+            <marker date="1550580610949" expanded="true" signature="736:783" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Changers/FloatChanger.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="330">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <marker date="1550579772831" expanded="true" signature="64:1687" ph="{...}" />
             <marker date="1550579772831" expanded="true" signature="99:189" ph="{...}" />
@@ -1050,14 +1031,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdatingOpacity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="300">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
-            <marker date="1550580045871" expanded="true" signature="6:32" ph="..." />
-            <marker date="1550580045871" expanded="true" signature="120:751" ph="{...}" />
-            <marker date="1550580045871" expanded="true" signature="191:365" ph="{...}" />
-            <marker date="1550580045871" expanded="true" signature="403:439" ph="{...}" />
-            <marker date="1550580045871" expanded="true" signature="476:749" ph="{...}" />
+            <marker date="1550583140378" expanded="true" signature="6:32" ph="..." />
+            <marker date="1550583140378" expanded="true" signature="120:949" ph="{...}" />
+            <marker date="1550583140378" expanded="true" signature="233:515" ph="{...}" />
+            <marker date="1550583140378" expanded="true" signature="553:589" ph="{...}" />
+            <marker date="1550583140378" expanded="true" signature="626:947" ph="{...}" />
           </folding>
         </state>
       </provider>

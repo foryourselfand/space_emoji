@@ -473,7 +473,6 @@ GameObject:
   - component: {fileID: 89218575}
   - component: {fileID: 89218578}
   - component: {fileID: 89218576}
-  - component: {fileID: 89218577}
   m_Layer: 5
   m_Name: Dependent UI
   m_TagString: Untagged
@@ -512,18 +511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabSpeed: {fileID: 11400000, guid: 6a5b25c28f4614b908a0cbcf7a77c87e, type: 2}
---- !u!114 &89218577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 89218574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75cda6a5fd64d4b8588228b118dc95b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSpeed: {fileID: 11400000, guid: cc0748def41c64a4799d05cdaa810fa5, type: 2}
 --- !u!225 &89218578
 CanvasGroup:
   m_ObjectHideFlags: 0
