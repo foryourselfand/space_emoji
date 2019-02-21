@@ -6,7 +6,7 @@ using UnityEngine;
 public class Rocket : PositionXChanger
 {
     public CameraManager cameraManager;
-//    public DependentsParent dependentsParent;
+    public DependentsParent dependentsParent;
 
     private DirectionType _selfDirection = DirectionType.None;
     private DirectionType _lastDirection = DirectionType.None;
@@ -38,7 +38,7 @@ public class Rocket : PositionXChanger
 
     private void DependentsAction()
     {
-//        dependentsParent.AllDependentsAction(SelfDirection, DependentSpeed);
+        dependentsParent.AllDependentsAction(SelfDirection, DependentSpeed);
 //        dependentsParent.AllDependentsAction(SelfDirection, _clickCount);
     }
 
