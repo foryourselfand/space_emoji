@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212930266094848912}
   - component: {fileID: 58400753141541578}
   - component: {fileID: 50632135049873242}
-  - component: {fileID: 114361076258674590}
   m_Layer: 10
   m_Name: Up Bright Face
   m_TagString: Enemy
@@ -78,19 +77,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.77
---- !u!114 &114361076258674590
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1050017022150418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b58cf519864627bf82f4367bd19f13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offSetScale: {fileID: 11400000, guid: 4054f55835100456da8174e26c53bc9e, type: 2}
-  offSetRotation: {fileID: 11400000, guid: bc4624fcb64ea44e49013289bd99984a, type: 2}
 --- !u!212 &212930266094848912
 SpriteRenderer:
   m_ObjectHideFlags: 1
