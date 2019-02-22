@@ -109,26 +109,28 @@ public class Rocket : PositionXChanger
             {
                 case DirectionType.Left:
                     cameraManager.ShakeLittle(SelfDirection);
+                    _canLeft = false;
                     SelfDirection = DirectionType.Right;
                     break;
                 case DirectionType.Right:
                     cameraManager.ShakeLittle(SelfDirection);
+                    _canRight = false;
                     SelfDirection = DirectionType.Left;
                     break;
                 case DirectionType.None:
                 {
+                    switch (_lastDirection)
+                    {
+                        case DirectionType.Left:
+                            _canRight = false;
+                            break;
+                        case DirectionType.Right:
+                            _canLeft = false;
+                            break;
+                    }
+                    IncreaseSpeed(_lastDirection);
                     cameraManager.ShakeLittle(_lastDirection);
-                    if (_lastDirection == DirectionType.Left)
-                    {
-                        IncreaseSpeed(DirectionType.Right);
-                        _canLeft = false;
-                    }
-                    else if (_lastDirection == DirectionType.Right)
-                    {
-                        IncreaseSpeed(DirectionType.Left);
-                        _canRight = false;
-                    }
-
+                    
                     break;
                 }
             }
